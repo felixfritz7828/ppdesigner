@@ -128,7 +128,7 @@
             margin: 0 auto;
             text-align: left;
         }
-
+  
         footer {
             padding: 60px 0;
             border-top: 1px solid #000000;
@@ -137,6 +137,7 @@
             color: #9e9e9e;
             margin-top: 40px;
         }
+        
 
         /* Style pour les boutons dans l'en-tête */
         .header-buttons {
@@ -188,8 +189,9 @@
             position: fixed;
             top: 0;
             left: 0;
-            height: 100%;
-            width: 250px;
+            overflow: scroll;
+            height: 100vh;
+            width: 300px;
             background-color: #fafafa;
             border-right: 1px solid #000000;
             padding: 20px;
@@ -197,6 +199,7 @@
             transform: translateX(-100%);
             transition: transform 0.3s ease;
             z-index: 999;
+            scroll-behavior: smooth;
         }
 
         .sidebar.open {
@@ -217,6 +220,7 @@
             color: #000;
             font-family: 'HabenGrotesk-Medium', sans-serif;
             font-size: 16px;
+            line-height: 0.2;
             text-align: left;
         }
 
