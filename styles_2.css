@@ -1,0 +1,818 @@
+/* --- VARIABLES & GLOBAL FONT SETTINGS --- */
+:root {
+  /* OpenType stylistic set 09 globally */
+  --ff-ss09: "ss09" 1;
+  font-feature-settings: var(--ff-ss09);
+  -webkit-font-feature-settings: var(--ff-ss09);
+  -moz-font-feature-settings: var(--ff-ss09);
+}
+
+/* --- FONT-FACE --- */
+@font-face {
+  font-family: 'HabenGrotesk-Medium';
+  src: url('typos/HabenGrotesk-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pardon-4x4';
+  src: url('typos/Pardon-4x4.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('typos/IBMPlexMono-ExtraLight.ttf')format('.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- TYPOGRAPHIE GLOBALE POUR HABENGROTESK --- */
+body,
+header h1,
+p,
+span,
+a,
+button,
+.separator,
+.container,
+.designer-block,
+.designer-tagline,
+.designer-description,
+footer,
+.header-buttons button,
+.sidebar ul li a,
+.about-ppdesigner,
+.interview-text,
+.interview-dialogue {
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  font-feature-settings: var(--ff-ss09);
+  -webkit-font-feature-settings: var(--ff-ss09);
+  -moz-font-feature-settings: var(--ff-ss09);
+}
+
+/* --- BODY --- */
+body {
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  line-height: 1;
+  color: #000000;
+  background: linear-gradient(to bottom,
+      #ed6d3c 0%,
+      #ed6d3c 1%,
+      #fafafa 8%,
+      #fafafa 95%,
+      #eb589a 98%,
+      #eb589a 100%);
+  font-size: 16px;
+  text-align: center;
+}
+
+body.podcast-gradient {
+  background: linear-gradient(to bottom,
+      /* orange en haut */
+      #ed6d3c 0%,
+      #ed6d3c 2%,
+      /* neutre au centre */
+      #fafafa 6%,
+      #fafafa 95%,
+      /* bleu en bas */
+      #2955a4 98%,
+      #2955a4 100%);
+}
+
+body.podcast-gradient .taglines-podcast div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 1em; /* espace entre label et contenu */
+}
+
+body.podcast-gradient .taglines-podcast strong {
+  width: 100px; /* largeur fixe pour alignement parfait */
+  flex-shrink: 0;
+  text-align: left;
+}
+
+body.podcast-gradient .taglines-podcast .infobjet {
+  flex: 1;
+}
+
+body.podcast-gradient main {
+  padding-bottom: 250px;
+}
+
+
+
+/* --- SEPARATORS --- */
+.separator {
+  border: none;
+  border-top: 1px solid #000;
+  width: 100vw;
+  margin: 20px calc(50% - 50vw);
+}
+
+/* --- CONTAINER : Full width, responsive --- */
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 15px;
+}
+
+/* --- HEADER --- */
+header {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* --- HOME BLOCK --- */
+#home-block {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-block img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* --- DESIGNER BLOCK --- */
+.designer-block {
+  margin-bottom: 120px;
+  position: relative;
+  padding-top: 80px;
+}
+
+.designer-title {
+  font-size: clamp(48px, 10vw, 140px);
+  margin-bottom: -50px;
+  font-weight: 500;
+  display: inline-block;
+  white-space: nowrap;
+  transition: margin-bottom 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .designer-title {
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .designer-title {
+    margin-bottom: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .designer-title {
+    margin-bottom: 0;
+  }
+}
+
+.designer-name {
+  font-size: calc(10vw * 4 / 5);
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #000000;
+  font-family: 'Pardon-4x4', sans-serif;
+  width: 100%;
+}
+
+.designer-number {
+  font-size: calc(10vw * 3 / 5);
+  margin-bottom: -20px;
+  font-weight: 400;
+  color: #000000;
+  font-family: 'Pardon-4x4', sans-serif;
+  width: 100%;
+}
+
+/* --- DESIGNER TAGLINE & DESCRIPTION ---
+     Unifie le style pour une répartition en colonnes sur grand écran,
+     avec padding allégé et filets (uniquement pour .designer-tagline) --- */
+.designer-tagline,
+.designer-description {
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 1250px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+  column-count: 2;
+  column-gap: 25px;
+  color: #424242;
+  padding: 0.75rem 1rem;
+  position: relative;
+}
+
+/* Filets uniquement pour .designer-tagline */
+.designer-tagline::before,
+.designer-tagline::after {
+  content: "";
+  display: block;
+  column-span: all;
+  width: 100%;
+  border-top: 1px solid #000;
+  margin: 10px -10px;
+}
+
+/* Saut de colonne */
+.column-break {
+  break-after: column;
+  display: block;
+  height: 0;
+}
+
+.designer-bio h4::after,
+.designer-project h4::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #000;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+
+/* Classe utilitaire pour forcer un saut de ligne */
+.break-line {
+  display: none;
+  /* Masqué par défaut */
+}
+
+/* --- TYPOGRAPHIE SPÉCIFIQUE --- */
+.infobjet {
+  font-family: 'IBMPlexMono', sans-serif;
+  font-feature-settings: "ss04" 1;
+  -webkit-font-feature-settings: "ss04" 1;
+  -moz-font-feature-settings: "ss04" 1;
+}
+
+/* --- CAROUSEL --- */
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 40px;
+  scrollbar-width: dot;
+  scrollbar-color: #000000;
+  padding-bottom: 10px;
+  cursor: grab;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: rgb(50, 50, 50);
+  border-width: 4px 0px;
+  border-style: dashed;
+  border-color: transparent;
+  border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.carousel img {
+  display: inline-block;
+  height: 360px;
+  margin-right: 24px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 60px 0;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  margin-top: 40px;
+}
+
+/* --- HEADER BUTTONS --- */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  /* Corrigé ici */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+}
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+.header-buttons button {
+  margin-right: 10px;
+}
+
+.header-buttons button:last-child {
+  margin-right: 0;
+}
+
+.home-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.index-button,
+.podcast-button,
+.exposition-button {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  background-color: whitesmoke;
+  cursor: pointer;
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.home-button:hover,
+.index-button:hover,
+.podcast-button:hover,
+.exposition-button {
+  border-style: dashed;
+}
+
+
+
+/* --- SIDEBAR --- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #0f0f0f;
+  border-right: 1px solid #000;
+  padding: 20px;
+  padding-top: 80px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+  max-height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fafafa;
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+
+body.sidebar-open .header-buttons button {
+  background-color: rgb(0, 0, 0);
+  /* ou une autre couleur inversée */
+  color: rgb(255, 255, 255);
+  /* texte ou icône en noir */
+  border: 1px solid rgb(255, 255, 255);
+}
+
+/* --- SIDEBAR OVERLAY (si utilisé) --- */
+.sidebar-overlay.open {
+  display: block;
+}
+
+/* --- ABOUT PP DESIGNER --- */
+.about-ppdesigner {
+  margin-top: 50px;
+  padding: 0;
+  color: #fafafa;
+  text-align: left;
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-ppdesigner h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-ppdesigner p {
+  margin-bottom: 10px;
+}
+
+
+/* --- PNG OVERLAY --- */
+#pngOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 500;
+  transform: translateY(0);
+}
+
+#pngOverlay img:nth-child(1) {
+  top: 8%;
+  left: 5%;
+  width: 30%;
+  position: absolute;
+}
+
+#pngOverlay img:nth-child(2) {
+  top: 5%;
+  left: 55%;
+  width: 25%;
+  position: absolute;
+}
+
+#pngOverlay img:nth-child(3) {
+  top: 45%;
+  left: 85%;
+  width: 15%;
+  transform: rotate(30deg);
+  position: absolute;
+}
+
+#pngOverlay img:nth-child(4) {
+  top: 70%;
+  left: 5%;
+  width: 15%;
+  position: absolute;
+}
+
+#pngOverlay img:nth-child(5) {
+  top: 90%;
+  left: 60%;
+  width: 30%;
+  position: absolute;
+}
+
+#pngOverlay img:nth-child(6) {
+  top: 50%;
+  left: 40%;
+  width: 30%;
+  position: absolute;
+}
+
+/* --- INTERVIEW --- */
+/* Organisation en Grid sur la zone interview */
+
+/* Conteneur qui organise les blocs dans une grille à deux colonnes */
+.blocks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Deux colonnes de largeur égale */
+  gap: 1rem;
+  /* Espacement entre les blocs */
+  margin-bottom: 2rem;
+  /* Espace après l'ensemble des blocs */
+}
+
+/* Chaque bloc image va toujours dans la colonne de gauche */
+.block.left {
+  grid-column: 1;
+}
+
+/* Chaque bloc texte va toujours dans la colonne de droite */
+.block.right {
+  grid-column: 2;
+}
+
+/* Style pour les images */
+.block.left img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 50vw;
+  /* L'image ne dépasse pas 50% de la largeur de la fenêtre */
+}
+
+
+/* Styles pour les textes */
+.interview-text {
+  font-size: 17px;
+  line-height: 1.4;
+  max-width: 800px;
+  color: #424242;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Style commun pour un bloc de dialogue */
+.interview-dialogue {
+  margin-bottom: 2rem;
+  padding: 0;
+  border-radius: 4px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Pour la prise de parole de la Personne 1 : texte aligné à droite */
+.interview-dialogue.person1 {
+  text-align: right;
+  font-style: italic;
+}
+
+/* Pour la prise de parole de la Personne 2 : texte aligné à gauche */
+.interview-dialogue.person2 {
+  text-align: left;
+  font-style: normal;
+}
+
+/* Si besoin, adapter les questions et réponses */
+.interview-dialogue p.question,
+.interview-dialogue p.answer {
+  margin: 0;
+  padding: 0;
+}
+
+/* Player SoundCloud et images dans la colonne de gauche */
+.interview-left .soundcloud-link {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Optionnel : ajuster le style du player si tu veux conserver un fond personnalisé
+   Par exemple, pour éviter le style du lien :
+*/
+.interview-left .soundcloud-link iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* --- Responsive : Adaptation en une colonne sur petit écran --- */
+@media (max-width: 768px) {
+  .column-break {
+    break-after: auto;
+    /* Annule le saut de colonne */
+  }
+
+  .break-line {
+    display: block;
+    /* Affiche le saut de ligne */
+    content: "";
+    width: 100%;
+    height: 1em;
+    /* Ajustez la hauteur du saut de ligne si nécessaire */
+  }
+
+  .designer-tagline,
+  .designer-description {
+    column-count: 1;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .interview-layout {
+    flex-direction: column;
+  }
+
+  .interview-image,
+  .soundcloud-link,
+  .interview-text {
+    margin-top: 1.5rem;
+  }
+}
+
+/* --- THEMES COULEUR PODCAST --- */
+
+/* BLEU : #2955a4 */
+.theme-bleu .designer-block, .theme-bleu .designer-number,
+.theme-bleu .designer-title,
+.theme-bleu .designer-name,
+.theme-bleu .designer-tagline,
+.theme-bleu .designer-tagline::before,
+.theme-bleu .designer-tagline::after,
+.theme-bleu .section-title,
+.theme-bleu .section-title::after {
+  color: #2955a4;
+  border-color: #2955a4;
+}
+
+/* ROSE : #eb589a */
+.theme-rose .designer-number,
+.theme-rose .designer-title,
+.theme-rose .designer-name,
+.theme-rose .designer-tagline,
+.theme-rose .designer-tagline::before,
+.theme-rose .designer-tagline::after,
+.theme-rose .section-title,
+.theme-rose .section-title::after {
+  color: #eb589a;
+  border-color: #eb589a;
+}
+
+/* ORANGE : #ed6d3c */
+.theme-orange .designer-number,
+.theme-orange .interview section,
+.theme-orange .designer-title,
+.theme-orange .designer-name,
+.theme-orange .designer-tagline,
+.theme-orange .designer-tagline::before,
+.theme-orange .designer-tagline::after,
+.theme-orange .section-title,
+.theme-orange .section-title::after {
+  color: #ed6d3c;
+  border-color: #ed6d3c;
+  
+}
+
+.taglines-podcast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.taglines-podcast div {
+  padding: 6px 0;
+  border-bottom: 1px solid currentColor;
+}
+
+.taglines-podcast div:last-child {
+  border-bottom: none;
+}
+
+/* Supprime les filets automatiques de .designer-tagline pour le podcast */
+.taglines-podcast::before,
+.taglines-podcast::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* --- LECTEUR FIXE EN BAS --- */
+.podcast-player-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fafafa;
+  z-index: 1001;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.podcast-player-fixed audio {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.podcast-infos-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1250px;
+  padding: 0 1rem;
+}
+
+.podcast-audio {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.podcast-audio audio {
+  width: 100%;
+}
+
+body.podcast-gradient .taglines-podcast {
+  flex: 1 1 400px;
+}
+
+/* Player audio avec portrait à gauche */
+.podcast-audio.player-inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f5f5f5;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.podcast-audio.player-inline img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.podcast-audio.player-inline audio {
+  flex: 1;
+  max-width: 100%;
+}
+
+
+.close-player {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 1002;
+}
+
+
+.site-footer {
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  background-color: #ffffff00;
+  margin-top: 60px;
+
+}
+
+.site-footer .partenaires {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-footer .partenaires img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
