@@ -80,7 +80,6 @@
 
   <!-- Header Buttons -->
   <div class="header-buttons">
-        <button class="home-button" onclick="window.location.href='index.html';" aria-label="Home"></button>
     <button class="index-button">Index</button>
     <button class="exposition-button" onclick="window.location.href='../futuribles.html';">Exposition</button>
     
@@ -112,7 +111,7 @@
         <div class="podcast-infos-wrapper">
           <div class="podcast-audio player-inline">
             <img src="./img_2/portrait/dot/Nathalie_arnould.png" alt="Nathalie_Arnould">
-            <audio controls>
+            <audio controls preload="none">
               <source src="./media/Nathalie_Design_manager.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la lecture audio.
             </audio>
@@ -139,7 +138,7 @@
         <div class="podcast-infos-wrapper">
           <div class="podcast-audio player-inline">
             <img src="./img_2/portrait/dot/Studio_bouhaniche.png" alt="Portrait de Rémi Bouhaniche">
-            <audio controls>
+            <audio controls preload="none">
               <source src="./media/Remi_Bou_Haniche.mp3" type="audio/mpeg">
               Votre navigateur ne supporte pas la lecture audio.
             </audio>
@@ -165,7 +164,7 @@
           <div class="podcast-infos-wrapper">
             <div class="podcast-audio player-inline">
               <img src="./img_2/portrait/dot/Thibault_Huguet.png" alt="Thibault Huguet">
-              <audio controls>
+              <audio controls preload="none">
                 <source src="./media/Thibault_Huguet.mp3" type="audio/mpeg">
                 Votre navigateur ne supporte pas la lecture audio.
               </audio>
@@ -192,7 +191,7 @@
             <div class="podcast-infos-wrapper">
               <div class="podcast-audio player-inline">
                 <img src="./img_2/portrait/dot/Gabriel_Fontana.png" alt="Gabriel_fontana">
-                <audio controls>
+                <audio controls preload="none">
                   <source src="./media/Gabriel_Fontana.mp3" type="audio/mpeg">
                   Votre navigateur ne supporte pas la lecture audio.
                 </audio>
@@ -219,7 +218,7 @@
               <div class="podcast-infos-wrapper">
                 <div class="podcast-audio player-inline">
                   <img src="./img_2/portrait/dot/Foghar.png" alt="Foghar">
-                  <audio controls>
+                  <audio controls preload="none">
                     <source src="./media/Foghar.mp3" type="audio/mpeg">
                     Votre navigateur ne supporte pas la lecture audio.
                   </audio>
@@ -246,7 +245,7 @@
                 <div class="podcast-infos-wrapper">
                   <div class="podcast-audio player-inline">
                     <img src="./img_2/portrait/dot/mathilde_nuit_bouquet.png" alt="Mathilde_Reynaud">
-                    <audio controls>
+                    <audio controls preload="none">
                       <source src="./media/Mathilde_Reynaud.mp3" type="audio/mpeg">
                       Votre navigateur ne supporte pas la lecture audio.
                     </audio>
@@ -273,7 +272,7 @@
                   <div class="podcast-infos-wrapper">
                     <div class="podcast-audio player-inline">
                       <img src="./img_2/portrait/dot/Juliette_Laroche_Millart.png" alt="Juliette_Larochemillard">
-                      <audio controls>
+                      <audio controls preload="none">
                         <source src="./media/Juliette_Larochemillard.mp3" type="audio/mpeg">
                         Votre navigateur ne supporte pas la lecture audio.
                       </audio>
@@ -294,13 +293,13 @@
                   </div>
                   <section class="interview section" id="Cecile_Poulat">
                     <p class="designer-number">#8.</p>
-                    <h2 class="designer-title">L’expédition Utoupie</h2>
+                    <h2 class="designer-title">L’expédition <br> Utoupie</h2>
                     <h3 class="designer-name">Cécile Poulat</h3>
                     <div class="podcast-infos-wrapper">
                       <div class="podcast-audio player-inline">
                         <img src="./img_2/portrait/dot/Cecile_poulat.png"
                           alt="Thibault Huguet">
-                        <audio controls>
+                          <audio controls preload="none">
                           <source src="./media/Cecile_Poulat_expeditio_Utoupie.mp3" type="audio/mpeg">
                           Votre navigateur ne supporte pas la lecture audio.
                         </audio>
@@ -328,7 +327,7 @@
                       <div class="podcast-infos-wrapper">
                         <div class="podcast-audio player-inline">
                           <img src="./img_2/portrait/dot/Jessica_Perez.png" alt="Thibault Huguet">
-                          <audio controls>
+                          <audio controls preload="none">
                             <source src="./media/Jessica_Perez.mp3" type="audio/mpeg">
                             Votre navigateur ne supporte pas la lecture audio.
                           </audio>
@@ -345,8 +344,12 @@
     </main>
 
     <!-- Pied de page commun -->
-    <footer>
-      <p>© 2025 Futuribles</p>
+    <footer class="site-footer">
+      <p>Futuribles est rendue possible grâce au soutien de nos partenaires, que nous remercions chaleureusement.</p>
+      <div class="partenaires">
+        <img src="../img_2/partenaires.png" alt="Logos des partenaires de l'exposition Futuribles">
+        <p>© 2025 Futuribles</p>
+      </div>
     </footer>
 
 
