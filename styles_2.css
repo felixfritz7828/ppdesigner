@@ -816,21 +816,20 @@ body.podcast-gradient .taglines-podcast {
   text-align: center;
   font-size: 15px;
   color: #000;
-  background-color: #ffffff00;
+  background-color: transparent;
   margin-top: 60px;
-
 }
 
 .site-footer .partenaires {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .site-footer .partenaires img {
-  max-width: 100%;
+  max-width: calc(100vw - 100px); /* <= contraint la largeur */
   height: auto;
   max-height: 80px;
   object-fit: contain;
