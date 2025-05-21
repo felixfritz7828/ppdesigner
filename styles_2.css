@@ -110,6 +110,27 @@ body.podcast-gradient main {
   padding-bottom: 250px;
 }
 
+/* --- BOUTON EXPO --- */
+
+  .btn-futuribles {
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    box-shadow: #000;
+  }
+
+  .btn-futuribles img {
+    width: 300px; /* ajuste selon tes besoins */
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-futuribles:hover img {
+    transform: scale(1.05);
+  }
 
 
 /* --- SEPARATORS --- */
