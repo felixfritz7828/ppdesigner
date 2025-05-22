@@ -10,19 +10,21 @@
 
 <body class="podcast-gradient">
   <div class="podcast-player-fixed">
-    <audio id="globalPlayer" controls>
+    <audio id="globalPlayer" controls preload="none">
       <source src="../media/podcast-global.mp3" type="audio/mpeg">
+      <source src="../media/podcast-global.aac" type="audio/aac">
       Votre navigateur ne supporte pas la lecture audio.
     </audio>
   </div>
   <div class="podcast-player-fixed" id="globalPlayerBar" style="display: none;">
     <button class="close-player" onclick="closeGlobalPlayer()">×</button>
-    <audio id="globalPlayer" controls>
+    <audio id="globalPlayer" controls preload="none">
       <source src="../media/podcast-global.mp3" type="audio/mpeg">
+      <source src="../media/podcast-global.aac" type="audio/aac">
       Votre navigateur ne supporte pas la lecture audio.
     </audio>
   </div>
-  
+
 
   <!-- Fenêtre latérale -->
   <div class="sidebar" id="sidebar">
@@ -82,10 +84,10 @@
   <div class="header-buttons">
     <button class="index-button">Index</button>
     <button class="exposition-button" onclick="window.location.href='../futuribles.html';">Exposition</button>
-    
+
   </div>
 
-</div>
+  </div>
 
 
   <!-- Main Content -->
@@ -113,16 +115,17 @@
             <img src="./img_2/portrait/dot/Nathalie_arnould.png" alt="Nathalie_Arnould">
             <audio controls preload="none">
               <source src="./media/Nathalie_Design_manager.mp3" type="audio/mpeg">
+              <source src="./media/Nathalie_Design_manager.aac" type="audio/aac">
               Votre navigateur ne supporte pas la lecture audio.
             </audio>
           </div>
 
           <div class="designer-tagline taglines-podcast">
             <div><strong>Année :</strong> <span class="infobjet">Depuis 1996</span></div>
-            <div><strong>Durée :</strong> <span class="infobjet">38:00</span></div>
             <div><strong>Format :</strong> <span class="infobjet">Métier</span></div>
-            <div><strong>Mots-clés :</strong> <span class="infobjet">Espace public, commande publique, biennale du∏
+            <div><strong>Mots-clés :</strong> <span class="infobjet">Espace public, commande publique, biennale du
                 design</span></div>
+            <div><strong>Durée :</strong> <span class="infobjet">38:00</span></div>
           </div>
         </div>
       </section>
@@ -140,217 +143,219 @@
             <img src="./img_2/portrait/dot/Studio_bouhaniche.png" alt="Portrait de Rémi Bouhaniche">
             <audio controls preload="none">
               <source src="./media/Remi_Bou_Haniche.mp3" type="audio/mpeg">
+              <source src="./media/Remi_Bou_Haniche.aac" type="audio/aac">
               Votre navigateur ne supporte pas la lecture audio.
             </audio>
           </div>
 
           <div class="designer-tagline taglines-podcast">
             <div><strong>Année :</strong> <span class="infobjet">2019</span></div>
-            <div><strong>Durée :</strong> <span class="infobjet">20:00</span></div>
             <div><strong>Format :</strong> <span class="infobjet">Design d’objet</span></div>
             <div><strong>Mots-clés :</strong> <span class="infobjet">Vignes, territoire, paysage</span></div>
+            <div><strong>Durée :</strong> <span class="infobjet">20:00</span></div>
           </div>
         </div>
       </section>
 
-        <!-- PODCAST 3 -->
-        <div class="carousel">
-          <img src="./img_2/fumee.png" alt="Thibault Huguet">
-        </div>
-        <section class="interview-section" id="Thibault_Hughet">
-          <p class="designer-number">#3.</p>
-          <h2 class="designer-title">Le temps <br>de la production</h2>
-          <h3 class="designer-name">Thibault Huguet</h3>
-          <div class="podcast-infos-wrapper">
-            <div class="podcast-audio player-inline">
-              <img src="./img_2/portrait/dot/Thibault_Huguet.png" alt="Thibault Huguet">
-              <audio controls preload="none">
-                <source src="./media/Thibault_Huguet.mp3" type="audio/mpeg">
-                Votre navigateur ne supporte pas la lecture audio.
-              </audio>
-            </div>
-
-            <div class="designer-tagline taglines-podcast">
-              <div><strong>Année :</strong> <span class="infobjet">Depuis 2014</span></div>
-              <div><strong>Durée :</strong> <span class="infobjet">01:15:00</span></div>
-              <div><strong>Format :</strong> <span class="infobjet">Design d’objet</span></div>
-              <div><strong>Mots-clés :</strong> <span class="infobjet">Artisanat, collaboration
-                  auto-édition</span></div>
-            </div>
-          </div>
-        </section>
-
-          <!-- PODCAST 4 -->
-          <div class="carousel">
-            <img src="./img_2/fontana.png" alt="Gabriel Fontana">
-          </div>
-          <section class="interview-section" id="Gabriel_Fontana">
-            <p class="designer-number">#4.</p>
-            <h2 class="designer-title">Positioning <br>the body <br>as a learning tool</h2>
-            <h3 class="designer-name">Gabriel Fontana</h3>
-            <div class="podcast-infos-wrapper">
-              <div class="podcast-audio player-inline">
-                <img src="./img_2/portrait/dot/Gabriel_Fontana.png" alt="Gabriel_fontana">
-                <audio controls preload="none">
-                  <source src="./media/Gabriel_Fontana.mp3" type="audio/mpeg">
-                  Votre navigateur ne supporte pas la lecture audio.
-                </audio>
-              </div>
-
-              <div class="designer-tagline taglines-podcast">
-                <div><strong>Année :</strong> <span class="infobjet">2019 - en cours</span></div>
-                <div><strong>Durée :</strong> <span class="infobjet">36:00</span></div>
-                <div><strong>Format :</strong> <span class="infobjet">Essai, sport</span></div>
-                <div><strong>Mots-clés :</strong> <span class="infobjet">Pédagogie queer, normes sociales, jeu</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-            <!-- PODCAST 5 -->
-            <div class="carousel">
-              <img src="./img_2/foghar studio copie.png" alt="Foghar Studio">
-            </div>
-            <section class="interview section" id="Foghar_Studio">
-              <p class="designer-number">#5.</p>
-              <h2 class="designer-title">La recherche <br> de matière</h2>
-              <h3 class="designer-name">Foghar Studio</h3>
-              <div class="podcast-infos-wrapper">
-                <div class="podcast-audio player-inline">
-                  <img src="./img_2/portrait/dot/Foghar.png" alt="Foghar">
-                  <audio controls preload="none">
-                    <source src="./media/Foghar.mp3" type="audio/mpeg">
-                    Votre navigateur ne supporte pas la lecture audio.
-                  </audio>
-                </div>
-
-                <div class="designer-tagline taglines-podcast">
-                  <div><strong>Année :</strong> <span class="infobjet">Depuis 2020</span></div>
-                  <div><strong>Durée :</strong> <span class="infobjet">30:00</span></div>
-                  <div><strong>Format :</strong> <span class="infobjet">Recherche</span></div>
-                  <div><strong>Mots-clés :</strong> <span class="infobjet">Feuilles mortes, matériau durable</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-              <!-- PODCAST 6 -->
-              <div class="carousel">
-                <img src="./img_2/main mathilde 3.png" alt="Mathilde Reynaud">
-              </div>
-              <section class="interview section" id="Mathilde_Reynaud">
-                <p class="designer-number">#6.</p>
-                <h2 class="designer-title">Ce qu’il reste <br> à la nuit</h2>
-                <h3 class="designer-name">Mathilde Reynaud</h3>
-                <div class="podcast-infos-wrapper">
-                  <div class="podcast-audio player-inline">
-                    <img src="./img_2/portrait/dot/mathilde_nuit_bouquet.png" alt="Mathilde_Reynaud">
-                    <audio controls preload="none">
-                      <source src="./media/Mathilde_Reynaud.mp3" type="audio/mpeg">
-                      Votre navigateur ne supporte pas la lecture audio.
-                    </audio>
-                  </div>
-
-                  <div class="designer-tagline taglines-podcast">
-                    <div><strong>Année :</strong> <span class="infobjet">2024</span></div>
-                    <div><strong>Durée :</strong> <span class="infobjet">24:00</span></div>
-                    <div><strong>Format :</strong> <span class="infobjet">Film, installation, jeu vidéo</span></div>
-                    <div><strong>Mots-clés :</strong> <span class="infobjet">Science-fiction, corps célestes,
-                        espace</span></div>
-                  </div>
-                </div>
-              </section>
-
-                <!-- PODCAST 7 -->
-                <div class="carousel">
-                  <img src="./img_2/Dessin_lampe_juliette_laroche.png" alt="Juliette_Laroche_Millart">
-                </div>
-                <section class="interview section" id="Juliette Laroche">
-                  <p class="designer-number">#7.</p>
-                  <h2 class="designer-title">Design circulaire</h2>
-                  <h3 class="designer-name">Juliette Laroche</h3>
-                  <div class="podcast-infos-wrapper">
-                    <div class="podcast-audio player-inline">
-                      <img src="./img_2/portrait/dot/Juliette_Laroche_Millart.png" alt="Juliette_Larochemillard">
-                      <audio controls preload="none">
-                        <source src="./media/Juliette_Larochemillard.mp3" type="audio/mpeg">
-                        Votre navigateur ne supporte pas la lecture audio.
-                      </audio>
-                    </div>
-
-                    <div class="designer-tagline taglines-podcast">
-                      <div><strong>Année :</strong> <span class="infobjet">Depuis 2022</span></div>
-                      <div><strong>Durée :</strong> <span class="infobjet">17:00</span></div>
-                      <div><strong>Format :</strong> <span class="infobjet"> Design d’objet </span></div>
-                      <div><strong>Mots-clés :</strong> <span class="infobjet">Reconsidérer, économie sociale et
-                          solidaire</span></div>
-                    </div>
-                  </div>
-        </section>
-                  <!-- PODCAST 8 -->
-                  <div class="carousel">
-                    <img src="./img_2/croquis machine orange trait.png" alt="Cecile_Poulat">
-                  </div>
-                  <section class="interview section" id="Cecile_Poulat">
-                    <p class="designer-number">#8.</p>
-                    <h2 class="designer-title">L’expédition <br> Utoupie</h2>
-                    <h3 class="designer-name">Cécile Poulat</h3>
-                    <div class="podcast-infos-wrapper">
-                      <div class="podcast-audio player-inline">
-                        <img src="./img_2/portrait/dot/Cecile_poulat.png"
-                          alt="Thibault Huguet">
-                          <audio controls preload="none">
-                          <source src="./media/Cecile_Poulat_expeditio_Utoupie.mp3" type="audio/mpeg">
-                          Votre navigateur ne supporte pas la lecture audio.
-                        </audio>
-                      </div>
-
-                      <div class="designer-tagline taglines-podcast">
-                        <div><strong>Année :</strong> <span class="infobjet">2025 - en cours</span></div>
-                        <div><strong>Durée :</strong> <span class="infobjet">24:00</span></div>
-                        <div><strong>Format :</strong> <span class="infobjet"> Objet itinérant </span>
-                        </div>
-                        <div><strong>Mots-clés :</strong> <span class="infobjet">Artisanat, machine révolutive,
-                            utoupies</span></div>
-                      </div>
-                    </div>
-                  </section>
-                  
-                    <!-- PODCAST 9 -->
-                    <div class="carousel">
-                      <img src="./img_2/dessin_pyramide_final.png" alt="Jessica_Perez">
-                    </div>
-                    <section class="interview section" id="Jessica_Perez">
-                      <p class="designer-number">#9.</p>
-                      <h2 class="designer-title">Murmure <br>des marais</h2>
-                      <h3 class="designer-name">Jessica Perez</h3>
-                      <div class="podcast-infos-wrapper">
-                        <div class="podcast-audio player-inline">
-                          <img src="./img_2/portrait/dot/Jessica_Perez.png" alt="Thibault Huguet">
-                          <audio controls preload="none">
-                            <source src="./media/Jessica_Perez.mp3" type="audio/mpeg">
-                            Votre navigateur ne supporte pas la lecture audio.
-                          </audio>
-                        </div>
-
-                        <div class="designer-tagline taglines-podcast">
-                          <div><strong>Année :</strong> <span class="infobjet">2025 - en cours</span></div>
-                          <div><strong>Format :</strong> <span class="infobjet"> Son, vidéo </span></div>
-                          <div><strong>Mots-clés :</strong> <span class="infobjet">Instruments, zone humide, éléments
-                              naturels</span></div>
-                          <div><strong>Durée :</strong> <span class="infobjet">27:00</span></div>
-                        </div>
-                      </section>
-    </main>
-
-    <!-- Pied de page commun -->
-    <footer class="site-footer">
-      <p>Futuribles est rendue possible grâce au soutien de nos partenaires, que nous remercions chaleureusement.</p>
-      <div class="partenaires">
-        <img src="../img_2/partenaires.png" alt="Logos des partenaires de l'exposition Futuribles">
-        <p>© 2025 Futuribles</p>
+      <!-- PODCAST 3 -->
+      <div class="carousel">
+        <img src="./img_2/fumee.png" alt="Thibault Huguet">
       </div>
-    </footer>
+      <section class="interview-section" id="Thibault_Hughet">
+        <p class="designer-number">#3.</p>
+        <h2 class="designer-title">Le temps <br> de la production</h2>
+        <h3 class="designer-name">Thibault Huguet</h3>
+        <div class="podcast-infos-wrapper">
+          <div class="podcast-audio player-inline">
+            <img src="./img_2/portrait/dot/Thibault_Huguet.png" alt="Thibault Huguet">
+            <audio controls preload="none">
+              <source src="./media/Thibault_Huguet.mp3" type="audio/mpeg">
+              <source src="./media/Thibault_Huguet.aac" type="audio/aac">
+              Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+          </div>
+
+          <div class="designer-tagline taglines-podcast">
+            <div><strong>Année :</strong> <span class="infobjet">Depuis 2014</span></div>
+            <div><strong>Format :</strong> <span class="infobjet">Design d’objet</span></div>
+            <div><strong>Mots-clés :</strong> <span class="infobjet">Artisanat, collaboration, auto-édition</span></div>
+            <div><strong>Durée :</strong> <span class="infobjet">01:15:00</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PODCAST 4 -->
+      <div class="carousel">
+        <img src="./img_2/fontana.png" alt="Gabriel Fontana">
+      </div>
+      <section class="interview-section" id="Gabriel_Fontana">
+        <p class="designer-number">#4.</p>
+        <h2 class="designer-title">Positioning <br> the body <br> as a learning tool</h2>
+        <h3 class="designer-name">Gabriel Fontana</h3>
+        <div class="podcast-infos-wrapper">
+          <div class="podcast-audio player-inline">
+            <img src="./img_2/portrait/dot/Gabriel_Fontana.png" alt="Gabriel_fontana">
+            <audio controls preload="none">
+              <source src="./media/Gabriel_Fontana.mp3" type="audio/mpeg">
+              <source src="./media/Gabriel_Fontana.aac" type="audio/aac">
+              Votre navigateur ne supporte pas la lecture audio.
+            </audio>
+          </div>
+
+          <div class="designer-tagline taglines-podcast">
+            <div><strong>Année :</strong> <span class="infobjet">2019 - en cours</span></div>
+            <div><strong>Format :</strong> <span class="infobjet">Essai, sport</span></div>
+            <div><strong>Mots-clés :</strong> <span class="infobjet">Pédagogie queer, normes sociales, jeu</span></div>
+            <div><strong>Durée :</strong> <span class="infobjet">36:00</span></div>
+          </div>
+        </div>
+  </div>
+  </section>
+
+  <!-- PODCAST 5 -->
+  <div class="carousel">
+    <img src="./img_2/foghar studio copie.png" alt="Foghar Studio">
+  </div>
+  <section class="interview section" id="Foghar_Studio">
+    <p class="designer-number">#5.</p>
+    <h2 class="designer-title">La recherche <br> de matière</h2>
+    <h3 class="designer-name">Foghar Studio</h3>
+    <div class="podcast-infos-wrapper">
+      <div class="podcast-audio player-inline">
+        <img src="./img_2/portrait/dot/Foghar.png" alt="Foghar">
+        <audio controls preload="none">
+          <source src="./media/Foghar.mp3" type="audio/mpeg">
+          <source src="./media/Foghar.aac" type="audio/aac">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+
+      <div class="designer-tagline taglines-podcast">
+        <div><strong>Année :</strong> <span class="infobjet">Depuis 2020</span></div>
+        <div><strong>Format :</strong> <span class="infobjet">Recherche</span></div>
+        <div><strong>Mots-clés :</strong> <span class="infobjet">Feuilles mortes, matériau durable</span></div>
+        <div><strong>Durée :</strong> <span class="infobjet">30:00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCAST 6 -->
+  <div class="carousel">
+    <img src="./img_2/main mathilde 3.png" alt="Mathilde Reynaud">
+  </div>
+  <section class="interview section" id="Mathilde_Reynaud">
+    <p class="designer-number">#6.</p>
+    <h2 class="designer-title">Ce qu’il reste <br> à la nuit</h2>
+    <h3 class="designer-name">Mathilde Reynaud</h3>
+    <div class="podcast-infos-wrapper">
+      <div class="podcast-audio player-inline">
+        <img src="./img_2/portrait/dot/mathilde_nuit_bouquet.png" alt="Mathilde_Reynaud">
+        <audio controls preload="none">
+          <source src="./media/Mathilde_Reynaud.mp3" type="audio/mpeg">
+          <source src="./media/Mathilde_Reynaud.aac" type="audio/aac">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+
+      <div class="designer-tagline taglines-podcast">
+        <div><strong>Année :</strong> <span class="infobjet">2024</span></div>
+        <div><strong>Format :</strong> <span class="infobjet">Film, installation, jeu vidéo </span></div>
+        <div><strong>Mots-clés :</strong> <span class="infobjet">Science-fiction, corps célestes, espace</span></div>
+        <div><strong>Durée :</strong> <span class="infobjet">24:00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCAST 7 -->
+  <div class="carousel">
+    <img src="./img_2/Dessin_lampe_juliette_laroche.png" alt="Juliette_Laroche_Millart">
+  </div>
+  <section class="interview section" id="Juliette Laroche">
+    <p class="designer-number">#7.</p>
+    <h2 class="designer-title">Design circulaire</h2>
+    <h3 class="designer-name">Juliette Laroche</h3>
+    <div class="podcast-infos-wrapper">
+      <div class="podcast-audio player-inline">
+        <img src="./img_2/portrait/dot/Juliette_Laroche_Millart.png" alt="Juliette_Larochemillard">
+        <audio controls preload="none">
+          <source src="./media/Juliette_Larochemillard.mp3" type="audio/mpeg">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+
+      <div class="designer-tagline taglines-podcast">
+        <div><strong>Année :</strong> <span class="infobjet">Depuis 2022</span></div>
+        <div><strong>Durée :</strong> <span class="infobjet">17:00</span></div>
+        <div><strong>Format :</strong> <span class="infobjet"> Design d’objet </span></div>
+        <div><strong>Mots-clés :</strong> <span class="infobjet">Reconsidérer, économie sociale et solidaire</span>
+        </div>
+        <div><strong>Durée :</strong> <span class="infobjet">17:00</span></div>
+      </div>
+    </div>
+  </section>
+  <!-- PODCAST 8 -->
+  <div class="carousel">
+    <img src="./img_2/croquis machine orange trait.png" alt="Cecile_Poulat">
+  </div>
+  <section class="interview section" id="Cecile_Poulat">
+    <p class="designer-number">#8.</p>
+    <h2 class="designer-title">L’expédition <br> Utoupie</h2>
+    <h3 class="designer-name">Cécile Poulat</h3>
+    <div class="podcast-infos-wrapper">
+      <div class="podcast-audio player-inline">
+        <img src="./img_2/portrait/dot/Cecile_poulat.png" alt="Thibault Huguet">
+        <audio controls preload="none">
+          <source src="./media/Cecile_Poulat_expeditio_Utoupie.mp3" type="audio/mpeg">
+          <source src="./media/Cecile_Poulat_expeditio_Utoupie.aac" type="audio/aac">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+
+      <div class="designer-tagline taglines-podcast">
+        <div><strong>Année :</strong> <span class="infobjet">2025 - en cours</span></div>
+        <div><strong>Format :</strong> <span class="infobjet"> Objet itinérant </span></div>
+        <div><strong>Mots-clés :</strong> <span class="infobjet">Artisanat, machine révolutive, utoupies</span></div>
+        <div><strong>Durée :</strong> <span class="infobjet">24:00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PODCAST 9 -->
+  <div class="carousel">
+    <img src="./img_2/dessin_pyramide_final.png" alt="Jessica_Perez">
+  </div>
+  <section class="interview section" id="Jessica_Perez">
+    <p class="designer-number">#9.</p>
+    <h2 class="designer-title">Murmure <br> des marais</h2>
+    <h3 class="designer-name">Jessica Perez</h3>
+    <div class="podcast-infos-wrapper">
+      <div class="podcast-audio player-inline">
+        <img src="./img_2/portrait/dot/Jessica_Perez.png" alt="Thibault Huguet">
+        <audio controls preload="none">
+          <source src="./media/Jessica_Perez.mp3" type="audio/mpeg">
+          <source src="./media/Jessica_Perez.aac" type="audio/aac">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+
+      <div class="designer-tagline taglines-podcast">
+        <div><strong>Année :</strong> <span class="infobjet">2025 - en cours</span></div>
+        <div><strong>Format :</strong> <span class="infobjet"> Son, vidéo </span></div>
+        <div><strong>Mots-clés :</strong> <span class="infobjet">Instruments, zone humide, éléments
+            naturels</span></div>
+        <div><strong>Durée :</strong> <span class="infobjet">27:00</span></div>
+      </div>
+  </section>
+  </main>
+
+  <!-- Pied de page commun -->
+  <footer class="site-footer">
+    <p>Futuribles est rendue possible grâce au soutien de nos partenaires, que nous remercions chaleureusement.</p>
+    <div class="partenaires">
+      <img src="../img_2/partenaires.png" alt="Logos des partenaires de l'exposition Futuribles">
+      <p>© 2025 Futuribles</p>
+    </div>
+  </footer>
 
 
   <script src="./script.js"></script>
