@@ -1,13 +1,37 @@
-/* --- VARIABLES & GLOBAL FONT SETTINGS --- */
+/* --------------------------------------------------
+   FEUILLE DE STYLE — FUTURIBLES
+   Organisation :
+   1. Variables et réglages globaux
+   2. Font-face (import typographies)
+   3. Reset CSS
+   4. Typographie globale
+   5. Body et dégradés
+   6. Boutons (généraux et spécifiques)
+   7. Titres, sections, blocs designer
+   8. Carrousels
+   9. Sidebar (menu latéral)
+  10. Footer
+  11. Overlays PNG
+  12. Podcast (gradient, player, taglines)
+  13. Interviews (grille, dialogues)
+  14. Responsive (mobile)
+-------------------------------------------------- */
+
+/* ---------------------------------------------
+   1. VARIABLES & GLOBAL FONT SETTINGS
+--------------------------------------------- */
+
 :root {
-  /* OpenType stylistic set 09 globally */
   --ff-ss09: "ss09" 1;
   font-feature-settings: var(--ff-ss09);
   -webkit-font-feature-settings: var(--ff-ss09);
   -moz-font-feature-settings: var(--ff-ss09);
 }
 
-/* --- FONT-FACE --- */
+/* ---------------------------------------------
+   2. FONT-FACE
+--------------------------------------------- */
+
 @font-face {
   font-family: 'HabenGrotesk-Medium';
   src: url('typos/HabenGrotesk-Medium.woff2') format('woff2');
@@ -29,14 +53,20 @@
   font-style: normal;
 }
 
-/* --- RESET --- */
+/* ---------------------------------------------
+   3. RESET CSS
+--------------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* --- TYPOGRAPHIE GLOBALE POUR HABENGROTESK --- */
+/* ---------------------------------------------
+   4. TYPOGRAPHIE GLOBALE
+--------------------------------------------- */
+
 body,
 header h1,
 p,
@@ -59,18 +89,27 @@ footer,
   -webkit-font-feature-settings: var(--ff-ss09);
   -moz-font-feature-settings: var(--ff-ss09);
 }
+.infobjet {
+  font-family: 'IBMPlexMono', sans-serif;
+  font-feature-settings: "ss04" 1;
+  -webkit-font-feature-settings: "ss04" 1;
+  -moz-font-feature-settings: "ss04" 1;
+}
 
-/* --- BODY --- */
+/* ---------------------------------------------
+   5. BODY & GRADIENTS
+--------------------------------------------- */
+
 body {
   font-family: 'HabenGrotesk-Medium', sans-serif;
   line-height: 1;
   color: #000000;
   background: linear-gradient(to bottom,
       #ed6d3c 0%,
-      #ed6d3c 1%,
-      #fafafa 1.2%,
-      #fafafa 97.8%,
-      #eb589a 98%,
+      #ed6d3c 0.2%,
+      #fafafa 0.6%,
+      #fafafa 99.4%,
+      #eb589a 99.8%,
       #eb589a 100%);
   font-size: 16px;
   text-align: center;
@@ -78,14 +117,12 @@ body {
 
 body.podcast-gradient {
   background: linear-gradient(to bottom,
-      /* orange en haut */
+
       #ed6d3c 0%,
-      #ed6d3c 2%,
-      /* neutre au centre */
-      #fafafa 6%,
-      #fafafa 95%,
-      /* bleu en bas */
-      #2955a4 98%,
+      #ed6d3c 0.8%,
+      #fafafa 2.3%,
+      #fafafa 97.5%,
+      #2955a4 99%,
       #2955a4 100%);
 }
 
@@ -93,11 +130,13 @@ body.podcast-gradient .taglines-podcast div {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  gap: 1em; /* espace entre label et contenu */
+  gap: 1em;
+  /* espace entre label et contenu */
 }
 
 body.podcast-gradient .taglines-podcast strong {
-  width: 100px; /* largeur fixe pour alignement parfait */
+  width: 100px;
+  /* largeur fixe pour alignement parfait */
   flex-shrink: 0;
   text-align: left;
 }
@@ -112,25 +151,26 @@ body.podcast-gradient main {
 
 /* --- BOUTON EXPO --- */
 
-  .btn-futuribles {
-    padding: 20px;
-    display: inline-block;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    background: none;
-    box-shadow: #000;
-  }
+.btn-futuribles {
+  padding: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+  box-shadow: #000;
+}
 
-  .btn-futuribles img {
-    width: 300px; /* ajuste selon tes besoins */
-    height: auto;
-    transition: transform 0.2s ease;
-  }
+.btn-futuribles img {
+  width: 300px;
+  /* ajuste selon tes besoins */
+  height: auto;
+  transition: transform 0.2s ease;
+}
 
-  .btn-futuribles:hover img {
-    transform: scale(1.05);
-  }
+.btn-futuribles:hover img {
+  transform: scale(1.05);
+}
 
 
 /* --- SEPARATORS --- */
@@ -174,14 +214,6 @@ header h1 {
   justify-content: center;
   align-items: center;
 }
-#home-block-podcast {
-position: relative;
-width: 60%;
-height: 50vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
 
 #home-block img {
   max-width: 100%;
@@ -200,7 +232,7 @@ align-items: center;
   margin-bottom: -50px;
   font-weight: 500;
   display: inline-block;
-  white-space: nowrap;
+  white-space: normal;
   transition: margin-bottom 0.3s ease;
 }
 
@@ -222,6 +254,25 @@ align-items: center;
   }
 }
 
+@media (max-width: 400px) {
+  .designer-title {
+    margin-bottom: 0px;
+    width: screen;
+  }
+}
+
+@media (max-width: 768px) {
+  .designer-number{
+    margin-bottom: 10px;
+    width: screen;
+  }
+}
+@media (max-width: 400px) {
+  .designer-number{
+    margin-bottom: 20px;
+     }
+}
+
 .designer-name {
   font-size: calc(10vw * 4 / 5);
   margin-bottom: 8px;
@@ -233,7 +284,7 @@ align-items: center;
 
 .designer-number {
   font-size: calc(10vw * 3 / 5);
-  margin-bottom: -20px;
+  margin-bottom: -5px;
   font-weight: 400;
   color: #000000;
   font-family: 'Pardon-4x4', sans-serif;
@@ -291,13 +342,6 @@ align-items: center;
   /* Masqué par défaut */
 }
 
-/* --- TYPOGRAPHIE SPÉCIFIQUE --- */
-.infobjet {
-  font-family: 'IBMPlexMono', sans-serif;
-  font-feature-settings: "ss04" 1;
-  -webkit-font-feature-settings: "ss04" 1;
-  -moz-font-feature-settings: "ss04" 1;
-}
 
 /* --- CAROUSEL --- */
 .carousel {
@@ -360,10 +404,12 @@ footer {
   left: 20px;
   z-index: 1001;
 }
+
 .button-group {
   display: flex;
   gap: 10px;
 }
+
 .header-buttons button {
   margin-right: 10px;
 }
@@ -669,48 +715,6 @@ body.sidebar-open .header-buttons button {
   }
 }
 
-/* --- THEMES COULEUR PODCAST --- */
-
-/* BLEU : #2955a4 */
-.theme-bleu .designer-block, .theme-bleu .designer-number,
-.theme-bleu .designer-title,
-.theme-bleu .designer-name,
-.theme-bleu .designer-tagline,
-.theme-bleu .designer-tagline::before,
-.theme-bleu .designer-tagline::after,
-.theme-bleu .section-title,
-.theme-bleu .section-title::after {
-  color: #2955a4;
-  border-color: #2955a4;
-}
-
-/* ROSE : #eb589a */
-.theme-rose .designer-number,
-.theme-rose .designer-title,
-.theme-rose .designer-name,
-.theme-rose .designer-tagline,
-.theme-rose .designer-tagline::before,
-.theme-rose .designer-tagline::after,
-.theme-rose .section-title,
-.theme-rose .section-title::after {
-  color: #eb589a;
-  border-color: #eb589a;
-}
-
-/* ORANGE : #ed6d3c */
-.theme-orange .designer-number,
-.theme-orange .interview section,
-.theme-orange .designer-title,
-.theme-orange .designer-name,
-.theme-orange .designer-tagline,
-.theme-orange .designer-tagline::before,
-.theme-orange .designer-tagline::after,
-.theme-orange .section-title,
-.theme-orange .section-title::after {
-  color: #ed6d3c;
-  border-color: #ed6d3c;
-  
-}
 
 .taglines-podcast {
   display: flex;
@@ -818,6 +822,19 @@ body.podcast-gradient .taglines-podcast {
   z-index: 1002;
 }
 
+.podcast-audio.player-inline {
+  position: relative;
+  cursor: pointer;
+}
+
+.glyph-icon {
+  font-family: 'HabenGrotesk-Medium', sans-serif;
+  font-size: 32px;
+  color: #000;
+  margin-right: 8px;
+  line-height: 1;
+}
+
 
 .site-footer {
   padding: 60px 20px;
@@ -837,7 +854,8 @@ body.podcast-gradient .taglines-podcast {
 }
 
 .site-footer .partenaires img {
-  max-width: calc(100vw - 100px); /* <= contraint la largeur */
+  max-width: calc(100vw - 100px);
+  /* <= contraint la largeur */
   height: auto;
   max-height: 80px;
   object-fit: contain;
@@ -856,12 +874,12 @@ body.landing-page {
   align-items: center;
   text-align: center;
   background: linear-gradient(to bottom,
-    #ed6d3c 0%,
-    #ed6d3c 2%,
-    #fafafa 5%,
-    #fafafa 95%,
-    #2955a4 98%,
-    #2955a4 100%);
+      #ed6d3c 0%,
+      #ed6d3c 2%,
+      #fafafa 5%,
+      #fafafa 95%,
+      #2955a4 98%,
+      #2955a4 100%);
   padding: 40px 20px;
 }
 
