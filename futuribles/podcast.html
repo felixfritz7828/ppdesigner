@@ -18,13 +18,19 @@
   </div>
   <div class="podcast-player-fixed" id="globalPlayerBar" style="display: none;">
     <button class="close-player" onclick="closeGlobalPlayer()">×</button>
-    <audio id="globalPlayer" controls preload="none">
-      <source src="../media/podcast-global.mp3" type="audio/mpeg">
-      <source src="../media/podcast-global.aac" type="audio/aac">
-      Votre navigateur ne supporte pas la lecture audio.
-    </audio>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <img id="globalPlayerPortrait" src="" alt="Portrait" style="width: 64px; height: 64px; object-fit: cover; border-radius: 4px;">
+      <div style="flex: 1;">
+        <div id="globalPlayerMeta1" style="font-weight: bold;">#X – Nom</div>
+        <div id="globalPlayerMeta2" style="font-size: 0.9em;">Titre du podcast</div>
+        <audio id="globalPlayer" controls preload="none" style="width: 100%; margin-top: 0.5rem;">
+          <source src="" type="audio/mpeg">
+          Votre navigateur ne supporte pas la lecture audio.
+        </audio>
+      </div>
+    </div>
   </div>
-
+  
 
   <!-- Fenêtre latérale -->
   <div class="sidebar" id="sidebar">
@@ -54,7 +60,7 @@
       <li><a href="#designer-22">22. Madé Mathieu (2022)</a></li>
       <li><a href="#designer-23">23. Perrine Kamoun (2022)</a></li>
       <li><a href="#designer-24">24. Very Good Design (2022)</a></li>
-      <li><a href="#designer-25">25.Emma Faury—Graziani (2022)</a></li>
+      <li><a href="#designer-25">25. Emma Faury—Graziani (2022)</a></li>
       <li><a href="#designer-26">26. Félix Fritz (2022)</a></li>
       <li><a href="#designer-27">27. Jovien Panné (2023)</a></li>
       <li><a href="#designer-28">28. Simon Henry (2023)</a></li>
@@ -367,15 +373,14 @@
 
   <!-- Pied de page commun -->
   <footer class="site-footer">
-    <p>Futuribles est rendue possible grâce au soutien de nos partenaires, que nous remercions chaleureusement.</p>
-    <div class="partenaires">
+        <div class="partenaires">
       <img src="../img_2/partenaires.png" alt="Logos des partenaires de l'exposition Futuribles">
       <p>© 2025 Futuribles</p>
     </div>
   </footer>
 
 
-  <script src="./script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
