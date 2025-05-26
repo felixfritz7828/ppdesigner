@@ -922,6 +922,7 @@ body.podcast-gradient .taglines-podcast {
 .site-footer {
   /*padding: 60px 20px;*/
   text-align: center;
+  align-items: center;
   font-size: 15px;
   color: #000;
   background-color: transparent;
