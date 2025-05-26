@@ -918,6 +918,13 @@ body.podcast-gradient .taglines-podcast {
   line-height: 1;
 }
 
+.landing-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .site-footer {
   /*padding: 60px 20px;*/
