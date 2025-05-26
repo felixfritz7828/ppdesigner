@@ -284,6 +284,9 @@ header h1 {
     margin-bottom: 10px;
     width: screen;
   }
+  .landing-wrapper {
+    max-height: screen;
+  }
 }
 @media (max-width: 400px) {
   .designer-number{
