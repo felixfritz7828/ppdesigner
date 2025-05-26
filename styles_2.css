@@ -163,9 +163,8 @@ body.podcast-gradient main {
 }
 
 .btn-futuribles img {
-  width: 300px;
+  max-width: 250px;
   /* ajuste selon tes besoins */
-  height: auto;
   transition: transform 0.2s ease;
 }
 
@@ -921,16 +920,16 @@ body.podcast-gradient .taglines-podcast {
 
 
 .site-footer {
-  padding: 60px 20px;
+  /*padding: 60px 20px;*/
   text-align: center;
   font-size: 15px;
   color: #000;
   background-color: transparent;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
 }
 
 .site-footer .partenaires {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -941,7 +940,7 @@ body.podcast-gradient .taglines-podcast {
   max-width: calc(100vw - 100px);
   /* <= contraint la largeur */
   height: auto;
-  max-height: 80px;
+  max-height: 100px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.9;
