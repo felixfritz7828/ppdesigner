@@ -937,13 +937,15 @@ body.podcast-gradient .taglines-podcast {
 }
 
 .site-footer .partenaires img {
+  
   max-width: calc(100vw - 100px);
   /* <= contraint la largeur */
   height: auto;
-  max-height: 100px;
+  max-height: 80px;
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.9;
+   align-items: center;
 }
 
 
