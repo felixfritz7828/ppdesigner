@@ -1,103 +1,175 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const indexButton = document.querySelector('.index-button');
-  const sidebar = document.getElementById('sidebar');
-  const sidebarOverlay = document.getElementById('sidebar-overlay');
-  const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
+  // Gestion de la sidebar
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
 
-  indexButton.addEventListener('click', function () {
-    sidebar.classList.toggle('open');
-    sidebarOverlay.classList.toggle('open');
-    body.classList.toggle('sidebar-open'); // Ajoute ou retire la classe 'sidebar-open' au corps
-  });
+  if (sidebar && overlay) {
+    // Ajout d'une classe 'sidebar-open' au body pour ouverture
+    const toggleSidebar = () => {
+      sidebar.classList.toggle("open");
+      overlay.classList.toggle("open");
+      document.body.classList.toggle("sidebar-open");
+    };
 
-  const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      sidebar.classList.remove('open');
-      sidebarOverlay.classList.remove('open');
-      body.classList.remove('sidebar-open'); // Retire la classe 'sidebar-open' du corps
-    });
-  });
+    // Si le overlay est cliqué, fermer la sidebar
+    overlay.addEventListener("click", toggleSidebar);
 
-  sidebarOverlay.addEventListener('click', function () {
-    sidebar.classList.remove('open');
-    sidebarOverlay.classList.remove('open');
-    body.classList.remove('sidebar-open'); // Retire la classe 'sidebar-open' du corps
-  });
+    // Ajoute un bouton d'ouverture si besoin
+    const indexButtons = document.querySelectorAll(".index-button");
+    indexButtons.forEach(btn => btn.addEventListener("click", toggleSidebar));
+  }
 
+  // Animation PNG overlay (si existant)
   const pngOverlay = document.getElementById('pngOverlay');
   window.addEventListener('scroll', function () {
     pngOverlay.style.transform = 'translateY(' + (window.scrollY * 1.5) + 'px)';
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const globalPlayer = document.getElementById("globalPlayer");
-  const inlinePlayers = document.querySelectorAll(".podcast-audio audio");
-
-  inlinePlayers.forEach(inline => {
-    inline.addEventListener("play", (e) => {
-      const source = inline.querySelector("source");
-      const newSrc = source ? source.getAttribute("src") : null;
-
-      if (newSrc && globalPlayer.src !== window.location.origin + "/" + newSrc) {
-        globalPlayer.src = newSrc;
-        globalPlayer.play();
-      }
-
-      // Empêche la lecture dans le player inline
-      inline.pause();
-      inline.currentTime = 0;
+  // Affichage personnalisé du lecteur audio global (si défini)
+  const globalPlayerBar = document.getElementById("globalPlayerBar");
+  const closeBtn = document.querySelector(".close-player");
+  if (globalPlayerBar && closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      globalPlayerBar.style.display = "none";
+    
+    document.querySelectorAll(".player-inline.is-playing").forEach(el => {
+      el.classList.remove("is-playing");
+      const icon = el.querySelector(".glyph-icon");
+      if (icon) icon.textContent = "\\u25B7"; // ▶︎ retour au repos
     });
-  });
+});
+  }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const globalPlayer = document.getElementById("globalPlayer");
-  const globalBar = document.getElementById("globalPlayerBar");
 
-  // Si une source est stockée en mémoire, on la réaffiche
-  const storedSrc = localStorage.getItem("futuribles-player-src");
-  if (storedSrc) {
-    globalPlayer.src = storedSrc;
-    globalBar.style.display = "block";
+
+// --- SYNCHRONISATION DU LECTEUR GLOBAL AVEC LES BLOCS INLINE ---
+const globalPlayerBar = document.getElementById("globalPlayerBar");
+const globalPlayer = globalPlayerBar?.querySelector("audio");
+const portrait = document.getElementById("globalPlayerPortrait");
+const meta1 = document.getElementById("globalPlayerMeta1");
+const meta2 = document.getElementById("globalPlayerMeta2");
+
+if (globalPlayerBar && globalPlayer && portrait && meta1 && meta2) {
+  const inlinePlayers = document.querySelectorAll(".podcast-audio.player-inline audio");
+
+  const globalPlayerBar = document.getElementById("globalPlayerBar");
+  const globalPlayer = globalPlayerBar?.querySelector("audio");
+  const portrait = document.getElementById("globalPlayerPortrait");
+  const meta1 = document.getElementById("globalPlayerMeta1");
+  const meta2 = document.getElementById("globalPlayerMeta2");
+
+  if (globalPlayerBar && globalPlayer && portrait && meta1 && meta2) {
+    const inlineBlocks = document.querySelectorAll(".podcast-audio.player-inline");
+
+    inlineBlocks.forEach((block) => {
+  // Ajoute dynamiquement le glyphe si absent
+  let icon = block.querySelector(".glyph-icon");
+  if (!icon) {
+    icon = document.createElement("span");
+    icon.className = "glyph-icon";
+    icon.textContent = "\u25B7"; // ▶︎ lecture par défaut
+    block.insertBefore(icon, block.firstChild);
   }
 
-  // On capte les clics sur tous les lecteurs inline
-  const inlinePlayers = document.querySelectorAll(".podcast-audio audio");
-  inlinePlayers.forEach(inline => {
-    inline.addEventListener("play", (e) => {
-      const source = inline.querySelector("source");
-      const newSrc = source ? source.getAttribute("src") : null;
+      const audio = block.querySelector("audio");
+      const source = audio?.querySelector("source");
 
-      if (newSrc) {
-        // Met à jour le lecteur global
-        globalPlayer.src = newSrc;
-        globalPlayer.play();
-        globalBar.style.display = "block";
+      // Supprime les contrôles du lecteur inline
+      if (audio) audio.controls = false;
 
-        // Enregistre pour les autres pages
-        localStorage.setItem("futuribles-player-src", newSrc);
+      block.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
 
-        // Stoppe le lecteur inline
-        inline.pause();
-        inline.currentTime = 0;
-      }
+        if (source?.src) {
+          globalPlayer.src = source.src;
+          // Retire l'état "is-playing" de tous les autres
+          document.querySelectorAll(".player-inline.is-playing").forEach(el => {
+            el.classList.remove("is-playing");
+          });
+
+          // Active sur le bloc cliqué
+          block.classList.add("is-playing");
+      const icon = block.querySelector(".glyph-icon");
+      if (icon) icon.textContent = "\u25CC"; // ◌
+
+          globalPlayer.play().catch(err => console.warn("Playback failed", err));
+
+        }
+
+        const wrapper = block.closest(".interview-section");
+        if (wrapper) {
+          const number = wrapper.querySelector(".designer-number")?.textContent.trim() || "";
+          const name = wrapper.querySelector(".designer-name")?.textContent.trim() || "";
+          const title = wrapper.querySelector(".designer-title")?.textContent.trim() || "";
+          const img = block.querySelector("img")?.src || "";
+
+          meta1.textContent = `${number} – ${name}`;
+          meta2.textContent = title;
+          portrait.src = img;
+        }
+
+        globalPlayerBar.style.display = "block";
+      });
     });
+
+    const closeBtn = globalPlayerBar.querySelector(".close-player");
+    closeBtn.addEventListener("click", () => {
+      globalPlayer.pause();
+      globalPlayerBar.style.display = "none";
+
+      // 🔁 Retire l’icône de lecture active sur les players inline
+      document.querySelectorAll(".player-inline.is-playing").forEach(el => {
+        el.classList.remove("is-playing");
+      
+    document.querySelectorAll(".player-inline.is-playing").forEach(el => {
+      el.classList.remove("is-playing");
+      const icon = el.querySelector(".glyph-icon");
+      if (icon) icon.textContent = "\\u25B7"; // ▶︎ retour au repos
+    });
+});
+// Quand le podcast se termine naturellement (audio ended)
+globalPlayer.addEventListener("ended", () => {
+  document.querySelectorAll(".player-inline.is-playing").forEach(el => {
+    el.classList.remove("is-playing");
+    const icon = el.querySelector(".glyph-icon");
+    if (icon) icon.textContent = "\u25B7"; // ▶︎
   });
+  globalPlayerBar.style.display = "none";
 });
 
-// Fonction appelée par le bouton X
-function closeGlobalPlayer() {
-  const globalBar = document.getElementById("globalPlayerBar");
-  const globalPlayer = document.getElementById("globalPlayer");
-  globalPlayer.pause();
-  globalPlayer.currentTime = 0;
-  globalBar.style.display = "none";
 
-  // Supprime la mémoire
-  localStorage.removeItem("futuribles-player-src");
+
+
+
+
+      // Met à jour la source du player global
+      const source = audio.querySelector("source");
+      if (source && source.src) {
+        globalPlayer.src = source.src;
+        globalPlayer.play().catch(e => console.warn("Erreur de lecture", e));
+      }
+
+      // Récupération des données textuelles depuis le bloc parent
+      const wrapper = audio.closest(".interview-section");
+      if (wrapper) {
+        const number = wrapper.querySelector(".designer-number")?.textContent.trim() || "";
+        const name = wrapper.querySelector(".designer-name")?.textContent.trim() || "";
+        const title = wrapper.querySelector(".designer-title")?.textContent.trim() || "";
+        const img = wrapper.querySelector("img")?.src || "";
+
+        meta1.textContent = `${number} – ${name}`;
+        meta2.textContent = title;
+        portrait.src = img;
+      }
+
+      // Affiche le lecteur global
+      globalPlayerBar.style.display = "block";
+
+
+
+      console.log("Fichier JS bien chargé !");
+    });
+  }
 }
-
-
-console.log("Fichier JS bien chargé !");
