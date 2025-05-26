@@ -275,7 +275,7 @@ header h1 {
     width: screen;
   }
   .landing-wrapper {
-    height: 60vh;
+    max-height: screen;
   }
 }
 
@@ -290,7 +290,7 @@ header h1 {
     margin-bottom: 20px;
      }
      .landing-wrapper {
-    height: 60vh;
+    max-height: screen;
   }
 }
 
