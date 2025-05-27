@@ -526,6 +526,7 @@ footer {
   -ms-overflow-style: none;
 }
 
+
 .sidebar::-webkit-scrollbar {
   display: none;
 }

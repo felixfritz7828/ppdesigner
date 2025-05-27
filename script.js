@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Gestion de la sidebar
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("sidebar-overlay");
+  
+  const sidebar = document.getElementById('sidebar');
+  const indexButton = document.querySelector('.index-button');
 
-  if (sidebar && overlay) {
-    // Ajout d'une classe 'sidebar-open' au body pour ouverture
-    const toggleSidebar = () => {
-      sidebar.classList.toggle("open");
-      overlay.classList.toggle("open");
-      document.body.classList.toggle("sidebar-open");
-    };
+  // Ouvre/ferme la sidebar au clic sur le bouton Index
+  indexButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // Empêche le clic de se propager au body
+    sidebar.classList.toggle('open');
+  });
 
-    // Si le overlay est cliqué, fermer la sidebar
-    overlay.addEventListener("click", toggleSidebar);
-
-    // Ajoute un bouton d'ouverture si besoin
-    const indexButtons = document.querySelectorAll(".index-button");
-    indexButtons.forEach(btn => btn.addEventListener("click", toggleSidebar));
-  }
+  // Ferme la sidebar si on clique ailleurs
+  document.addEventListener('click', (e) => {
+    // Si le clic n'est pas dans la sidebar et pas sur le bouton index
+    if (!sidebar.contains(e.target) && !indexButton.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
 
   // Animation PNG overlay (si existant)
   const pngOverlay = document.getElementById('pngOverlay');
