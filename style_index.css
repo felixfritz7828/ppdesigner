@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'PP-Mori';
+  src: url('typos/PPMori-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+    margin:20px;
+    background:#e8e8e8;
+    font-family: 'PP-Mori';
+    font-size:clamp(14px, 1vw + 10px, 18px);
+}
+
+.logo{
+    display:block;
+    width:min(80vw, 500px);
+    height:auto;
+    max-width:500px;
+    margin:50px auto;
+}
+
+.collectif{
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.photo{
+    height:100%;
+}
+
+.photo img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+}
+.texte{
+    font-size:clamp(14px, 1vw + 8px, 18px);
+    line-height:1.2;
+}
+
+.intro-expos{
+    text-align:center;
+    margin:60px 0;
+    color: #767676;
+}
+
+.affiches{
+
+    display:flex;
+    line-height: 14px;
+    flex-direction:column;
+    align-items:center;
+    gap:60px;
+}
+
+.affiche{
+    text-decoration:none;
+    color:#555;
+    text-align:center;
+}
+
+.affiche h3{
+    margin:20px 0 5px 0;
+    font-size:clamp(16px, 1vw + 10px, 24px);
+}
+
+.affiche span{
+    display:block;
+    margin:0;
+    color:#767676;
+    font-size:clamp(12px, 0.8vw + 8px, 16px);
+}
+
+.affiche img{
+    width:min(85vw, 320px);
+    height:auto;
+    max-width:320px;
+    border-radius:8px;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.12),
+        0 2px 6px rgba(0,0,0,0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.affiche:hover img{
+    transform: scale(1.03);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.18),
+        0 5px 10px rgba(0,0,0,0.10);
+}
+
+footer{
+    margin:120px auto 40px;
+    text-align:center;
+    font-size:0.85rem;
+    letter-spacing:0.03em;
+}
+
+footer p{
+    margin-bottom:8px;
+    color:#9a9a9a;
+}
+
+footer a{
+    color:#444;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* -----  MEDIA QUERIES  ----- */
+
+
+
+@media (min-width:1000px){
+
+    .collectif{
+        display:grid;
+        grid-template-columns:55% 45%;
+        gap:60px;
+        align-items:start;
+    }
+
+    .photo img{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+
+    .texte{
+        max-width:60ch;
+        line-height:1.5;
+        font-size:0.95rem;
+    }
+
+}
+    
+@media (min-width:1000px){
+
+    .affiches{
+
+        flex-direction:row;
+        justify-content:center;
+        gap:100px;
+    }
+
+}
+
+@media (min-width:1000px){
+
+    .affiche img{
+        width:min(32vw, 400px);
+        height:auto;
+        max-width:400px;
+    }
+
+}

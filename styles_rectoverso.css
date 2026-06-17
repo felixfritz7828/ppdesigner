@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'ES-Plakeit';
+  src: url('typos/esklarheitplakat-xbd.otf');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Self-Modern';
+  src: url('typos/self-modern_regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.plan-fond{
+    position:fixed;
+    inset:0;
+    background-image:url("img/plan_recto_verso.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:200vh;
+    opacity:0.06;
+    pointer-events:none;
+    z-index:1;
+}
+
+.recto{
+    color:#000000;
+}
+
+.verso{
+    color:#e85aa9;
+}
+
+.message {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:min(90%,700px);
+    text-align:center;
+    z-index:2;
+}
+
+.message h1{
+    font-size:clamp(2.5rem,5vw,5rem);
+    font-weight:normal;
+    margin-bottom:20px;
+    color:#000000;
+}
+
+.message p, h2{
+    font-size:clamp(1rem,1.2vw,1.2rem);
+    line-height:1.4;
+    color:#232323;
+    margin-bottom:35px;
+}
+
+.message a{
+    font-family: 'ES-Plakeit';
+    color:#232323;
+    text-decoration:none;
+    font-size:inherit;
+    font-family:inherit;
+    transition:color .3s ease;
+}
+
+.message a:hover{
+    color:#e85aa9;
+}
+
+p{
+    font-family: 'Self-Modern';
+}
+
+h1, h2{
+    font-family: 'ES-Plakeit';
+}
+
+
+/*
+
+.plan-container{
+    position:relative;
+    max-width:screen;
+    margin:30px;
+}
+
+.plan-container img{
+    width:100%;
+}
+
+.salle{
+    position:absolute;
+    color: black;
+    background: white;
+    border:none;
+    border-radius:6px;
+    font-family: 'ES-Plakeit', sans-serif;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.salle:hover{
+    transform: scale(1.2);
+}
+
+/* position salles fantome */
+
+
+/*
+
+
+.salle-a{
+    top:60%;
+    left:57%;
+}
+
+.salle-b{
+    top:69%;
+    left:37%;
+}
+
+.salle-c{
+    top:52%;
+    left:50%;
+}
+
+/* position numéro fantome */
+
+/*
+
+
+.colin1{
+    top:60%;
+    left:57%;
+}
+
+.nils1{
+    top:69%;
+    left:37%;
+}
+
+.elise1{
+    top:52%;
+    left:50%;
+}
+
+.ludo1{
+    top:52%;
+    left:50%;
+}
+
+/* POPUP */
+
+/*
+
+
+.popup{
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    z-index:1000;
+}
+
+.popup-content{
+
+    position:relative;
+
+    background:white;
+
+    width:min(900px,90%);
+    max-height:85vh;
+
+    overflow:auto;
+
+    margin:5vh auto;
+
+    padding:40px;
+}
+
+.popup-content img{
+    width:100%;
+    margin:20px 0;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+h2{
+    font-family: 'ES-Plakeit', sans-serif;
+    font-size:36px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 32px;
+    text-align: center;
+}
+
+p{
+  font-family: 'Self-Modern';
+}
+
