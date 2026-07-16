@@ -1,18 +1,21 @@
 @font-face {
-  font-family: 'ES-Plakeit';
-  src: url('typos/esklarheitplakat-xbd.otf');
-  font-weight: bold;
-  font-style: bold;
+    font-family:'ES-Plakeit';
+    src:url('typos/esklarheitplakat-xbd.otf');
+    font-weight:bold;
 }
 
-@font-face {
-  font-family: 'Self-Modern';
-  src: url('typos/self-modern_regular.ttf');
-  font-weight: normal;
-  font-style: normal;
+@font-face{
+    font-family:'Self-Modern';
+    src:url('typos/self-modern_regular.ttf') format('truetype');
+    font-style:normal;
 }
 
-
+@font-face{
+    font-family:'Self-Modern';
+    src:url('typos/self-modern_italic.otf') format('truetype');
+    font-style:italic;
+}
+/*
 .plan-fond{
     position:fixed;
     inset:0;
@@ -78,141 +81,1164 @@ h1, h2{
     font-family: 'ES-Plakeit';
 }
 
+*/
 
-/*
+/* =========================
+   ACCUEIL
+========================= */
+
+*{
+    box-sizing:border-box;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings:"tnum" 1;
+}
+
+html{
+    scrollbar-gutter: stable;
+}
+
+html,
+body{
+    width:100%;
+    margin:0;
+    overflow-x:hidden;
+}
+
+html.popup-open,
+body.popup-open{
+    overflow:hidden;
+}
+
+.home{
+    display:grid;
+    grid-template-columns:minmax(0,35%) minmax(0,65%);
+    grid-template-areas:
+        "hero hero"
+        "texte plan";
+    gap:40px;
+    padding:40px;
+    box-sizing:border-box;
+    max-width:100vw;
+}
+
+.hero{
+    grid-area:hero;
+    display:grid;
+    grid-template-columns:minmax(0,35%) minmax(0,65%);
+    gap:40px;
+    align-items:end;
+}
+
+.home-plan,
+.plan-container,
+.plan-container img{
+    max-width:100%;
+}
+
+.logo-rectoverso{
+    width:min(450px,100%);
+    height:auto;
+    display:block;
+    margin:0;
+}
+
+.home-title{
+    margin:0;
+    font-family:'ES-Plakeit', sans-serif;
+    font-size:clamp(1.2rem,3vw,3rem);
+    line-height:1.2;
+}
+
+.home-texte{
+    display:contents;
+}
+
+.home-texte > p{
+    grid-area:texte;
+    max-width:520px;
+    margin:0;
+    font-family:'Self-Modern';
+    font-size:clamp(14px,1vw,18px);
+}
+
+.home-plan{
+    grid-area:plan;
+    width:100%;
+}
+
+.plan-legende{
+    width:100%;
+    margin-top:15px;
+    font-family:'Self-Modern';
+    font-size:clamp(14px,1vw,18px);
+    line-height:1.2;
+}
+
+
+/* =========================
+   PLAN PRINCIPAL
+========================= */
 
 .plan-container{
     position:relative;
-    max-width:screen;
-    margin:30px;
+    width:100%;
+    margin:0;
 }
 
 .plan-container img{
+    display:block;
     width:100%;
 }
+
+
+/* =========================
+   BOUTONS SALLES
+========================= */
 
 .salle{
     position:absolute;
-    color: black;
-    background: white;
+    color:black;
+    background:none;
     border:none;
-    border-radius:6px;
-    font-family: 'ES-Plakeit', sans-serif;
-    font-size:18px;
+    font-family:'ES-Plakeit', sans-serif;
+    font-size:clamp(12px,1.2vw,18px);
     font-weight:bold;
     cursor:pointer;
-    transition: all 0.3s ease;
+    transition:all 0.3s ease;
+    z-index:10;
 }
 
 .salle:hover{
-    transform: scale(1.2);
+    transform:scale(1.2);
+    color:#e85aa9;
 }
 
-/* position salles fantome */
+
+/* Positions plan */
+
+.salle-a{ top:60%; left:57%; }
+.salle-b{ top:62%; left:38%; }
+.salle-c1{ top:54.5%; left: 43.5%; }
+.salle-c2{ top:47%; left:51%; }
+.salle-d{ top:39.5%; left:20.7%; }
+.salle-e{ top:26%; left:26%; }
+.salle-f{ top:38.5%; left:60.9%; }
+.salle-g{ top:32.7%; left:82.5%; }
+.salle-h{ top:11%; left:72%; }
+.salle-i{ top:2%; left:53.5%; }
+.salle-j{ top:23%; left:57.2%; }
+.salle-k{ top:29%; left:52.5%; }
+.salle-l{ top:11.5%; left:34.2%; }
+.salle-cine{ top:11.2%; left:43%; }
+.salle-celeste{ top:41%; left:52%; }
+.salle-jeanne{ top:29%; left:34%; }
 
 
-/*
-
-
-.salle-a{
-    top:60%;
-    left:57%;
-}
-
-.salle-b{
-    top:69%;
-    left:37%;
-}
-
-.salle-c{
-    top:52%;
-    left:50%;
-}
-
-/* position numéro fantome */
-
-/*
-
-
-.colin1{
-    top:60%;
-    left:57%;
-}
-
-.nils1{
-    top:69%;
-    left:37%;
-}
-
-.elise1{
-    top:52%;
-    left:50%;
-}
-
-.ludo1{
-    top:52%;
-    left:50%;
-}
-
-/* POPUP */
-
-/*
-
+/* =========================
+   POPUPS
+========================= */
 
 .popup{
-    display:none;
-
     position:fixed;
-    top:0;
-    left:0;
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
 
     width:100%;
-    height:100%;
+    height:100dvh;
+    padding:16px;
 
-    background:rgba(0,0,0,0.7);
+    overflow:hidden;
+    box-sizing:border-box;
 
+    background:rgba(0,0,0,.5);
     z-index:1000;
 }
 
 .popup-content{
-
     position:relative;
-
     background:white;
-
-    width:min(900px,90%);
-    max-height:85vh;
-
-    overflow:auto;
-
-    margin:5vh auto;
-
-    padding:40px;
+    border-radius:10px;
+    width:min(900px,80vw);
+    max-height:calc(100dvh - 32px);
+    overflow-y:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    margin:4vh auto;
+    padding:30px;
+    box-sizing:border-box;
+    animation:popupAppear 0.15s ease-out;
+    z-index:1001;
 }
 
-.popup-content img{
-    width:100%;
-    margin:20px 0;
+@keyframes popupAppear{
+    from{ transform:scale(0.99); }
+    to{ transform:scale(1); }
 }
 
 .close{
-    position:absolute;
+    position:sticky;
+    float:right;
     top:15px;
     right:20px;
-    font-size:30px;
+    color:#999;
+    font-size:40px;
+    line-height:1;
     cursor:pointer;
+    z-index:20;
 }
 
+/* =========================
+   POPUP SALLE
+========================= */
+
+.popup-salle{
+    width:100%;
+    max-width:1000px;
+    max-height:100%;
+    margin:auto;
+    overflow-y:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.popup-salle::-webkit-scrollbar{
+    display:none;
+}
+
+.popup-salle .titre,
+.popup-salle .image-fantome,
+.popup-salle > p{
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.titre{
+    margin:0 0 20px;
+}
+
+.image-fantome{
+    position:relative;
+    width:100%;
+    margin:0 auto 25px;
+}
+
+.image-fantome img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0 auto;
+}
+
+.image-fantome .salle{
+    font-size:clamp(18px,1.5vw,30px);
+    font-weight:700;
+}
+
+
+/* =========================
+   POPUP FANTÔME A
+========================= */
+
+.colin1{ top:82%; left:23%; }
+.nils1{ top:53%; left:39%; }
+.elise1{ top:8%; left:55%; }
+.ludo1{ top:58%; left:88%; }
+
+/* =========================
+   POPUP FANTÔME B
+========================= */
+
+.kamila1{ top:5%; left:10%; }
+.kamila2{ top:1%; left:50%; }
+.gabriel_lecurieux1{ top:28%; left:20%; }
+.jasmine1{ top:47%; left:47%; }
+.gabriel_penicaud1{ top:49%; left:67%; }
+.clement1{ top:11%; left:75%; }
+.alexia1{ top:48%; left:93%; }
+.jeanne_these1{ top:90%; left:85%; }
+
+/* =========================
+   POPUP FANTÔME C1
+========================= */
+
+.pierre1{ top:43%; left:7%; }
+.romane1{ top:15%; left:20%; }
+.sarah1{ top:55%; left:33%; }
+.lou1{ top:10%; left:58%; }
+.juliette_mottier1{ top:22%; left:70%; }
+.marion1{ top:43%; left:85%; }
+
+/* =========================
+   POPUP FANTÔME C2
+========================= */
+
+.kenza1{ top:47%; left:8%; }
+.lisa1{ top:95%; left:25%; }
+.emile1{ top:12%; left:38%; }
+.emma1{ top:59%; left:37%; }
+.cecile_poulat1{ top:18%; left:54%; }
+.clemence_candille1{ top:90%; left:65%; }
+.charlotte_asmonti1{ top:43%; left:85%; }
+
+/* =========================
+   POPUP FANTÔME D
+========================= */
+
+.soraya1{ top:23%; left:5%; }
+.leana1{ top:44%; left:17%; }
+.linda1{ top:90%; left:28%; }
+.thomas1{ top:3%; left:43%; }
+.juliette_cornelius1{ top:38%; left:46%; }
+.jeanne_these2{ top:38%; left:57%; }
+.arthur_van1{ top:82%; left:64%; }
+.abel1{ top:38%; left:68%; }
+.maximilian1{ top:2%; left:73%; }
+.mathias1{ top:95%; left:83%; }
+.heidi1{ top:47%; left:92%; }
+
+/* =========================
+   POPUP FANTÔME E
+========================= */
+
+.adele1{ top:10%; left:10%; }
+.adele2{ top:5%; left:60%; }
+.adele3{ top:55%; left:90%; }
+.gabriel_lecurieux2{ top:78%; left:10%; }
+.jeanne_lafaye1{ top:20%; left:40%; }
+.jowey1{ top:54%; left:43%; }
+.judith1{ top:88%; left:57%; }
+.remy1{ top:35%; left:77%; }
+.erwan1{ top:93%; left:82%; }
+
+/* =========================
+   POPUP FANTÔME F
+========================= */
+
+.f-coline1{ top:44%; left:50%; }
+.f-anna1{ top:90%; left:64%; }
+.f-julie1{ top:28%; left:77%; }
+.f-yagmur1{ top:15%; left:47%; }
+.f-mathis1{ top:75%; left:14%; }
+
+/* =========================
+   POPUP FANTÔME G
+========================= */
+
+.arthur_euvrard_g1{ top:30%; left:80%; }
+.lilou1{ top:13%; left:28%; }
+.lea1{ top:55%; left:49%; }
+.clemence_joseph1{ top:85%; left:30%; }
+.lorenza1{ top:13%; left:61%; }
+.justine_margale1{ top:80%; left:66%; }
+.charlotte_maucourt1{ top:3%; left:72%; }
+.india1{ top:32%; left:5%; }
+.india2{ top:84%; left:12%; }
+.alvina1{ top:63%; left:92%; }
+
+/* =========================
+   POPUP FANTÔME H
+========================= */
+
+.louis1{ top:91%; left:61%; }
+.elyette1{ top:55%; left:92%; }
+.estelle1{ top:10%; left:22%; }
+.mathias2{ top:74%; left:47%; }
+.richard1{ top:30%; left:83%; }
+.angele1{ top:53%; left:67%; }
+.virgile1{ top:60%; left:5%; }
+
+/* =========================
+   POPUP FANTÔME I
+========================= */
+
+.juliette_cornelius2{ top:3%; left:85%; }
+.mathilde1{ top:85%; left:19%; }
+.mathilde2{ top:86%; left:74%; }
+.eugenie1{ top:4%; left:47%; }
+.laura1{ top:45%; left:7%; }
+.margaux1{ top:80%; left:35%; }
+.maxence1{ top:46%; left:42%; }
+
+/* =========================
+   POPUP FANTÔME J
+========================= */
+
+.martina1{ top:63%; left:43%; }
+.doriane1{ top:15%; left:74%; }
+.benoit1{ top:82%; left:55%; }
+.lauriane1{ top:58%; left:8%; }
+.saudade1{ top:82%; left:85%; }
+
+/* =========================
+   POPUP FANTÔME K
+========================= */
+
+.arthur_carpentier1{ top:80%; left:5%; }
+.arthur_carpentier2{ top:83%; left:63%; }
+.arthur_euvrard_k1{ top:26%; left:77%; }
+.benoit2{ top:35%; left:20%; }
+.justine_gaspard1{ top:65%; left:36%; }
+.morgane1{ top:20%; left:48%; }
+
+/* =========================
+   POPUP FANTÔME L
+========================= */
+
+.tina1{ top:68%; left:5%; }
+.aurelie1{ top:90%; left:70%; }
+.orane1{ top:70%; left:87%; }
+.alfea1{ top:87%; left:46%; }
+.jessica1{ top:5%; left:20%; }
+.juliette_soustelle1{ top:50%; left:58%; }
+
+/* =========================
+   POPUP FANTÔME CELESTE
+========================= */
+
+.celeste1{ top:75%; left:65%; }
+
+
+/* =========================
+   POPUP FANTÔME JEANNE
+========================= */
+
+.jeanne1{ top:83%; left:47%; }
+
+
+/* =========================
+   POPUP CINÉMA
+========================= */
+
+.popup-cinema{
+    display:none;
+
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100dvh;
+
+    padding:20px;
+    box-sizing:border-box;
+
+    background:rgba(0,0,0,.92);
+
+    /*
+     * C’est désormais le fond du popup qui défile.
+     */
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    overscroll-behavior:contain;
+    scrollbar-gutter:stable;
+
+    z-index:1000;
+}
+
+.popup-cinema .cinema-content{
+    position:relative;
+
+    width:100%;
+    max-width:1000px;
+
+    /*
+     * Aucune hauteur imposée et aucun scroll ici.
+     */
+    height:auto;
+    max-height:none;
+
+    margin:0 auto;
+    padding:35px;
+
+    overflow:visible;
+
+    background:#080808;
+    color:#fff;
+    border-radius:10px;
+
+    /*
+     * Empêche les transformations ou animations héritées.
+     */
+    animation:none !important;
+    transform:none !important;
+    transition:none !important;
+    scale:1 !important;
+    zoom:1;
+}
+
+.popup-cinema .close{
+    position:absolute;
+    top:18px;
+    right:22px;
+
+    float:none;
+
+    color:#fff;
+    font-size:40px;
+    line-height:1;
+
+    cursor:pointer;
+    z-index:20;
+}
+
+.cinema-titre{
+    margin:0 0 45px;
+    padding-right:50px;
+
+    color:#fff;
+}
+
+.cinema-liste{
+    display:flex;
+    flex-direction:column;
+    gap:80px;
+
+    width:100%;
+}
+
+.cinema-item{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+
+    width:100%;
+    min-width:0;
+
+    padding-bottom:60px;
+    border-bottom:1px solid rgba(255,255,255,.25);
+}
+
+.cinema-item:last-child{
+    padding-bottom:0;
+    border-bottom:none;
+}
+
+.cinema-video{
+    display:block;
+
+    width:100%;
+    max-width:100%;
+    height:auto;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:contain;
+    background:#000;
+
+    /*
+     * Stabilise le rendu Firefox des vidéos.
+     */
+    transform:none;
+    scale:1;
+}
+
+.cinema-cartel{
+    width:100%;
+    min-width:0;
+    color:#fff;
+}
+
+.cinema-cartel .cartel-titre{
+    display:grid;
+    grid-template-columns:70px minmax(0,1fr);
+    gap:20px;
+}
+
+.cinema-cartel .numero,
+.cinema-cartel h3,
+.cinema-cartel p{
+    color:#fff;
+}
+
+.cinema-cartel .titre-oeuvre{
+    color:#999;
+}
+
+.cinema-cartel .infos{
+    color:#ddd;
+}
+
+.cinema-cartel .insta a{
+    color:#999;
+    text-decoration:none;
+}
+
+.cinema-cartel .insta a:hover{
+    color:#e85aa9;
+}
+
+/* =========================
+   POPUP ŒUVRE / CARTEL
+========================= */
+
+.popup-oeuvre{
+    z-index:2000;
+    display:none;
+    padding:40px;
+    overflow:hidden;
+    background:rgba(0,0,0,.5);
+}
+
+.popup-oeuvre .popup-content{
+    width:min(1200px,90vw);
+    max-height:calc(100dvh - 80px);
+    margin:0 auto;
+    padding:24px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+}
+
+.popup-oeuvre .popup-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.popup-oeuvre .popup-content::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    background:rgba(0,0,0,.25);
+}
+
+.oeuvre-layout{
+    display:grid;
+    grid-template-columns:minmax(220px,30%) 40px minmax(0,1fr);
+    gap:24px;
+    align-items:start;
+}
+
+.oeuvre-image{
+    grid-column:1;
+    min-width:0;
+}
+
+.oeuvre-image img,
+.oeuvre-image video{
+    display:block;
+    max-width:100%;
+    height:auto;
+    margin:0;
+    object-fit:contain;
+}
+
+.oeuvre-image video{
+    width:100%;
+    max-height:55vh;
+}
+
+.oeuvre-texte{
+    grid-column:2 / 4;
+    display:grid;
+    grid-template-columns:50px minmax(0,1fr);
+    column-gap:30px;
+    align-content:start;
+    min-width:0;
+}
+
+.cartel-titre{
+    display:contents;
+}
+
+.numero{
+    grid-column:1;
+    grid-row:1 / span 6;
+    margin:0;
+    font-family:'ES-Plakeit',sans-serif;
+    font-size:1.8rem;
+    line-height:1;
+}
+
+.numero2{
+    margin:0;
+    font-family:'ES-Plakeit',sans-serif;
+    font-size:1.2rem;
+    line-height:1;
+}
+
+.cartel-titre > div,
+.infos,
+.oeuvre-texte > p:not(.titre-oeuvre){
+    grid-column:2;
+}
+
+.cartel-titre h3,
+.titre-oeuvre{
+    display:block;
+    margin:0;
+    font-family:'ES-Plakeit',sans-serif;
+    font-size:1.8rem;
+    line-height:1;
+}
+
+.titre-oeuvre{
+    color:#999;
+}
+
+.infos{
+    margin:5px 0 16px;
+}
+
+.insta{
+    margin-top:10px;
+}
+
+.insta a{
+    color:#999;
+    text-decoration:none;
+    font-family:'ES-Plakeit',sans-serif;
+    transition:color .2s ease;
+}
+
+.insta a:hover{
+    color:#e85aa9;
+}
+
+/* =========================
+   GALERIES DES CARTELS
+========================= */
+
+/* =========================
+   GALERIE 2 IMAGES
+========================= */
+
+.gallery-2{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+}
+
+.gallery-2 img,
+.gallery-2 video{
+    display:block;
+    height:auto;
+    max-width:100%;
+    object-fit:contain;
+}
+
+/* Première image */
+
+.gallery-2 img:first-child,
+.gallery-2 video:first-child{
+    width:72%;
+    align-self:flex-start;
+}
+
+/* Deuxième image */
+
+.gallery-2 img:last-child,
+.gallery-2 video:last-child{
+    width:72%;
+    align-self:flex-end;
+}
+
+/* =========================
+   INDEX
+========================= */
+
+.liste-artistes{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.liste-colonne{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.liste-groupe{
+    break-inside:avoid;
+}
+
+.liste-titre{
+    display:grid;
+    grid-template-columns:32px 1fr;
+    gap:10px;
+    margin-bottom:0;
+    font-family:'ES-Plakeit', sans-serif;
+    font-size:0.8rem;
+    line-height:1;
+
+    color:#9a9a9a;
+}
+
+.liste-titre span{
+    font-weight:bold;
+}
+
+.liste-titre strong{
+    font-weight:bold;
+}
+
+.liste-groupe button{
+
+    display:grid;
+    grid-template-columns:32px 1fr;
+    gap:10px;
+
+    width:100%;
+
+    border:none;
+    background:none;
+
+    padding:0;
+    margin:0;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    font-family:'ES-Plakeit', sans-serif;
+    font-size:0.8rem;
+    line-height:1;
+    color:#000;
+    transition:color .2s ease;
+}
+
+.liste-groupe button span{
+    font-family:'ES-Plakeit', sans-serif;
+    font-weight:bold;
+}
+
+.liste-groupe button:hover{
+    color:#e85aa9;
+}
+
+/* =========================
+   INDEX - TITRE - SOUS-TITRE
+========================= */
+
+.index-artistes-header{
+    grid-column:1 / -1;
+    margin:90px 0 35px;
+}
+
+.index-artistes-header h2{
+    margin:0 0 8px;
+
+    font-family:'ES-Plakeit', sans-serif;
+    font-size:clamp(2rem,2.6vw,3rem);
+    line-height:0.95;
+    text-align:left;
+}
+
+.index-artistes-header p{
+    margin-top:10px;
+
+    font-family:'Self-Modern';
+    font-size:clamp(0.8rem,1vw,1rem);
+    line-height:1.35;
+
+    color:#000000;
+}
+
+
+/* =========================
+   TYPOGRAPHIE
+========================= */
+
 h2{
-    font-family: 'ES-Plakeit', sans-serif;
+    font-family:'ES-Plakeit', sans-serif;
     font-size:36px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 32px;
-    text-align: center;
+    font-weight:bold;
+    line-height:32px;
+    text-align:center;
 }
 
 p{
-  font-family: 'Self-Modern';
+    font-family:'Self-Modern';
+    font-size:clamp(14px,1.2vw,18px);
 }
 
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width:1024px){
+    .home{
+        grid-template-columns:40% 60%;
+        gap:25px;
+    }
+
+    .home-title{
+        font-size:clamp(2rem,3.5vw,3.5rem);
+    }
+
+    .oeuvre-layout{
+        grid-template-columns:minmax(190px,32%) 36px minmax(0,1fr);
+        gap:20px;
+    }
+
+    .oeuvre-texte{
+        grid-template-columns:44px minmax(0,1fr);
+        column-gap:20px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+    .home{
+        display:flex;
+        flex-direction:column;
+        padding:25px;
+        gap:30px;
+    }
+
+    .home-texte{
+        display:contents;
+    }
+
+    .hero{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .logo-rectoverso{
+        width:75%;
+        max-width:350px;
+    }
+
+    .home-title{
+        margin:0;
+        font-size:clamp(2rem,9vw,3.5rem);
+        line-height:.95;
+    }
+
+    .home-plan{
+        width:100%;
+    }
+
+    .home-texte > p{
+        max-width:none;
+    }
+
+    .popup{
+        padding:16px;
+        overflow:hidden;
+    }
+
+    .popup-content{
+        margin:auto;
+    }
+
+    .popup-salle{
+        width:100%;
+        max-width:none;
+        max-height:calc(100dvh - 32px);
+        padding:22px;
+        overflow-y:auto;
+    }
+
+    .popup-salle .titre{
+        margin:0 0 18px;
+        font-size:clamp(1.4rem,5.8vw,2rem);
+        line-height:.95;
+    }
+
+    .popup-salle .close{
+        top:12px;
+        right:16px;
+    }
+
+    .salle{
+        font-size:clamp(12px,1.2vw,18px);
+    }
+
+    .image-fantome{
+        width:100%;
+        margin:0 auto 25px;
+    }
+
+    .popup-oeuvre{
+        padding:16px;
+    }
+
+    .popup-oeuvre .popup-content{
+        width:100%;
+        max-height:calc(100dvh - 32px);
+        margin:auto;
+        padding:20px;
+        overflow-y:auto;
+    }
+
+    .oeuvre-layout{
+        display:block;
+    }
+
+    .oeuvre-image{
+        margin-bottom:20px;
+    }
+
+    .oeuvre-texte{
+        display:block;
+        width:100%;
+    }
+
+    .cartel-titre{
+        display:block;
+    }
+
+    .numero{
+        display:block;
+        margin:0 0 10px;
+        font-size:1.5rem;
+        line-height:1;
+    }
+
+    .cartel-titre h3,
+    .titre-oeuvre{
+        display:block;
+        margin:0;
+        font-size:1.5rem;
+        line-height:.95;
+    }
+
+    .titre-oeuvre{
+        margin-top:5px;
+        margin-bottom:15px;
+    }
+
+    .infos{
+        width:100%;
+        margin:0 0 20px;
+        line-height:1.1;
+    }
+
+    .insta{
+        width:100%;
+        margin-top:10px;
+    }
+
+    .oeuvre-texte p{
+        width:100%;
+        margin-left:0;
+    }
+
+    /* Toutes les galeries passent sur une colonne sur mobile */
+    .gallery-2v,
+    .gallery-3{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .gallery-3 > :nth-child(3){
+        grid-column:auto;
+    }
+
+    .gallery-vh img,
+    .gallery-vh video{
+        width:100%;
+        align-self:stretch;
+    }
+
+    .gallery-1 img,
+    .gallery-2v img,
+    .gallery-vh img,
+    .gallery-2h img,
+    .gallery-3 img{
+        max-height:none;
+    }
+
+    .liste-artistes{
+        grid-template-columns:1fr;
+        gap:28px;
+        margin-top:50px;
+    }
+
+    .liste-colonne{
+        gap:28px;
+    }
+
+    .index-artistes-header{
+        margin:60px 0 30px;
+    }
+
+    .index-artistes-header h2{
+        font-size:2rem;
+    }
+
+}
+
+   @media (max-width:768px){
+
+    .popup-cinema{
+        padding:16px;
+    }
+
+    .popup-cinema .cinema-content{
+        width:100%;
+        max-width:none;
+
+        margin:0;
+        padding:22px;
+    }
+
+    .cinema-liste{
+        gap:55px;
+    }
+
+    .cinema-cartel .cartel-titre{
+        grid-template-columns:50px minmax(0,1fr);
+        gap:14px;
+    }
+}
+
+
+/* =========================
+   BOUTON RETOUR ACCUEIL
+========================= */
+
+.header-buttons{
+    position:fixed;
+    top:20px;
+    left:20px;
+
+    display:flex;
+    align-items:center;
+
+    z-index:5000;
+}
+
+.home-button{
+    width:40px;
+    height:40px;
+
+    padding:0;
+
+    border:1px solid #000;
+    border-radius:50%;
+
+    background-color:whitesmoke;
+
+    cursor:pointer;
+
+    transition:
+        border-style .2s ease,
+        transform .2s ease,
+        background-color .2s ease;
+}
+
+.home-button:hover{
+    border-style:dashed;
+}
+
+.home-button:active{
+    transform:scale(.94);
+}
+
+.home-button:focus-visible{
+    outline:2px solid #e85aa9;
+    outline-offset:3px;
+}

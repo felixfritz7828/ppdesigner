@@ -1,182 +1,3670 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>recto verso</title>
-  <link rel="stylesheet" href="styles_rectoverso.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>recto verso</title>
+<link href="styles_rectoverso.css" rel="stylesheet"/>
 </head>
-
 <body>
+    <!-- BOUTON RETOUR ACCUEIL -->
 
-    <div class="plan-fond">
-    </div>
-
-    <div class="message">
-
-        <h1>
-            <span class="recto">recto</span>
-            <span class="verso">verso</span>
-        </h1>
-
-        <p>
-            L'exposition numérique est actuellement <br>
-            en cours d'intégration sur le site. <br><br>
-
-            Mais l'exposition <i>recto verso</i> se déroule <br> 
-            jusqu'au 4 octobre 2026 à :<br><br>
-
-            <u>La Platine - Cité du design <br>
-            3 rue Javelin Pagnon - 42000 Saint-Étienne</u> <br><br> 
-
-            Du mardi au dimanche <br>
-            10h - 12h30 et 13h30 - 18h
+<div class="header-buttons">
+    <button
+        class="home-button"
+        type="button"
+        aria-label="Retour à l’accueil"
+        onclick="window.location.href='index.html';">
+    </button>
+</div>
+<main class="home">
+<section class="home-texte">
+<div class="hero">
+<img alt="Recto Verso" class="logo-rectoverso" src="img_rectoverso/rectoverso_logo.svg"/>
+<h1 class="home-title">
+                L’exposition des diplômé·e·s<br/>
+                2024 &amp; 2025 de l’Ésad Saint-Étienne
+            </h1>
+</div>
+<p>
+            Du 29 avril au 04 octobre 2026, la Cité du design réunit au sein d’une même exposition les travaux des diplômé·e·s 2024 et 2025 de l’Ésad Saint-Étienne. Conçue par le collectif ppdesigner, avec la participation curatoriale d’Éric Jourdan et le soutien des équipes pédagogiques, l’exposition recto verso interroge les préoccupations d’une génération en fin de formation. Elle propose une lecture collective des projets, elle révèle les récits ainsi que les prises de position de ces jeunes artistes et designers.<br/>
+<br/>
+                  Le titre de cette exposition fait écho à un dispositif spatial qui crée des dialogues inattendus ; elle met en relation des pratiques individuelles, tout en laissant apparaître les choix formels, théoriques et éthiques propres à chacun et à chacune. De fait, la scénographie s’organise sur un principe de recto-verso qui oriente le regard du visiteur. Cette double lecture articule, d’une part, certaines pièces d’un projet finalisé tel qu’il se donne à voir à l’issue du diplôme, et d’autre part, les étapes qui le précèdent : recherches, essais, ratés. Ensemble, ces deux dimensions rendent compte de la construction progressive d’une pratique.<br/>
+<br/>
+                  recto verso invite le public à une déambulation en deux temps. En donnant à voir à la fois les pièces misent en scène dans des dioramas et les processus qui les ont nourries, l’exposition souligne l’importance du dialogue, du collectif et de la transmission dans la formation des designers et des artistes. Elle offre ainsi une vision complète de ce que signifie étudier dans une école d’art et de design, entre réflexion et réalisation. Elle est aussi porteuse d’un message pour l’après-école, où il est plus que nécessaire de se réunir.
 
         </p>
-        <h2>
-        <a href="index.html">
-            ← Retour à l'accueil
-        </a>
-        </h2>
-
-    </div>
-
-</body>
-
-<!--
-    <div class="plan-container">
-
-    <img src="plan_recto_verso_hall_echelle_1.png" alt="Plan exposition">
-
-    <button class="salle salle-a"
-            onclick="openPopup('popupA')">
-        A
-    </button>
-
-    <button class="salle salle-b"
-            onclick="openPopup('popupB')">
-        B
-    </button>
-
-    <button class="salle salle-c"
-            onclick="openPopup('popupC')">
-        C
-    </button>
-
+</section>
+<section class="home-plan">
+<div class="plan-container">
+<img alt="Plan exposition" src="img_rectoverso/plan_recto_verso.png"/>
+<button class="salle salle-a" onclick="openPopup('popupA')">A.</button>
+<button class="salle salle-b" onclick="openPopup('popupB')">B.</button>
+<button class="salle salle-c1" onclick="openPopup('popupC1')">C.1</button>
+<button class="salle salle-c2" onclick="openPopup('popupC2')">C.2</button>
+<button class="salle salle-d" onclick="openPopup('popupD')">D.</button>
+<button class="salle salle-e" onclick="openPopup('popupE')">E.</button>
+<button class="salle salle-f" onclick="openPopup('popupF')">F.</button>
+<button class="salle salle-g" onclick="openPopup('popupG')">G.</button>
+<button class="salle salle-h" onclick="openPopup('popupH')">H.</button>
+<button class="salle salle-i" onclick="openPopup('popupI')">I.</button>
+<button class="salle salle-j" onclick="openPopup('popupJ')">J.</button>
+<button class="salle salle-k" onclick="openPopup('popupK')">K.</button>
+<button class="salle salle-l" onclick="openPopup('popupL')">L.</button>
+<button class="salle salle-cine" onclick="openPopup('popupCINE')">cinéma</button>
+<button class="salle salle-celeste" onclick="openPopup('popupCELESTE')" style="color:#9a9a9a">55. →</button>
+<button class="salle salle-jeanne" onclick="openPopup('popupJEANNE')" style="color:#9a9a9a">← 80.</button>
 </div>
- -->
-
+<p class="plan-legende">
+        → Cliquez sur une lettre pour découvrir un diorama, puis sur un numéro pour accéder au cartel d'une œuvre
+    </p>
 <!-- POPUP SALLE A -->
-<!--
-
-<div id="popupA" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close"
-              onclick="closePopup('popupA')">
+<div class="popup" id="popupA">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupA')">
             ×
         </span>
-
-        <h2 class="titre">
-          A. <br> Quand les murs se <br> souviennent des pas 
+<h2 class="titre">
+          A.<br/>Quand les murs se<br/>souviennent des pas 
         </h2>
-
-        <img src="img/fantom/A.jpg" alt="">
-
-        <button class="colin1"
-            onclick="openPopup('popup71')">
-            71.
-        </button>
-
-        <button class="nils1"
-                onclick="openPopup('popup29')">
-            29.
-        </button>
-
-        <button class="elise1"
-                onclick="openPopup('popup27')">
-            27.
-        </button>
-
-        <button class="ludo1"
-                onclick="openPopup('popup37')">
-            37.
-        </button>
-
-        <p>
-            La collecte et la recomposition sont le point de départ des projets présentés dans ce premier diorama. Les alumni s'inscrivent dans une démarche de «glaneur-euse-s>> et puisent dans ce qui est déjà-là, qu'il s'agisse de débris industriels, de souvenirs ouvriers ou de fragments architecturaux afin de proposer de nouveaux récits. Les objets et environnements exposés s'intéressent à la façon dont les formes et les matériaux deviennent des supports de récit. Certaines pièces déplacent ainsi la fonction habit11elle de l'objet po11r en faire 11n espace de narration, un prolongement de l'intime ou un dispositif à expérimenter. <br><br>
-
-
-            Ici, la broche a une place centrale et se transmet comme un souvenir, un fragment d'histoire. On l'imagine toujours accrochée à un vêtement, mais que devient-elle lorsqu'elle n'est pas portée? La broderie <i>Anamnèse: Broche - Exfiltrer</i> prolonge sa présence, l'expose et la transforme en tableau. Le bijou cesse d'être seulement un ornement du corps, il devient autonome. Ainsi, le présentoir <i>Des archives que l'on porte</i> s'appuie sur cette ambivalence. Ici, le bijou ne transmet pas seulement une histoire familiale et inti1ne, mais une mémoire collective, celle d'un territoire. L'étagère comme la sculpture <i>Le portail des gloutons</i> naissent d'explorations à la fois concrètes et historiques. Elles donnent corps à une mémoire tangible. <br><br>
-
-
-            L'architecture aussi est porteuse de mémoire. Ainsi, le jeu vidéo <i>Sentier modulaire</i> propose une ville instable, mouvante où le son et le bâti sont interdépendants. Ici, le temps ne se fige pas, il devient rythme, les sons modifient l'espace, l'architecture répond. La mémoire ne conserve plus, elle transforme. <br><br>
-
-
-            « Quand les murs se souviennent des pas» se déploie comme un espace à traverser, pensé po·ur une approche attentiv·e et rapprochée des productions. Les ·visiteur-e·use-s sont invité-e-s à circuler entre les pièces, à en observer les formes, les 1natières et les détails. Du bijou au jeu vidéo, se dessine u11e volonté commune de transformer la mémoire en ressource. 
-        </p>
-
-    </div>
-
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/A.svg"/>
+<button class="salle colin1" onclick="openPopup('oeuvre71')">71.</button>
+<button class="salle nils1" onclick="openPopup('oeuvre29')">29.</button>
+<button class="salle elise1" onclick="openPopup('oeuvre27')">27.</button>
+<button class="salle ludo1" onclick="openPopup('oeuvre37')">37.</button>
 </div>
+<p>
+            La collecte et la recomposition sont le point de départ des projets présentés dans ce premier diorama. Les alumni s'inscrivent dans une démarche de «glaneur·euse·s&gt;&gt; et puisent dans ce qui est déjà-là, qu'il s'agisse de débris industriels, de souvenirs ouvriers ou de fragments architecturaux afin de proposer de nouveaux récits. Les objets et environnements exposés s'intéressent à la façon dont les formes et les matériaux deviennent des supports de récit. Certaines pièces déplacent ainsi la fonction habituelle de l'objet pour en faire un espace de narration, un prolongement de l'intime ou un dispositif à expérimenter. <br/><br/>
 
--->
+                  Ici, la broche a une place centrale et se transmet comme un souvenir, un fragment d'histoire. On l'imagine toujours accrochée à un vêtement, mais que devient-elle lorsqu'elle n'est pas portée? La broderie <i>Anamnèse: Broche - Exfiltrer </i> prolonge sa présence, l'expose et la transforme en tableau. Le bijou cesse d'être seulement un ornement du corps, il devient autonome. Ainsi, le présentoir <i>Des archives que l'on porte</i> s'appuie sur cette ambivalence. Ici, le bijou ne transmet pas seulement une histoire familiale et intime, mais une mémoire collective, celle d'un territoire. L'étagère comme la sculpture <i>Le portail des gloutons</i> naissent d'explorations à la fois concrètes et historiques. Elles donnent corps à une mémoire tangible. <br/><br/>
 
+                  L'architecture aussi est porteuse de mémoire. Ainsi, le jeu vidéo <i>Sentier modulaire</i> propose une ville instable, mouvante où le son et le bâti sont interdépendants. Ici, le temps ne se fige pas, il devient rythme, les sons modifient l'espace, l'architecture répond. La mémoire ne conserve plus, elle transforme. <br/><br/>
+
+                  « Quand les murs se souviennent des pas » se déploie comme un espace à traverser, pensé pour une approche attentive et rapprochée des productions. Les visiteur·e·use·s sont invité·e·s à circuler entre les pièces, à en observer les formes, les matières et les détails. Du bijou au jeu vidéo, se dessine une volonté commune de transformer la mémoire en ressource. 
+        </p>
+</div>
+</div>
 <!-- POPUP SALLE B -->
-
-<!--
-
-<div id="popupB" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close"
-              onclick="closePopup('popupB')">
+<div class="popup" id="popupB">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupB')">
             ×
         </span>
-
-        <h2>Salle B</h2>
-
-        <img src="images/salle-b.jpg" alt="">
-
-        <p>
-            Informations sur la salle.
-        </p>
-
-    </div>
-
+<h2 class="titre">
+          B.<br/>Le capitalisme<br/>n'a pas de saison 
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/B.svg"/>
+<button class="salle kamila1" onclick="openPopup('oeuvre05.1')">05.1</button>
+<button class="salle kamila2" onclick="openPopup('oeuvre05.2')">05.2</button>
+<button class="salle gabriel_lecurieux1" onclick="openPopup('oeuvre44.1')">44.1</button>
+<button class="salle jasmine1" onclick="openPopup('oeuvre09')">09.</button>
+<button class="salle gabriel_penicaud1" onclick="openPopup('oeuvre63')">63.</button>
+<button class="salle clement1" onclick="openPopup('oeuvre66')">66.</button>
+<button class="salle alexia1" onclick="openPopup('oeuvre75')">75.</button>
+<button class="salle jeanne_these1" onclick="openPopup('oeuvre79.1')">79.1</button>
 </div>
+<p>
+            Une réflexion sur la manière dont nos sociétés organisent le temps, la production et la relation au vivant réunit ici ces projets. Ils interrogent les pratiques dominantes en confrontant l’efficacité aux logiques de soin et de durabilité.<br/><br/>
 
--->
+                  Le fauteuil <i>Jardin japonais</i> invite à nous accorder au rythme de la nature. Une parenthèse bienvenue face à l’accélération industrielle dont les excès ont provoqué des déséquilibres écologiques alarmants. Ainsi l’animation <i>Le Cycle des Nymphaléens</i> imagine un monde sans pollinisateurs et nous rappelle l’urgence d’agir avant qu’il ne soit trop tard. Ces projets soulignent souvent notre tendance à nous replier sur notre propre individualité. Pourtant, la série d’illustrations <i>Orientations</i> propose de ralentir pour inciter à porter un regard neuf sur les paysages du quotidien, ces lieux de passage que nous parcourons sans y prêter attention.<br/><br/>
 
-<!-- POPUP SALLE C -->
+                  La sitcom <i>C’est un tube !</i> montre que nos villes se sont construites autour de réseaux invisibles. À Saint-Jean-De-Tubes, cette logique souterraine déborde jusqu’au langage : les tubes contaminent le vocabulaire et les modes de communication des habitant·e·s, jusqu’au grotesque. L’imperceptible devient alors visible, exposant les mécanismes industriels qui organisent nos flux, nos rythmes, nos vies. Et le temps n’échappe pas à cette logique. <i>Indestemparis</i> pousse l’idée plus loin en imaginant une société où la relativité du temps gouverne. Nos instruments de mesure ne se bornent pas à quantifier la durée, ils façonnent notre manière de vivre. Ces deux projets nous rappellent que nos infrastructures et nos horloges nous contraignent bien plus que nous ne l’imaginons.<br/><br/>
 
-<!--
+                  Si la fiction permet de remettre en question nos modèles de société, la valorisation des rebuts industriels et électroniques offre une façon de la faire évoluer. Le bougeoir <i>À tâtons</i>, par sa réalisation aléatoire à partir d’une matière issue du thermoformage, est une critique des modes de production. Effectivement, la compréhension de la machine et de ses limites ouvre un champ inattendu, permettant de générer de nouvelles formes sans recourir à la surproduction. De même, les lampes et étagères <i>Composer avec les limites</i> interrogent la durée de vie et la valeur des objets.<br/><br/>
 
-<div id="popupB" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close"
-              onclick="closePopup('popupC')">
+                  A travers ces démarches, la conscience de leurs gestes et de la finitude des ressources et de ses impacts met en exergue la responsabilité des designer·euse·s dans le façonnement de nouveaux modèles de société non uniformisés. 
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE C1 -->
+<div class="popup" id="popupC1">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupC1')">
             ×
         </span>
-
-        <h2>C</h2>
-
-        <img src="images/salle-b.jpg" alt="">
-
-        <p>
-            Informations sur la salle.
-        </p>
-
-    </div>
-
+<h2 class="titre">
+          C.1<br/>Il faut ré-apprendre<br/>à lire
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/C1.svg"/>
+<button class="salle pierre1" onclick="openPopup('oeuvre76')">76.</button>
+<button class="salle romane1" onclick="openPopup('oeuvre67')">67.</button>
+<button class="salle sarah1" onclick="openPopup('oeuvre35')">35.</button>
+<button class="salle lou1" onclick="openPopup('oeuvre40')">40.</button>
+<button class="salle juliette_mottier1" onclick="openPopup('oeuvre59')">59.</button>
+<button class="salle marion1" onclick="openPopup('oeuvre77')">77.</button>
 </div>
+<p>
+            Conçues pour être approchées ou activées par les visiteur·euse·s, les pièces rassemblées dans cet espace bouleversent les modèles dominants en explorant nos manières de transmettre et de représenter les savoirs.
+            <br/><br/>
+                  Au cœur de cette exploration, le langage devient une matière vivante, à la fois visuelle et sonore. La série d’affiches <i>Chicha</i> réactive un mouvement graphique populaire des quartiers de Lima. En décortiquant les gestes calligraphiques, dits « ductus », elle élabore un alphabet modulable qui recompose les paroles d’une chanson punk féministe péruvienne. L’écriture se transforme en rythme et révèle la dimension politique d’une esthétique souvent reléguée aux marges. Cette transformation du langage trouve un écho dans la vidéo <i>Poetics of Sound</i>, où des caractères typographiques, convertis en spectrogrammes puis en sons, s’effacent pour laisser place à une expérience sonore et visuelle, où le texte se dissout au profit d’un mouvement perceptible plutôt que lisible.
+            <br/><br/>
+                  Le jeu <i>Une brève histoire de mots</i> prolonge cette réflexion en proposant une autre manière d’accéder au contenu d’un livre à travers la typographie. En déplaçant les codes académiques vers une approche plus sensible et graphique, le projet cherche à rendre accessibles des connaissances complexes. La question de ce qui est transmis traverse aussi le projet graphique <i>Exposition incomplète</i>. Issu d’un travail de recherche sur la place des femmes dans le design graphique, le projet se présente tel un prototype d’exposition diffusé sous forme de cartes postales mises à disposition du public. Elles rendent ainsi visibles des figures souvent absentes des récits dominants.
+            <br/><br/>
+                  L’enjeu de la circulation des savoirs prend une tournure militante dans <i>Her Cyberévolution</i>. Ce jeu vidéo immerge les joueur·euse·s dans des espaces numériques dominés par des discours masculinistes. La déambulation révèle leurs mécanismes de violence, tout en menant vers un manifeste qui appelle à la réappropriation collective de ces territoires. Enfin, la composition <i>Animalis - Chrysocyon Brachyurus</i> revisite les codes de l’illustration scientifique et interroge à son tour les formes pédagogiques héritées. À travers peintures, modules et sérigraphies, le projet crée un écosystème visuel qui interroge notre rapport au vivant.
+            <br/><br/>
+                  De projet en projet, cet ensemble montre que les formes graphiques ne se contentent pas de véhiculer des savoirs, mais participent activement à les construire et à les remettre en cause.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE C2 -->
+<div class="popup" id="popupC2">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupC2')">
+            ×
+        </span>
+<h2 class="titre">
+          C.2<br/>Ce que touchent<br/>les mains
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/C2.svg"/>
+<button class="salle kenza1" onclick="openPopup('oeuvre14')">14.</button>
+<button class="salle lisa1" onclick="openPopup('oeuvre65')">65.</button>
+<button class="salle emile1" onclick="openPopup('oeuvre19')">19.</button>
+<button class="salle emma1" onclick="openPopup('oeuvre21')">21.</button>
+<button class="salle cecile_poulat1" onclick="openPopup('oeuvre69')">69.</button>
+<button class="salle clemence_candille1" onclick="openPopup('oeuvre10')">10.</button>
+<button class="salle charlotte_asmonti1" onclick="openPopup('oeuvre04')">04.</button>
+</div>
+<p>
+            Qu’ils prennent la forme de sculptures, de modules ou de dispositifs participatifs, ces projets transforment la production en une expérience vivante et collective, où la création ne se limite plus à un objet mais devient un espace de rencontre et d’échange.
+            <br/><br/>
+                  Dans cette dynamique, passé et présent se répondent. Ainsi, les dispositifs <i>Les Utoupies</i> et la <i>Machine Révolutive II</i> réactivent des héritages oubliés pour en faire des outils de transmission et de rassemblement. Dans le village de Marcenod, ce projet réinterprète un patrimoine social en le reliant à une pratique collective impliquant le jeune public. Ainsi, cette machine est conçue pour créer du lien : elle invite à se retrouver autour de récits portés par des formes en mouvement. Cette idée de transition et de mouvement se retrouve aussi dans la performance <i>Échafauder</i> qui pousse cette logique plus loin. Elle fait ressentir la transition entre deux positions du corps en mouvement. Le corps y est à la fois outil, matière et partie intégrante de l’œuvre. Le public, en circulant entre peintures et sculptures, vit physiquement l’espace et le temps de la performance. De la même manière, les modules <i>Module 9x20</i>, conçus pour construire collectivement des cabanes, relient le geste individuel à une création partagée. Chacun·e peut faire d’un matériau commun de récupération, une structure collective. 
+            <br/><br/>
+                  Mais que se passe-t-il quand l’œuvre semble faite pour circuler hors des murs de l’institution ? Les sculptures en série <i>Sans titre</i>, présentées dans des cagettes en plastique, sont prêtes à être emportées. Ces pièces reproductibles et faciles à dissi-muler jouent avec l’idée de propriété. Que signifie être artiste dans un lieu conçu pour contrôler les gestes du public ? Le projet bouscule cette limite et nous invite à repenser la valeur des objets et la manière dont les formes voyagent entre les mains. À l’opposé, certaines œuvres ne prennent leur sens que dans la visibilité. <i>Les Pions urbains</i>, ainsi, ont besoin de la ville comme terrain de jeu pour exister. Ils se révèlent dans l’espace public où le jeu devient un langage universel, accessible sans mots. De même la <i>Station de parole</i> matérialise les échanges et l’écoute, rendant visibles des interactions ordinaires que l’on ne remarque plus.
+            <br/><br/>
+                  Du geste au module, de la performance à l’objet à emporter, les projets interrogent nos manières de communiquer, nos normes de représentation et la valeur que nous accordons à ce qui circule entre les mains et les corps.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE D -->
+<div class="popup" id="popupD">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupD')">
+            ×
+        </span>
+<h2 class="titre">
+          D.<br/>Entre murs et murmures
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/D.svg"/>
+<button class="salle soraya1" onclick="openPopup('oeuvre42')">42.</button>
+<button class="salle leana1" onclick="openPopup('oeuvre60')">60.</button>
+<button class="salle linda1" onclick="openPopup('oeuvre38')">38.</button>
+<button class="salle thomas1" onclick="openPopup('oeuvre11')">11.</button>
+<button class="salle juliette_cornelius1" onclick="openPopup('oeuvre18.1')">18.1</button>
+<button class="salle jeanne_these2" onclick="openPopup('oeuvre79.2')">79.2</button>
+<button class="salle arthur_van1" onclick="openPopup('oeuvre81')">81.</button>
+<button class="salle abel1" onclick="openPopup('oeuvre22')">22.</button>
+<button class="salle maximilian1" onclick="openPopup('oeuvre08')">08.</button>
+<button class="salle mathias1" onclick="openPopup('oeuvre62.1')">62.1</button>
+<button class="salle heidi1" onclick="openPopup('oeuvre34')">34.</button>
+</div>
+<p>
+            Les projets réunis ici interrogent la manière dont les espaces façonnent nos usages et nos imaginaires. Habiter apparaît alors comme une interaction entre les individus, les lieux et les histoires qui s’y déposent.
+            <br/><br/>
+                  L’architecture dessine nos lieux de vie et nos monuments, et façonne l’identité des villes. Certaines œuvres s’emparent du <i>déjà-là</i>, qu’il s’agisse d’espaces ou d’objets, pour le réinvestir et le réinterpréter. Du quartier Bergson à Saint-Étienne aux calanques de Marseille, le <i>Bureau d’études techniques imaginaires</i> et le <i>Marchepied / boîte à livres</i> naissent de bribes de ces environnements, recomposés et réactivés. <br/>
+            La peinture <i>Arche 3</i> rassemble des fragments architecturaux et propose un châssis où image et support se répondent. Les carafes <i>Collaborare</i>, conçues à partir de bouteilles de vin, se parent d’un nuage de verre inspiré des pierres « graves » typiques du territoire où ce vin, autrefois surnommé « l’eau de Carbonnieux », était produit au Maroc. Par de subtils décalages et des variations d’échelle, ces œuvres transforment notre rapport à l’espace et nous invitent à le ressentir autrement. La <i>Fenêtre de Cobogo</i> et le <i>Marchepied / boîte à livres</i> sont des objets modulables qui sollicitent le corps dans leur usage. Ces projets font directement référence à des éléments architecturaux de différentes cultures, comme les briques creuses brésiliennes Cobogó ou les azulejos, fameux carreaux de faïences portugais.
+            <br/><br/>
+                  À l’inverse, le <i>Bureau d’études techniques imaginaires</i> et la peinture <i>Arche 3</i> s’inspirent des formes architecturales pour construire une narration plus onirique. <i>L’Assise : Un peu plus haut</i>, elle, crée un lien entre narrateur·rice et lecteur·rice, mettant en avant le désir de générer des espaces de dialogue. Dans une société qui s’accélère, ces lieux de rencontre sont précieux. À l’opposé, l’enceinte <i>Almost Concretion</i> fonctionne comme une communication à sens unique et expose des angoisses habituellement silencieuses. Certaines œuvres nous conduisent à porter notre attention sur d’autres formes de vie. La veilleuse <i>Luci</i>, inspirée par la bioluminescence, recrée dans l’intimité du foyer, l’atmosphère magique de ce phénomène nocturne. D’une autre façon, le totem <i>Co-Habiter</i>, destiné aux pollinisateurs, invite les humain·e·s à réintégrer les insectes dans nos espaces de vie, nous rappelant d’observer et d’écouter le monde naturel qui nous entoure.
+            <br/><br/>
+                  L’espace agit sur nous autant que nous agissons sur lui, et ces projets mettent en lumière cette influence réciproque.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE E -->
+<div class="popup" id="popupE">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupE')">
+            ×
+        </span>
+<h2 class="titre">
+          E.<br/>Sous la surface
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/E.svg"/>
+<button class="salle adele1" onclick="openPopup('oeuvre03.1')">03.1</button>
+<button class="salle adele2" onclick="openPopup('oeuvre03.2')">03.2</button>
+<button class="salle adele3" onclick="openPopup('oeuvre03.3')">03.3</button>
+<button class="salle gabriel_lecurieux2" onclick="openPopup('oeuvre44.2')">44.2</button>
+<button class="salle jeanne_lafaye1" onclick="openPopup('oeuvre43')">43.</button>
+<button class="salle jowey1" onclick="openPopup('oeuvre15')">15.</button>
+<button class="salle judith1" onclick="openPopup('oeuvre50')">50.</button>
+<button class="salle remy1" onclick="openPopup('oeuvre13')">13.</button>
+<button class="salle erwan1" onclick="openPopup('oeuvre02')">02.</button>
+</div>
+<p>
+            Microbes, champignons, gestes anciens, objets abandonnés ou artefacts du futur se répondent dans ce diorama. Les projets orientent notre regard vers ce qui reste invisible, ignoré ou oublié, en créant un dialogue entre le vivant et l’objet.
+            <br/><br/>
+                  Plusieurs œuvres mettent en avant des entités souvent jugées secondaires. Les images-récits Symbiogenesis, les sculptures <i>And, so?</i> et le dispositif sonore <i>Mutualisme pré-cybernétique</i> donnent une présence à ce qui, d’ordinaire, échappe à nos sens. Ces œuvres incitent à élargir notre regard : elles nous poussent à reconnaître et à prendre en compte d’autres êtres. Qu’il s’agisse de transmettre un récit illustré, de jouer sur l’échelle ou de donner voix à une espèce avec laquelle nous ne pouvons communiquer, ces projets invitent l’espèce humaine à considérer les autres formes de vie, quelles qu’elles soient. Cette attention au vivant et aux oublié·e·s se prolonge dans l’urne <i>Le poids des choses</i> et dans le cabinet <i>À l’Orée des naissances</i> en gardant en mémoire des pensées, des éléments du quotidien et des moments fugaces.
+            <br/><br/>
+                  Dans ce diorama, il est souvent question de donner forme à l’invisible, de figer ce qui est éphémère. La sculpture <i>Omega</i> de la fiction <i>Indestemparis</i> se veut être une trace archéologique d’un temps futur, comme une tentative de capter ce qui nous échappe. A l’opposé, la chaise à bascule <i>Balancí mallorquí</i> réactive d’anciens gestes artisanaux, tout en cherchant à faire évoluer ce patrimoine. À travers des temporalités lentes ou cycliques, d’autres pièces explorent l’écoulement du temps : la croissance des moisissures, le développement de micro-organismes ou l’évolution d’une grossesse.
+            <br/><br/>
+                  Ces projets composent un ensemble où l’expérience naît de l’observation, de l’écoute et de la rencontre avec ce qui se manifeste subtilement, rappelant que le monde vivant et ses traces se révèlent à qui prend le temps de regarder.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE F -->
+<div class="popup" id="popupF">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupF')">×</span>
+<h2 class="titre">
+            F.<br/>Sur le fil
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/F.svg"/>
+<button class="salle f-coline1" onclick="openPopup('oeuvre20')">20.</button>
+<button class="salle f-anna1" onclick="openPopup('oeuvre30')">30.</button>
+<button class="salle f-julie1" onclick="openPopup('oeuvre31')">31.</button>
+<button class="salle f-yagmur1" onclick="openPopup('oeuvre41')">41.</button>
+<button class="salle f-mathis1" onclick="openPopup('oeuvre84')">84.</button>
+</div>
+<p>
+            Dans cet espace, les questionnements personnels se transmettent par l’œuvre. Plusieurs dualités s’y confrontent et se complètent : le corps et l’esprit, le Je et le Moi, l’action et l’arrêt, l’image et le mot, le vide et le plein.<br/><br/>
 
--->
+                  Le fauteuil <i>Soma</i> attire l’attention sur les moments de repos dans notre quotidien et invite à ne rien faire. À suspendre l’action. À laisser le corps et l’esprit ralentir. Les fictions sous forme de séries, livres ou jeux vidéo offrent elles aussi cette mise en pause. Elles créent une distance avec nos responsabilités, nous réconfortent en nous confrontant à des personnages auxquels nous pouvons nous identifier. À travers eux, il devient possible de dépasser, ne serait-ce qu’un instant, les limites que nous nous imposons. Ainsi, le dessin numérique <i>Dark Circles</i> naît de moments de dilemme. Cette entité incarne une posture à la fois impulsive et détachée face aux épreuves. Elle traduit une tension persistante entre l’image que l’on donne aux autres et celle que l’on souhaiterait incarner. Le dessin <i>Les Jumeaux</i> prolonge cette exploration introspective. La création d’un univers régi par les propres codes de l’artiste devient un espace rassurant. Mais cet univers est aussi traversé par le regard des autres, qui vient le déplacer, l’altérer.<br/><br/>
+
+                  À nouveau, dans <i>Ricochets</i>, le graphisme émerge d’un besoin de communication afin de donner forme au chaos des idées, rendre lisible ce qui, au départ, ne l’est pas. Ces images évoquent un flux mental ininterrompu. Pour en saisir la logique, le corps doit s’engager et suivre la ligne, la laisser devenir fil conducteur. La lecture devient active. La fragilité et l’équilibre sont le fil rouge de ce diorama. La sculpture <i>Anicroche</i> est une composition chaotique et désorganisée qui laisse l’espace circuler entre les lames qui la composent. Le bronze vient ici structurer ce désordre apparent et révèle une tension entre équilibre et fragilité sur le point de rupture.<br/><br/>
+
+                  Ensemble, ces œuvres soulignent l’ambivalence de l’être humain, sa recherche d’équilibre et de stabilité malgré les confusions et les oppositions qui s’imposent à lui. Ce diorama rappelle enfin l’importance de construire des espaces où l’on se sent en sécurité, des zones où l’on peut se recentrer et penser à soi.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE G -->
+<div class="popup" id="popupG">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupG')">×</span>
+<h2 class="titre">
+            G.<br/>Ce que regarde<br/>le soleil
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/G.svg"/>
+<button class="salle arthur_euvrard_g1" onclick="openPopup('oeuvre23.1')">23.1</button>
+<button class="salle lilou1" onclick="openPopup('oeuvre28')">28.</button>
+<button class="salle lea1" onclick="openPopup('oeuvre33')">33.</button>
+<button class="salle clemence_joseph1" onclick="openPopup('oeuvre39')">39.</button>
+<button class="salle lorenza1" onclick="openPopup('oeuvre46')">46.</button>
+<button class="salle justine_margale1" onclick="openPopup('oeuvre48')">48.</button>
+<button class="salle charlotte_maucourt1" onclick="openPopup('oeuvre51')">51.</button>
+<button class="salle india1" onclick="openPopup('oeuvre52.1')">52.1</button>
+<button class="salle india2" onclick="openPopup('oeuvre52.2')">52.2</button>
+<button class="salle alvina1" onclick="openPopup('oeuvre70')">70.</button>
+</div>
+<p>
+            Vacances, bien-être et réussite personnelle constituent le sujet des projets présentés ici. À travers des formes et des images immédiatement reconnaissables, ces références archétypales deviennent des sujets critiques qui interrogent, parfois avec ironie, nos idéaux de détente, de performance ou d’évasion.<br/><br/>
+
+                  La coupe recomposée <i>Dans 15 minutes tout le monde deviendra célèbre</i> détourne le symbole traditionnel de la victoire pour mettre en lumière le désir de célébrité. Fabriquée à partir de trophées récupérés en recyclerie, elle souligne aussi l’éphémérité de la gloire. En se référant aux sept merveilles du monde, <i>Souvenirs de Système Septem</i> et la <i>Lampe Roma</i> révèlent également notre tendance à transformer chaque instant en expérience spectaculaire. Le patchwork <i>La Lectrice</i> et les dessins <i>90 minutes</i> explorent la répétition et l’accumulation d’images qui saturent notre quotidien. Les retransmissions télévisées de football diffusent souvent les mêmes plans, révélant la codification du sport et sa transformation en spectacle ritualisé. À travers la mise en scène de personnages stéréotypés, <i>La Lectrice</i> invite les visiteur·euse·s à prendre conscience de leur participation à ces constructions sociales.<br/><br/>
+
+                  Le diorama interroge aussi notre culture du contrôle et de l’amélioration de soi. Le tapis <i>Biceps</i> place la performance physique au cœur du foyer, tandis que le mobilier sportif <i>L’élan</i>, activé par la synchronisation de deux personnes, privilégie la rencontre plutôt que la performance individuelle. La sculpture typographique réalisée avec la police Syna matérialise la lettre. Seule, elle évoque le mot « Yoga », mais combinée à d’autres formes de son alphabet, elle devient un « Y ». Par son changement d’échelle, la lettre acquiert une présence et apparaît comme un corps en mouvement.<br/><br/>
+
+                  Les installations <i>Vacances à Beaulieu</i> et <i>La Lectrice</i> évoquent l’imaginaire de l’évasion et des moments de pause. Elles confrontent le privilège de pouvoir s’exposer au soleil et à l’ennui à une réalité plus ambivalente, faite de vulnérabilité et de normes sociales implicites qui structurent la plage. Les échasses <i>Ouvrir les yeux</i> déplacent enfin notre regard sur les temps d’attente du quotidien. Elles transforment ce temps mort en moment d’observation active.<br/><br/>
+
+                  « Ce que regarde le soleil » montre ainsi comment des formes ordinaires participent à construire nos représentations du bien-être, de la performance et des vacances.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE H -->
+<div class="popup" id="popupH">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupH')">×</span>
+<h2 class="titre">
+            H.<br/>Rien ne se perd,<br/>tout circule
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/H.svg"/>
+<button class="salle louis1" onclick="openPopup('oeuvre17')">17.</button>
+<button class="salle elyette1" onclick="openPopup('oeuvre26')">26.</button>
+<button class="salle estelle1" onclick="openPopup('oeuvre61')">61.</button>
+<button class="salle mathias2" onclick="openPopup('oeuvre62.2')">62.2</button>
+<button class="salle richard1" onclick="openPopup('oeuvre73')">73.</button>
+<button class="salle angele1" onclick="openPopup('oeuvre82')">82.</button>
+<button class="salle virgile1" onclick="openPopup('oeuvre83')">83.</button>
+</div>
+<p>
+            En détournant les codes de construction, de fabrication ou les logiques économiques, les pièces présentées mettent en lumière des mécanismes habituellement invisibles ou considérés comme évidents.<br/><br/>
+
+                  Le tabouret <i>Paraform</i> et l’<i>Étagère Jackson</i> réinterprètent des formes techniques liées au bâti, profilés industriels ou plans de bâtiments, pour les rejouer à l’échelle domestique. La lampe <i>Carpet</i> revalorise le linoléum, matériau généralement déprécié, en le détachant de sa fonction initiale. Ces pièces offrent une dimension narrative à des éléments conçus pour soutenir, structurer ou recouvrir, mettant en tension rigueur industrielle et savoir-faire artisanal.<br/><br/>
+
+                  La question des ressources traverse le diorama à différentes échelles. L’installation <i>500 briques</i> et les impressions <i>CSIP</i> interrogent notre rapport à la consommation et l’exploitation des ressources. <i>500 briques</i> s’ancrent dans le sol stéphanois en moulant des briques avec les terres excavées du site de la Cité du design à Saint-Étienne, autrefois considérées comme des déchets de construction. <i>CSIP</i> transpose cette logique d’extraction dans un futur spéculatif extra-terrestre, où les ressources deviennent une nouvelle opportunité pour l’humain·e. La valeur des matières — locales ou fictives — reste toujours façonnée par des choix économiques et politiques. Certaines pièces valorisent le partage des savoirs et la collaboration : l’atelier participatif pour fabriquer <i>500 briques</i>, l’accès libre aux plans pour créer son propre atelier de production de billets, ou la réalisation des <i>Plaquel·les</i> selon un protocole collectif. Dans une société de plus en plus dématérialisée, elles affirment la volonté de transmettre par le geste des savoir-faire liés à des objets du quotidien en voie de disparition, comme le billet de 5 €. En rendant accessibles des processus industriels complexes, <i>5E</i> révèle la dimension technique et symbolique qui fonde la valeur et l’autorité de ces objets.<br/><br/>
+
+                  Enfin, <i>Plaquel·les</i> transpose ces enjeux dans l’espace public. Les interventions autour de statues féminines questionnent la représentation de leur corps dans la ville et la manière dont ils sont sexualisés dans l’espace public. En s’appuyant sur des formes éditoriales et sur l’action collective, ce projet instaure un dialogue critique entre patrimoine, regard contemporain et construction des normes.<br/><br/>
+
+                  Dans son ensemble, « Rien ne se perd, tout circule » met en lumière les systèmes structurels qui organisent nos espaces, nos ressources et nos représentations.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE I -->
+<div class="popup" id="popupI">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupI')">×</span>
+<h2 class="titre">
+            I.<br/>Les formes<br/>de l’attention
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/I.svg"/>
+<button class="salle juliette_cornelius2" onclick="openPopup('oeuvre18.2')">18.2</button>
+<button class="salle mathilde1" onclick="openPopup('oeuvre45.1')">45.1</button>
+<button class="salle mathilde2" onclick="openPopup('oeuvre45.2')">45.2</button>
+<button class="salle eugenie1" onclick="openPopup('oeuvre47')">47.</button>
+<button class="salle laura1" onclick="openPopup('oeuvre54')">54.</button>
+<button class="salle margaux1" onclick="openPopup('oeuvre57')">57.</button>
+<button class="salle maxence1" onclick="openPopup('oeuvre72')">72.</button>
+</div>
+<p>
+            Les pièces ici réunies, envisagent le corps comme un lieu de mutation et une enveloppe à soigner, nécessitant pédagogie et engagement collectif. Représenté ou accompagné, il devient un outil pour explorer des liens avec l’intimité, la santé et les autres.<br/><br/>
+
+                  Les trois photographies <i>Distortionem</i> et l’illustration <i>Le Naufragé</i> explorent le corps à travers sa transformation. Inspiré de la légende de l’île de Bréhat, <i>Le Naufragé</i> montre un corps qui se fond dans son environnement, perdant contours et identité propre. Dans la série <i>Distortionem</i>, le corps devient méconnaissable : fragmenté, sans repères fixes, ses limites entre peau et matière se brouillent. Dans ces œuvres, le corps n’est plus un modèle stable, mais soumis à des forces physiques ou imaginaires. Si <i>Le Naufragé</i> évoque l’océan comme une vaste masse bleue, les chaises <i>HoulA</i> semblent figer le mouvement des vagues. Visuellement instables, elles matérialisent des structures qui réagissent à la tension et au poids de forces invisibles.<br/><br/>
+
+                  D’autres projets déplacent cette réflexion vers le soin des corps. Les coussins posturaux <i>Le Reishi</i> et <i>Le 6</i> pour la micro-sieste au travail proposent une position intermédiaire entre veille et sommeil, offrant une réponse à l’absence d’espaces de repos dans ce milieu. De même, la vidéo <i>Bains publics rue du Treyve</i> documente et rend visible un lieu en voie disparition, pourtant essentiel à la dignité et à l’hygiène. Par le dessin et l’animation, loin des logiques de performance, elle montre comment le soin peut être collectif et discret. Dans cette même logique, les outils de médiation <i>Éclos</i> abordent le corps à travers l’éducation à la sexualité des enfants. Destinés à la fois aux professionnel·le·s de santé et aux parent·e·s, ils sensibilisent les adultes à leur rôle dans la libération de la parole et la transmission des enjeux sociaux et éducatifs liés au corps et aux droits des enfants.<br/><br/>
+
+                  Corps effacé, corps soigné ou corps discuté, chaque pièce explore notre relation à celui-ci et la manière dont la société lui attribue ou non, une place dans nos espaces de vie. Le diorama dédié aux formes de l’attention met ainsi en lumière ce que signifie la conscience du corps, en invitant à repenser nos responsabilités envers nous-mêmes et les autres.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE J -->
+<div class="popup" id="popupJ">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupJ')">×</span>
+<h2 class="titre">
+            J.<br/>Le temps<br/>des objets
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/J.svg"/>
+<button class="salle martina1" onclick="openPopup('oeuvre06')">06.</button>
+<button class="salle doriane1" onclick="openPopup('oeuvre07')">07.</button>
+<button class="salle benoit1" onclick="openPopup('oeuvre24.1')">24.1</button>
+<button class="salle lauriane1" onclick="openPopup('oeuvre36')">36.</button>
+<button class="salle saudade1" onclick="openPopup('oeuvre53')">53.</button>
+</div>
+<p>
+            Les projets ici rassemblés interrogent la manière dont les humain·e·s transmettent et perçoivent des informations à travers les objets.<br/><br/>
+
+                  Le disque de grès <i>Éphéméride</i> est un calendrier saisonnier où le temps n’est plus perceptible à travers une suite de chiffres, mais par une série de transformations illustrées par des gravures d’animaux. L’automne s’y manifeste par des comportements, des migrations, des réserves ou des disparitions. À Jingdezhen, capitale de la porcelaine chinoise, les objets trouvés dans une usine abandonnée sont porteurs de mémoire. Ils ne sont ni restaurés ni transformés : ils sont regardés comme des fossiles. Leur surface garde la trace de gestes industriels, d’usages répétés d’une activité aujourd’hui disparue. <i>Jingdezhen Fossils</i> ne produit pas un nouvel objet ; il devient le témoin d’un temps révolu.<br/><br/>
+
+                  Si <i>Jingdezhen Fossils</i> fige des artefacts, les moules à pain de <i>Pain de Py Froid</i> capturent, quant à eux, le relief d’un territoire. Les courbes du rocher s’impriment dans la pâte, tandis que l’emballage du pain devient une carte retraçant un réseau d’acteurs locaux. Ici, le temps est celui de la fermentation, du paysage en mouvement, les montagnes étant les témoins du temps géologique, et des liens tissés sur un territoire. Le pain est à la fois archive géologique et aliment. L’évolution des chaînes de montagnes, le cycle de la nature ou encore la présence de l’eau sont autant de marqueurs de l’histoire de notre planète. La fontaine <i>Jardinons !</i> adopte une position active en évoquant le temps à la manière d’une clepsydre. Elle rend visible le parcours de l’eau, de son ruissellement jusqu’à son infiltration vers les racines. Ce qui reste habituellement invisible – l’irrigation souterraine – devient perceptible.<br/><br/>
+
+                  Alors que la fontaine <i>Jardinons !</i> invite à la contemplation, le <i>Minitel</i>, témoin des années 1980, marque une accélération brutale des modes de communication. Mis en regard avec la <i>Tablette d’argile</i>, il révèle comment la pensée circule selon la nature du support : lourde et locale dans l’argile, fluide et connectée dans le réseau numérique. Dans les deux cas, l’objet conditionne le périmètre et la vitesse de transmission, influençant directement notre rapport au temps.<br/><br/>
+
+                  Les objets donnent souvent l’impression d’une certaine permanence, comme s’ils étaient destinés à nous survivre. Mais à l’ère du numérique, nos artefacts contemporains pourront-ils réellement traverser les siècles comme l’ont fait les tablettes d’argile des civilisations anciennes ?
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE K -->
+<div class="popup" id="popupK">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupK')">×</span>
+<h2 class="titre">
+            K.<br/>Une chose peut<br/>en devenir une autre
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/K.svg"/>
+<button class="salle arthur_carpentier1" onclick="openPopup('oeuvre12.1')">12.1</button>
+<button class="salle arthur_carpentier2" onclick="openPopup('oeuvre12.2')">12.2</button>
+<button class="salle arthur_euvrard_k1" onclick="openPopup('oeuvre23.2')">23.2</button>
+<button class="salle benoit2" onclick="openPopup('oeuvre24.2')">24.2</button>
+<button class="salle justine_gaspard1" onclick="openPopup('oeuvre25')">25.</button>
+<button class="salle morgane1" onclick="openPopup('oeuvre74')">74.</button>
+</div>
+<p>
+            À partir de références communes, un déplacement s’opère et porte notre attention sur certains détails. La matière n’est ici pas seulement un moyen de donner forme au bâti ou aux outils, mais aussi à la pensée.<br/><br/>
+
+                  Le design n’est pas seulement une pratique tournée vers les humain·e·s : il dessine un paysage et peut constituer un territoire pour d’autres espèces. Avec la modernisation des infrastructures urbaines, les bâtiments en pierre et les toitures en tuiles sont progressivement remplacés par des murs lisses et des toits plats, supprimant les recoins nécessaires à la nidification. Les <i>Objets destinés aux oiseaux en milieu urbain</i> s’inspirent des formes de toitures qui permettaient aux oiseaux de s’y abriter. Le projet assume une esthétique industrielle pour en faire un support d’accueil.<br/><br/>
+
+                  Cette attention portée aux structures existantes se retrouve dans <i>Fragments</i>. Si l’on reconnaît immédiatement les références mobilisées par les <i>Objets destinés aux oiseaux en milieu urbain</i>, l’origine des outils <i>Fragments</i> est plus ambiguë. Ils sont issus de morceaux d’objets manufacturés, récoltés, photographiés, classés puis réassemblés en outils de table. Les fragments ne sont plus des déchets, mais deviennent des possibilités pour de futurs usages. La vaisselle <i>Acousma</i> repense également notre relation aux objets du quotidien. Au-delà de sa forme, c’est sa qualité sonore qui retient l’attention. En hybridant objets usuels et instruments, le son n’est plus un simple bruit de fond : il révèle que nos déplacements, nos gestes et nos habitudes composent une partition quotidienne.<br/><br/>
+
+                  Si les pièces précédentes font appel au corps, à la matière et au toucher, les suivantes mobilisent davantage l’écriture et la pensée. La <i>Tablette d’argile</i> fait partie d’une série d’objets qui ont transformé notre manière de penser et de conserver la mémoire. Elle marque un moment décisif dans l’histoire, celui où la pensée se fixe dans la matière. La stèle pictographique <i>Stèle de Syna</i>, inspirée d’un modèle égyptien, rejoue ce geste en transposant un système d’écriture contemporain dans une forme historique. Dans les deux cas, il s’agit de rendre visibles des outils servant à transmettre la pensée, où l’écriture joue ainsi un rôle de mémoire pour les sociétés.<br/><br/>
+
+                  De la même manière que nos choix architecturaux ont des répercussions sur la vie d’autres espèces, nos modes de communication influencent la manière dont nous nous comprenons les un·e·s les autres.
+        </p>
+</div>
+</div>
+<!-- POPUP SALLE L -->
+<div class="popup" id="popupL">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupL')">×</span>
+<h2 class="titre">
+            L.<br/>Les traces<br/>que nous laissons
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/L.svg"/>
+<button class="salle tina1" onclick="openPopup('oeuvre01')">01.</button>
+<button class="salle aurelie1" onclick="openPopup('oeuvre49')">49.</button>
+<button class="salle orane1" onclick="openPopup('oeuvre56')">56.</button>
+<button class="salle alfea1" onclick="openPopup('oeuvre58')">58.</button>
+<button class="salle jessica1" onclick="openPopup('oeuvre64')">64.</button>
+<button class="salle juliette_soustelle1" onclick="openPopup('oeuvre78')">78.</button>
+</div>
+<p>
+            Ce diorama s’intéresse à la notion d’identité et ce qui la compose, aux traces que nous laissons et à leurs effets sur nos environnements, naturels, technologiques ou sociaux.<br/><br/>
+
+                  L’installation <i>Multibiote, Électrobiote, Anthropochienne</i> révèle des fragments oubliés de l’identité de l’artiste, témoignant d’une transition en cours. Destinée à s’estomper avec le temps, la photographie <i>Vivace</i> incarne également une volonté de mutation, remettant en question la quête d’éternité propre à l’image photographique. L’usage de techniques naturelles dans son développement oppose la lenteur à la surconsommation d’images. À l’inverse <i>Vivace</i>, <i>Artefacts</i> questionne l’instantanéité de nos modes de vie en combinant photographie et intelligence artificielle, alimentée par un flux massif d’images. <i>Résidus</i>, moulage en plâtre, dernière trace matérielle d’un lieu disparu, évoque quant à lui l’obsolescence du geste humain. Les bâtons de marche <i>Sentyé mêlé</i> dénoncent la surfréquentation des sentiers de la Guadeloupe tout en rappelant les courses émancipatrices qui y ont eu lieu à l’époque coloniale. Ces œuvres montrent ce qui reste après notre passage et révèlent comment nos activités laissent leurs empreintes sur les environnements que nous traversons.<br/><br/>
+
+                  La tentative de rapprocher environnement naturel et cadre artificiel se traduit à la fois par l’intégration de vies végétales dans notre quotidien et par la collaboration avec les éléments naturels. Le mobilier <i>Foyer au cœur végétal</i> devient un objet vivant, en mêlant plantes et matériaux tel que le feutre. Il rappelle que prendre soin du vivant est une responsabilité quotidienne qui invite aussi à considérer nos objets comme une entité à protéger. Cette interaction avec la nature prend une autre dimension lorsqu’elle devient mélodie, laissant l’humain·e en retrait. Ainsi, l’instrument à vent <i>Murmure des marais</i> joue avec les sons des zones humides pour révéler la fragilité des écosystèmes que nous traversons sans y prêter attention.<br/><br/>
+
+                  « Les traces que nous laissons » rappelle que nos traces ne sont jamais neutres et qu’elles influencent la nature, l’espace et le temps.
+        </p>
+</div>
+</div>
+<!-- POPUP CINÉMA -->
+<div class="popup popup-cinema" id="popupCINE">
+<div class="popup-content cinema-content">
+<span class="close" onclick="closePopup('popupCINE')">×</span>
+<h2 class="titre cinema-titre">
+            Cinéma
+        </h2>
+<div class="cinema-liste">
+<!-- CÉCILE CHEANG -->
+<article class="cinema-item" id="film-cecile">
+<video class="cinema-video" controls="" preload="metadata">
+<source src="img_rectoverso/CINEMA/cecile1.mp4" type="video/mp4"/>
+</video>
+<div class="cinema-cartel">
+<div class="cartel-titre">
+<span class="numero">16.</span>
+<div>
+<h3>Cécile Cheang</h3>
+<p class="titre-oeuvre">Sous l’Ombre de son Silence</p>
+</div>
+</div>
+<p class="infos">
+                        Art ACDC_espaces, 2025<br/>
+                        <i>Extrait du film, 2min 27 s</i> <br>
+                        Film, 8 min 06 s
+                    </p>
+<p>
+                        Après des années de silence, le père de Cécile Cheang lui raconte une période tragique de sa vie : le génocide cambodgien dans les années 1970. Dans l’extrait de son film <i>Sous l’Ombre de son Silence</i>, l’oralité se déploie autant à travers les mots que par les non-dits et le langage corporel, révélant ce qui ne peut se dire autrement.
+                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/cecile.cheang/" rel="noopener noreferrer" target="_blank">@cecile.cheang</a>
+</p>
+</div>
+</article>
+<!-- THOMAS GOUMARRE -->
+<article class="cinema-item" id="film-thomas">
+<video class="cinema-video" controls="" preload="metadata">
+<source src="img_rectoverso/CINEMA/thomas1.mp4" type="video/mp4"/>
+</video>
+<div class="cinema-cartel">
+<div class="cartel-titre">
+<span class="numero">32.</span>
+<div>
+<h3>Thomas Goumarre et Adriano Duarte*</h3>
+<p class="titre-oeuvre">Sentier des crassiers</p>
+</div>
+</div>
+<p class="infos">
+                        Art ACDC_espaces, 2025<br/>
+                        Contre-Visite des Crassiers en Friche à Saint-Étienne / Arnaud Descheemacker<br/>
+                        <i>Extrait du film, 2 min 56 s</i> <br>
+                        Film, 31 min 19 s
+                    </p>
+<p>
+                        À partir d’observations de terrain, Thomas Goumarre et Adriano Duarte créent un sentier de 55 km reliant les crassiers historiques et contemporains du bassin houiller de la Loire. Il traverse puits, cités ouvrières, jardins partagés et anciennes voies ferrées, révélant la diversité évolutive du paysage. Ce sentier-enquête explore les liens écologiques, historiques et militants, proposant de nouveaux récits du territoire et invitant à rester vigilant·e·s face aux logiques extractivistes qui produisent ces contre-monuments involontaires.
+                    </p>
+<p class="infos">
+                        Assises de l’espace de projection issues du projet <i>Sentier des crassiers</i>.<br/>
+                        * Adriano Duarte est paysagiste et concepteur.
+                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/thomasgoumarre/" rel="noopener noreferrer" target="_blank">@thomasgoumarre</a>
+</p>
+</div>
+</article>
+<!-- LISE PONCET -->
+<article class="cinema-item" id="film-lise">
+<video class="cinema-video" controls="" preload="metadata">
+<source src="img_rectoverso/CINEMA/liseponcet-distance_.mp4" type="video/mp4"/>
+</video>
+<div class="cinema-cartel">
+<div class="cartel-titre">
+<span class="numero">68.</span>
+<div>
+<h3>Lise Poncet</h3>
+<p class="titre-oeuvre">Distance</p>
+</div>
+</div>
+<p class="infos">
+                        Art ACDC_espaces, 2025<br/>
+                        <i>Extrait du film, 2min 45 s</i> <br>
+                        Film, 13 min 32 s
+                    </p>
+<p>
+                        Ce film rassemble des fragments de vidéos initialement présentés en projection spatialisée sur cinq écrans, ici réunis sur un seul écran où se recomposent séquences et superpositions. À Bruxelles, une journée fictive est construite à partir de récits, d’images et de sons, comme tentative de géographie sensible. Chaque dimension de la marche — mentale, sociale, numérique et visible — constitue une expérience urbaine subjective et située. Ce travail invite à questionner notre manière d’éprouver la ville.
+                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/lise.poncet80/" rel="noopener noreferrer" target="_blank">@lise.poncet80</a>
+</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+<!-- POPUP SALLE CELESTE -->
+<div class="popup" id="popupCELESTE">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupCELESTE')">×</span>
+<h2 class="titre">
+            Entre recto et verso
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/celeste.svg"/>
+<button class="salle celeste1" onclick="openPopup('oeuvre55')">55.</button>
+</div>
+</div>
+</div>
+<!-- POPUP SALLE JEANNE -->
+<div class="popup" id="popupJEANNE">
+<div class="popup-content popup-salle">
+<span class="close" onclick="closePopup('popupJEANNE')">×</span>
+<h2 class="titre">
+            Entre recto et verso
+        </h2>
+<div class="image-fantome">
+<img alt="" src="img_rectoverso/fantom/jeanne.svg"/>
+<button class="salle jeanne1" onclick="openPopup('oeuvre80')">80.</button>
+</div>
+</div>
+</div>
+</section>
+<section class="index-artistes-header">
+<h2>Index des dioramas</h2>
+<p class="plan-legende">
+        → Cliquez sur un nom pour consulter directement le cartel d'une œuvre 
+    </p>
+<section class="liste-artistes">
+<div class="liste-colonne">
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>A.</span>
+<strong>Quand les murs<br/>se souviennent des pas</strong>
+</div>
+<button onclick="openPopup('oeuvre27')"><span>27.</span>Elise Gauthiez</button>
+<button onclick="openPopup('oeuvre29')"><span>29.</span>Nils Geffre</button>
+<button onclick="openPopup('oeuvre37')"><span>37.</span>Ludovic Hohl</button>
+<button onclick="openPopup('oeuvre71')"><span>71.</span>Colin Riccobene</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>B.</span>
+<strong>Le capitalisme n’a pas de saison</strong>
+</div>
+<button onclick="openPopup('oeuvre05.1')"><span>05.1</span>Kamila Baldos</button>
+<button onclick="openPopup('oeuvre05.2')"><span>05.2</span></button>
+<button onclick="openPopup('oeuvre09')"><span>09.</span>Jasmine Cailliez</button>
+<button onclick="openPopup('oeuvre44.1')"><span>44.1</span>Gabriel Leurieux-Lafferronnay</button>
+<button onclick="openPopup('oeuvre63')"><span>63.</span>Gabriel Pénicaud</button>
+<button onclick="openPopup('oeuvre66')"><span>66.</span>Clément Peyret</button>
+<button onclick="openPopup('oeuvre75')"><span>75.</span>Alexia Roure</button>
+<button onclick="openPopup('oeuvre79.1')"><span>79.1</span>Jeanne Thèse</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>C.1</span>
+<strong>Il faut ré-apprendre à lire</strong>
+</div>
+<button onclick="openPopup('oeuvre35')"><span>35.</span>Sarah Hadjazi</button>
+<button onclick="openPopup('oeuvre40')"><span>40.</span>Lou Jourdan</button>
+<button onclick="openPopup('oeuvre59')"><span>59.</span>Juliette Mottier</button>
+<button onclick="openPopup('oeuvre67')"><span>67.</span>Romane Pinault</button>
+<button onclick="openPopup('oeuvre76')"><span>76.</span>Pierre Saby</button>
+<button onclick="openPopup('oeuvre77')"><span>77.</span>Marion Serclérat</button>
+</div>
+</div>
+<div class="liste-colonne">
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>C.2</span>
+<strong>Ce que touchent les mains</strong>
+</div>
+<button onclick="openPopup('oeuvre04')"><span>04.</span>Charlotte Asmonti</button>
+<button onclick="openPopup('oeuvre10')"><span>10.</span>Clémence Candille</button>
+<button onclick="openPopup('oeuvre14')"><span>14.</span>Kenza Cebe</button>
+<button onclick="openPopup('oeuvre19')"><span>19.</span>Emile Dalotel</button>
+<button onclick="openPopup('oeuvre21')"><span>21.</span>Emma Duplanil</button>
+<button onclick="openPopup('oeuvre65')"><span>65.</span>Lisa Petit</button>
+<button onclick="openPopup('oeuvre69')"><span>69.</span>Cécile Poulat</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>D.</span>
+<strong>Entre murs et murmure</strong>
+</div>
+<button onclick="openPopup('oeuvre08')"><span>08.</span>Maximilian James Browning</button>
+<button onclick="openPopup('oeuvre11')"><span>11.</span>Thomas Cappe</button>
+<button onclick="openPopup('oeuvre18.1')"><span>18.1</span>Juliette Cornélius</button>
+<button onclick="openPopup('oeuvre22')"><span>22.</span>Abel Dutournier</button>
+<button onclick="openPopup('oeuvre34')"><span>34.</span>Heidi Habbuloglu</button>
+<button onclick="openPopup('oeuvre38')"><span>38.</span>Linda Imbert</button>
+<button onclick="openPopup('oeuvre42')"><span>42</span>Soraya Khelil</button>
+<button onclick="openPopup('oeuvre60')"><span>60.</span>Léana Mouches-Damian</button>
+<button onclick="openPopup('oeuvre62.1')"><span>62.1</span>Mathias Padlewski</button>
+<button onclick="openPopup('oeuvre79.2')"><span>79.2</span>Jeanne Thèse</button>
+<button onclick="openPopup('oeuvre81')"><span>81</span>Arthur Van-Poucke</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>E.</span>
+<strong>Sous la surface</strong>
+</div>
+<button onclick="openPopup('oeuvre02')"><span>02.</span>Erwan Acas</button>
+<button onclick="openPopup('oeuvre03.1')"><span>03.1</span>Adèle Archaimbaud</button>
+<button onclick="openPopup('oeuvre03.2')"><span>03.2</span></button>
+<button onclick="openPopup('oeuvre03.3')"><span>03.3</span></button>
+<button onclick="openPopup('oeuvre13')"><span>13.</span>Rémi Castagna</button>
+<button onclick="openPopup('oeuvre15')"><span>15.</span>Yowei Chang</button>
+<button onclick="openPopup('oeuvre43')"><span>43.</span>Jeanne Lafaye de Micheaux</button>
+<button onclick="openPopup('oeuvre44.2')"><span>44.2</span>Gabriel Lecurieux-Lafferronnay</button>
+<button onclick="openPopup('oeuvre50')"><span>50</span>Judith Massutí</button>
+</div>
+</div>
+<div class="liste-colonne">
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>F.</span>
+<strong>Sur le fil</strong>
+</div>
+<button onclick="openPopup('oeuvre20')"><span>20.</span>Coline Drouglazet</button>
+<button onclick="openPopup('oeuvre30')"><span>30.</span>Anna-Nina Girel-Chatellard </button>
+<button onclick="openPopup('oeuvre31')"><span>31.</span>Julie Gomez</button>
+<button onclick="openPopup('oeuvre41')"><span>41.</span>Yagmur Kesmez</button>
+<button onclick="openPopup('oeuvre84')"><span>84.</span>Mathis Volpe</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>G.</span>
+<strong>Ce que regarde le soleil</strong>
+</div>
+<button onclick="openPopup('oeuvre23.1')"><span>23.1</span>Arthur Euvrard</button>
+<button onclick="openPopup('oeuvre28')"><span>28.</span>Lilou Gaxieu</button>
+<button onclick="openPopup('oeuvre33')"><span>33</span>Léa Guibert</button>
+<button onclick="openPopup('oeuvre39')"><span>39.</span>Clémence Joseph</button>
+<button onclick="openPopup('oeuvre46')"><span>46.</span>Lorenza Mannaioni</button>
+<button onclick="openPopup('oeuvre48')"><span>48.</span>Justine Margalé</button>
+<button onclick="openPopup('oeuvre51')"><span>51</span>Charlotte Maucourt</button>
+<button onclick="openPopup('oeuvre52.1')"><span>52.1</span>India Maury</button>
+<button onclick="openPopup('oeuvre52.2')"><span>52.2</span></button>
+<button onclick="openPopup('oeuvre70')"><span>70</span>Alvina Raguin</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>H.</span>
+<strong>Rien ne se perd, tout circule</strong>
+</div>
+<button onclick="openPopup('oeuvre17')"><span>17.</span>Louis Chevalier</button>
+<button onclick="openPopup('oeuvre26')"><span>26.</span>Elyette Gauthier</button>
+<button onclick="openPopup('oeuvre61')"><span>61.</span>Estelle Ottaviano</button>
+<button onclick="openPopup('oeuvre62.2')"><span>62.2</span>Mathias Padlewski</button>
+<button onclick="openPopup('oeuvre73')"><span>73.</span>Richard Rondelez</button>
+<button onclick="openPopup('oeuvre82')"><span>82</span>Angèle Villière</button>
+<button onclick="openPopup('oeuvre83')"><span>83</span>Virgile Voisin</button>
+</div>
+</div>
+<div class="liste-colonne">
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>I.</span>
+<strong>Les formes de l’attention</strong>
+</div>
+<button onclick="openPopup('oeuvre18.2')"><span>18.2</span>Juliette Cornélius</button>
+<button onclick="openPopup('oeuvre45.1')"><span>45.1</span>Mathilde Lescuyer</button>
+<button onclick="openPopup('oeuvre45.2')"><span>45.2</span></button>
+<button onclick="openPopup('oeuvre47')"><span>47.</span>Eugénie Mantilleri</button>
+<button onclick="openPopup('oeuvre54')"><span>54.</span>Laura Millaud</button>
+<button onclick="openPopup('oeuvre57')"><span>57.</span>Margaux Monrouveix</button>
+<button onclick="openPopup('oeuvre72')"><span>72.</span>Maxence Rondeau</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>J.</span>
+<strong>Le temps des objets</strong>
+</div>
+<button onclick="openPopup('oeuvre06')"><span>06.</span>Martina Baus</button>
+<button onclick="openPopup('oeuvre07')"><span>07.</span>Doriane Bouteille</button>
+<button onclick="openPopup('oeuvre24.1')"><span>24.1</span>Benoît Fage</button>
+<button onclick="openPopup('oeuvre36')"><span>36.</span>Lauriane Heintz</button>
+<button onclick="openPopup('oeuvre53')"><span>53.</span>Saudade Messina</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>K.</span>
+<strong>Une chose peut <br/>en devenir une autre</strong>
+</div>
+<button onclick="openPopup('oeuvre12.1')"><span>12.1</span>Arthur Carpentier</button>
+<button onclick="openPopup('oeuvre12.2')"><span>12.2</span></button>
+<button onclick="openPopup('oeuvre23.2')"><span>23.2</span>Arthur Euvrard</button>
+<button onclick="openPopup('oeuvre24.2')"><span>24.2</span>Benoît Fage</button>
+<button onclick="openPopup('oeuvre25')"><span>25.</span>Justine Gaspard</button>
+<button onclick="openPopup('oeuvre74')"><span>74.</span>Morgane Rousseau</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span>L.</span>
+<strong>Les traces que nous laissons</strong>
+</div>
+<button onclick="openPopup('oeuvre01')"><span>01.</span>Tina Abenzoar</button>
+<button onclick="openPopup('oeuvre49')"><span>49.</span>Aurélie Martinet</button>
+<button onclick="openPopup('oeuvre56')"><span>56.</span>Orane Mondani</button>
+<button onclick="openPopup('oeuvre58')"><span>58.</span>Alfea Morelli</button>
+<button onclick="openPopup('oeuvre64')"><span>64.</span>Jessica Perez</button>
+<button onclick="openPopup('oeuvre78')"><span>78</span>Juliette Soustelle</button>
+</div>
+</div>
+<div class="liste-colonne">
+<div class="liste-groupe">
+<div class="liste-titre">
+<span></span>
+<strong>Cinéma</strong>
+</div>
+<button onclick="openCinemaFilm('film-cecile')"><span>16.</span>Cécile Cheang</button>
+<button onclick="openCinemaFilm('film-thomas')"><span>32.</span>Thomas Goumarre</button>
+<button onclick="openCinemaFilm('film-lise')"><span>68.</span>Lise Poncet</button>
+</div>
+<div class="liste-groupe">
+<div class="liste-titre">
+<span></span>
+<strong>Entre recto et verso</strong>
+</div>
+<button onclick="openPopup('oeuvre55')"><span>55.</span>Céleste Moja</button>
+<button onclick="openPopup('oeuvre80')"><span>80.</span>Jeanne Troadec</button>
+</div>
+</div>
+</section>
+</section>
+</main>
+<!-- ----- SALLE A ----- -->
+<!-- COLIN -->
+<div class="popup popup-oeuvre" id="oeuvre71">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre71')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/A/colin.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">71.</span>
+<div>
+<h3>Colin Riccobene</h3>
+<p class="titre-oeuvre">
+                                                Le portail des gloutons
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                        Design ACDC_espaces, 2024<br/>
+                                        Hêtre, chêne, étain, fer forgé cire d'abeille, photographie 246×94×25cm
+
+                                    </p>
+<p>
+                                        Colin Riccobene construit une œuvre sculpturale à partir de ses explorations et expériences. Il multiplie les déplacements, comme le voyage en train de marchandises, et collecte formes et fragments dans des espaces naturels (forêt, rivière souterraine) ou marqués par l'activité humaine (ancienne maison de marbrier, lieux abandonnés ou en ruines). Ce travail se prolonge en atelier pour créer des sculptures «mémorielles», empreintes d'une esthétique médiévale, mettant en lumière des lieux oubliés ou invisibles.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/afet_visidur/" rel="noopener noreferrer" target="_blank">
+                                            @afet_visidur
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- NILS -->
+<div class="popup popup-oeuvre" id="oeuvre29">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre29')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/A/nils.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">29.</span>
+<div>
+<h3>Nils Geffre</h3>
+<p class="titre-oeuvre">
+                                                Des archives que l’on porte
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Objet, 2025<br/>
+                                            Sapin, Plexiglas, matériaux divers, 60×10,5×8cm
+
+                                    </p>
+<p>
+                                        Nils Geffre met en scène des broches composées de photos d’archives et de matériaux récupérés au gré de ses errances et explorations. Ces bijoux racontent des fragments de mémoire et d’histoire populaire. Le projet tisse un lien entre Saint-Étienne et Argenteuil, deux villes ouvrières et populaires. Il interroge la notion de trace et de territoire à travers des objets intimes et portables. Les broches deviennent des supports de récit et de transmission.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/nilsgef/" rel="noopener noreferrer" target="_blank">
+                                            @nilsgef
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ELISE -->
+<div class="popup popup-oeuvre" id="oeuvre27">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre27')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/A/elise.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">27.</span>
+<div>
+<h3>Elise Gauthiez</h3>
+<p class="titre-oeuvre">
+                                                Anamnèse : Broche - Exfiltrer
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Objet, 2025<br/>
+                                            Coton, broderie de perles, fil d’or, raphia, broche métallique, 72×27cm 
+
+                                    </p>
+<p>
+                                        Ce projet explore la place du bijou lorsqu’il n’est plus porté mais intégré à l’espace domestique. Chargé d’une valeur affective, il trouve sur son support une extension de sa présence et de l’attachement qu’il suscite. La broche, bijou particulier ne touchant jamais directement la peau, guide la forme fluide de cette broderie.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/elise_gauthiez/" rel="noopener noreferrer" target="_blank">
+                                            @elise_gauthiez
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LUDOVIC -->
+<div class="popup popup-oeuvre" id="oeuvre37">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre37')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/A/ludovic.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">37.</span>
+<div>
+<h3>Ludovic Hohl</h3>
+<p class="titre-oeuvre">
+                                                Sentier modulaire
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Créations numériques, 2024<br/>
+                                            Logiciel Godot, synthétiseur modulaire 
+
+                                    </p>
+<p>
+                                        Ce projet propose un espace virtuel où architecture et création sonore interagissent. Les choix visuels génèrent des sonorités, tandis que certains sons imposent des modifications architecturales. À la croisée de l’instrument, du jeu vidéo et de l’outil visuel, cet espace expérimental permet d’explorer librement la création, sans début ni fin.
+
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/hohl_ludovic/" rel="noopener noreferrer" target="_blank">
+                                            @hohl_ludovic
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ----- SALLE B ----- -->
+<!-- KAMILA -->
+<div class="popup popup-oeuvre" id="oeuvre05.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre05.1')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/kamila1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">05.1</span>
+<div>
+<h3>Kamila Baldos</h3>
+<p class="titre-oeuvre">
+                                                Orientations
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                        Design Objet, 2024<br/>
+                                        Papier, crayon de couleur, 50×70cm 
+                                    </p>
+<span class="numero2"><i>Valjouffrey</i></span>
+<p>
+                                        En allant au travail, en faisant ses courses, que voit Kamila Baldos si elle prend le temps de regarder les espaces qu’elle a l’habitude de rapidement traverser ? Que ce soit les rues autour de chez elle ou les lieux de son enfance, de nouveaux reliefs se dessinent lorsqu’elle ralentit le pas. <i>Orientations</i> est une série d’illustrations qui met en exergue les détails des paysages quotidiens. C’est un travail de recherche, à la fois sur les procédés graphiques, les formats et les points de vue choisis.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/kamila_blds/" rel="noopener noreferrer" target="_blank">
+                                            @kamila_blds
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre05.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre05.1')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/kamila2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">05.2</span>
+<div>
+<h3>Kamila Baldos</h3>
+<p class="titre-oeuvre">
+                                                Orientations
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                        Design Objet, 2024<br/>
+                                        Papier, crayon de couleur, 50×70cm 
+                                    </p>
+<span class="numero2"><i>Moulins-en-Tonnerois</i></span>
+<p class="insta">
+<a href="https://www.instagram.com/kamila_blds/" rel="noopener noreferrer" target="_blank">
+                                            @kamila_blds
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- GABRIEL LECURIEUX -->
+<div class="popup popup-oeuvre" id="oeuvre44.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre44.1')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/gabriel_lecurieux1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">44.1</span>
+<div>
+<h3>Gabriel Lecurieux-Lafferronnay 
+</h3>
+<p class="titre-oeuvre">
+                                                Indestemparis : Alpha
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Création numérique, 2025 <br/>
+                                            Impressions 3D et galvanoplastie, plastique, cuivre, peinture, 90×25×45cm 
+
+                                    </p>
+<p>
+<i>Indestemparis</i> est une fiction sur une civilisation future fondée sur la relativité du temps comme principe social et économique, représentée ici par des artefacts de mesure. Le projet interroge la création comme archéologie du virtuel : exhumer ce qui n’a pas encore existé. Par un protocole spéculatif, les outils numériques relient des virtualités déphasées. La sculpture <i>Indestemparis : Alpha</i> devient trace archéologique d’un rapport au temps encore à venir.
+
+                                    </p>
+<p class="insta">
+<a href="https://www.monadeworks.com" rel="noopener noreferrer" target="_blank">
+                                            monadeworks.com
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JASMINE -->
+<div class="popup popup-oeuvre" id="oeuvre09">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre09')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/jasmine.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">09.</span>
+<div>
+<h3>Jasmine Cailliez</h3>
+<p class="titre-oeuvre">
+                                                Engawa
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design ACDC_espaces, 2024<br/>
+                                            Bois, laine, papier, 180×60×42cm<br/>
+                                            Bande sonore, 6min 22s
+
+                                    </p>
+<p>
+                                        Inspirée des codes de l’aménagement intérieur, cette assise détourne la logique du meuble pour introduire une zone de flottement. Entre fragment d’espace et objet potentiel, elle interroge comment une forme conditionne l’usage, la perception et l’émergence d’un entre‑deux : un bref passage vers un ailleurs, une ouverture vers un soi intérieur.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/_jasckia_/" rel="noopener noreferrer" target="_blank">
+                                            @_jasckia_
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- GABRIEL PÉNICAUD -->
+<div class="popup popup-oeuvre" id="oeuvre63">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre63')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<video class="oeuvre-video" controls="" playsinline="" preload="metadata">
+<source src="img_rectoverso/B/gabriel_penicaud.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">63.</span>
+<div>
+<h3>Gabriel Pénicaud</h3>
+<p class="titre-oeuvre">
+                                                Le Cycle des Nymphaléens
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Objet, 2025<br/>
+                                            <i>Extrait du film, 1 min</i> <br>
+                                            Film, 3min 38s 
+
+                                    </p>
+<p>
+                                        Ce projet spéculatif s’ancre dans un futur lointain (d’ici 500 ans), dans un monde profondément transformé par la disparition progressive des insectes pollinisateurs. Dans ce contexte post-technologique, une tribu nomade « les Nymphaléens » s’est donnée pour mission de rétablir un équilibre perdu : la pollinisation. 
 
 
-<script src="app.js"></script>
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/gabriel.penicaud/" rel="noopener noreferrer" target="_blank">
+                                            @gabriel.penicaud
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CLÉMENT -->
+<div class="popup popup-oeuvre" id="oeuvre66">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre66')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/clement_peret.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">66.</span>
+<div>
+<h3>Clément Peyret</h3>
+<p class="titre-oeuvre">
+                                                À tâtons
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Objet, 2024 <br/>
+                                            Bois, polypropylène, polytétrafluoroéthylène, 120×10×10cm 
+
+
+                                    </p>
+<p>
+                                        Ce projet explore des modalités de conception hors des schémas établis du design. En adoptant la posture d’un·e ouvrier·ère assigné·e à une machine, ici une thermoformeuse, Clément Peyret s’intéresse aux formes latentes décelables dans les rebuts industriels. Bandes de plastique et matériaux glanés sont reconfigurés pour créer un vocabulaire constructif autonome. La forme ne se projette plus, elle s’éprouve. Le bougeoir présenté est l’une des matérialisations possibles de ce système.
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/clement_pyrt/" rel="noopener noreferrer" target="_blank">
+                                            @clement_pyrt
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ALEXIA -->
+<div class="popup popup-oeuvre" id="oeuvre75">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre75')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/alexia1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">75.</span>
+<div>
+<h3>Alexia Roure</h3>
+<p class="titre-oeuvre">
+                                                Composer avec les limites
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design Objet, 2025  <br/>
+                                            Métal, leds, 20×40×10cm 
+                                    </p>
+<p>
+<i>Composer avec les limites</i> explore la poétique des ruines à partir de claviers obsolètes issus du parc informatique d’une entreprise stéphanoise en faillite. Désassemblés de leurs composants internes, ils deviennent la matière première d’objets conçus avec l’existant. Sont présentées des étagères lumineuses, fragments d’une recherche en cours où le design compose avec la contrainte, la récupération et la transformation des matériaux.
+
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/alexia_roure/" rel="noopener noreferrer" target="_blank">
+                                            @alexia_roure
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JEANNE THESE -->
+<div class="popup popup-oeuvre" id="oeuvre79.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre79.1')"> × </span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/B/jeanne_these1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">79.1</span>
+<div>
+<h3>Jeanne Thèse</h3>
+<p class="titre-oeuvre">
+                                                C’est un tube !
+                                            </p>
+</div>
+</div>
+<p class="infos">
+                                            Design ACDC_espaces, 2024 <br/>
+                                            Céramique, dimensions variables 
+                                    </p>
+<p>
+<i>C’est un tube !</i> est issu d’une sitcom live filmée en plan séquence qui traverse cinq scénographies que Jeanne Thèse a réalisées au sein des bâtiments de l’Ésad Saint-Étienne lors de son diplôme. Entre écriture, céramique, sérigraphie, radio et édition, la fiction explore Saint-Jean-De-Tubes, ville fictive obsédée par les tubes. Inspirée par l’écrivain italien Italo Calvino, auteur des <i>Villes Invisibles</i>, elle questionne les liens urbains et sociaux. Nos connexions, visibles ou invisibles, sont-elles toujours signe de qualité ou juste de quantité ?
+
+
+                                    </p>
+<p class="insta">
+<a href="https://www.instagram.com/jeannoujeannettte/" rel="noopener noreferrer" target="_blank">
+                                            @jeannoujeannettte
+                                        </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE C.1
+========================= -->
+<div class="popup popup-oeuvre" id="oeuvre35">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre35')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/sarah_hadjazi.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">35.</span>
+<div>
+<h3>Sarah Hadjazi</h3>
+<p class="titre-oeuvre">Une brève histoire de mots</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Bois, peinture, 50×60cm
+                </p>
+<p>
+                    Cette installation explore la possibilité d’accéder au contenu d’un livre sans en lire une ligne, ni le consulter. À partir de l’ouvrage <i>Une brève histoire du temps</i>, dans lequel le célèbre physicien britannique Stephen Hawking explique les concepts de la relativité générale et de la mécanique quantique, Sarah Hadjazi transpose le dernier chapitre en jeu typographique mêlant les premières lettres de chaque mot des deux théories. Ce geste abstrait évoque la fusion des théories tout en ouvrant une lecture sensible, à voir, à toucher et à ressentir.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/sarah.hadjazii/" rel="noopener noreferrer" target="_blank">@sarah.hadjazii</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre40">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre40')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/lou1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">40.</span>
+<div>
+<h3>Lou Jourdan</h3>
+<p class="titre-oeuvre">Animalis - Chrysocyon Brachyurus</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Sérigraphie, collage, 200×80cm
+                </p>
+<p>
+                    Le projet <i>Animalis</i> explore la représentation du vivant via une iconographie artisanale autour de quatre espèces : <i>Chrysocyon brachyurus</i> (le loup à crinière), <i>Bos taurus</i> (la vache), <i>Sardina pilcharus</i> (la sardine) et <i>Columba livia</i> (le pigeon). Chaque espèce naît de la peinture avant d’être traduite en modules, sérigraphies et fiches explicatives, formant un écosystème cohérent.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/louanna_jrdn/" rel="noopener noreferrer" target="_blank">@louanna_jrdn</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre59">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre59')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/juliette_mottier1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">59.</span>
+<div>
+<h3>Juliette Mottier</h3>
+<p class="titre-oeuvre">Taller de Letras</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Trois sérigraphies, calligraphies, 102×72cm
+                </p>
+<p>
+                    Ce projet, né d’un voyage d’étude à Lima (Pérou), explore la culture graphique <i>Chicha</i> des quartiers populaires des années 1970, entre calligraphie, sérigraphie et musique. Inspiré par l’artiste Chichamare, l’alphabet modulable issu de neuf ductus, terme qui décrit le tracé des lettres et des gestes effectués par la plume lors de l’écriture, retranscrit ici les paroles d’une chanson punk féministe péruvienne en trois couleurs.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/juliette_mottier/" rel="noopener noreferrer" target="_blank">@juliette_mottier</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre67">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre67')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/romane1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">67.</span>
+<div>
+<h3>Romane Pinault</h3>
+<p class="titre-oeuvre">Exposition incomplète</p>
+</div>
+</div>
+<p class="infos">
+                    Les femmes dans le design graphique et la typographie<br/>
+                    Design Graphismes et Images, 2025<br/>
+                    Impression, fil, pince aluminium, 14,8×10,5cm
+                </p>
+<p>
+<i>Exposition incomplète</i> imaginée par Romane Pinault est née de son mémoire <i>Dossier incomplet d’un paysage graphique</i>. Elle y souligne l’importance des femmes designers graphiques et typographes, tout en constatant leur manque de visibilité auprès du grand public. Le projet propose un prototype d’exposition qui permet de diffuser leurs travaux dans de multiples espaces et, ici, par le biais de cartes postales laissées à disposition.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/romanepinault/" rel="noopener noreferrer" target="_blank">@romanepinault</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre76">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre76')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<video class="oeuvre-video" controls="" playsinline="" preload="metadata">
+<source src="img_rectoverso/C/pierre_saby.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">76.</span>
+<div>
+<h3>Pierre Saby</h3>
+<p class="titre-oeuvre">Poetics of sound</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    <i>Extrait de la vidéo, 1min</i><br> 
+                    Vidéo compète, 6min 10s
+                </p>
+<p>
+                    À l’aide d’un programme que Pierre Saby a développé sur la plateforme de programmation visuelle Touchdesigner, les formes typographiques et le contenu textuel sont convertis en spectrogrammes. Ceux-ci sont ensuite interprétés en contenu sonore. Cette vidéo rend visible le passage de la typographie vers le son.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/pierre.saby/" rel="noopener noreferrer" target="_blank">@pierre.saby</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre77">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre77')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<video class="oeuvre-video" controls="" playsinline="" preload="metadata">
+<source src="img_rectoverso/C/marion_scerclerat1.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">77.</span>
+<div>
+<h3>Marion Serclérat</h3>
+<p class="titre-oeuvre">Her Cyberévolution</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2024<br/>
+                    <i>Extrait vidéo, 1min</i> <br>
+                    Logiciel Godot
+                </p>
+<p>
+<i>Her Cyberévolution</i> raconte une histoire à la fois personnelle et universelle, celle d’une lutte contre les espaces numériques dominés par des structures patriarcales, colonialistes et capitalistes. Le jeu explore la manosphère, constituée de ces espaces numériques dominés par la violence et la haine. Le·a joueur·euse déambule dans un monde où chaque recoin est marqué par les cicatrices laissées par des discours destructeurs et oppressifs mais où l’expérience devient quête de libération. Le manifeste final propose une stratégie pour déconstruire et transformer ces espaces en lieux d’égalité et de justice.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/marion.scelerate/" rel="noopener noreferrer" target="_blank">@marion.scelerate</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE C.2
+========================= -->
+<div class="popup popup-oeuvre" id="oeuvre04">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre04')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/charlotte_asmonti1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">04.</span>
+<div>
+<h3>Charlotte Asmonti</h3>
+<p class="titre-oeuvre">Échafauder</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2025<br/>
+                    Peinture à l’huile, fusain, bâche plastique, dimensions variables
+                </p>
+<p>
+<i>Échafauder</i> s’inscrit dans une recherche sur la manière dont le corps trace des formes, dessine des trajectoires et habite l’espace. Le travail de Charlotte Asmonti prend appui sur le corps en mouvement, saisi dans des moments de transition, des « inter-mouvements » qu’elle peint à l’échelle 1. Ces corps sont les points d’ancrage pour construire volumes et dispositifs spatiaux. La performance qu’elle a imaginée cherche à déplacer le rapport frontal que l’on a avec la peinture en invitant le·la spectateur·rice à entrer dans le dispositif.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/charlotte.asmonti/" rel="noopener noreferrer" target="_blank">@charlotte.asmonti</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre10">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre10')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/clemence_candille1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">10.</span>
+<div>
+<h3>Clémence Candille</h3>
+<p class="titre-oeuvre">Station de parole</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Métal peint, 110×35×183cm
+                </p>
+<p>
+<i>Station de parole</i> est un objet manifeste qui met en scène la rencontre et l’échange sincère entre personnes. Conçu comme un lieu d’écoute et de partage, il suspend le rythme du quotidien et favorise la proximité sans contrainte. À la fois cadre ouvert et catalyseur d’histoires, le projet explore la capacité du design à créer des situations relationnelles et à rendre tangible le lien humain.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/clemence_candile/" rel="noopener noreferrer" target="_blank">@clemence_candile</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre14">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre14')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/kenza1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">14.</span>
+<div>
+<h3>Kenza Cebe</h3>
+<p class="titre-oeuvre">Pions urbains</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Bois, corde tressée, papier imprimé, 140×140cm
+                </p>
+<p>
+                    Ce sont des pions de jeu d’échecs transportables pour jouer partout, à tout moment. Ils invitent à faire de la ville elle-même un échiquier, où trottoirs, carreaux et pavés deviennent cases de jeu.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/knzacb/" rel="noopener noreferrer" target="_blank">@knzacb</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre19">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre19')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/emile1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">19.</span>
+<div>
+<h3>Emile Dalotel</h3>
+<p class="titre-oeuvre">Sans titre</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2024<br/>
+                    MDF, métal, élastiques, bois, 32,5×28×4cm
+                </p>
+<p>
+                    Émile Dalotel explore la sculpture comme un langage, en jouant avec les formes et les objets souvent ignorés qui peuplent notre quotidien. Pour cette série, il a puisé son inspiration dans un atelier de menuiserie partagé où il a observé et collecté des objets et des formes banales. En les assemblant, en les transformant et en les mettant en dialogue, il crée des compositions qui semblent évidentes, presque naturelles. Son travail interroge comment, à partir de ces éléments disparates, on atteint une forme d’équilibre, une harmonie visuelle et symbolique.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/_circulaire_monsieur_/" rel="noopener noreferrer" target="_blank">@_circulaire_monsieur_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre21">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre21')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/emma1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">21.</span>
+<div>
+<h3>Emma Duplanil</h3>
+<p class="titre-oeuvre">Module 9x20</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2025<br/>
+                    Modules, MDF, 9×20×1,9cm, Maquettes et socle, bois divers, 40×50×100cm
+                </p>
+<p>
+                    Pour son diplôme, Emma Duplanil a pensé et réalisé un système de modules, coupés dans des chutes de bois. Conçus comme un jeu de construction, ces modules donnent lieu à une expérience collective : construire une cabane. La maquette présentée ici en propose une interprétation possible. Sa pratique s’appuie sur des archétypes d’objets ou d’architecture qu’elle réinterprète pour créer des espaces de discussion, imaginer de nouveaux rituels et questionner notre rapport au vivant ainsi qu’aux modes de production sérielle.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/emma_duplanil/" rel="noopener noreferrer" target="_blank">@emma_duplanil</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre65">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre65')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/lisa_petit1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">65.</span>
+<div>
+<h3>Lisa Petit</h3>
+<p class="titre-oeuvre">Sans titre</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2025<br/>
+                    Plastique, céramique, 40×30×10cm
+                </p>
+<p>
+                    Lisa Petit imagine et crée des sculptures faites pour être transportées facilement dans la poche d’un manteau ou dans un sac. Petites et solides, celles-ci sont destinées à être emportées par les visiteur·euse·s. Présentées dans des cagettes empilables, elles évoquent le geste du travail sériel par l’emploi de moules en plâtre et la circulation des œuvres. Leur découverte progressive accompagne un geste simple : celui d’objets créés pour quitter l’espace d’exposition et disparaître.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/__liloup_/" rel="noopener noreferrer" target="_blank">@__liloup_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre69">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre69')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/C/cecile_poulat1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">69.</span>
+<div>
+<h3>Cécile Poulat</h3>
+<p class="titre-oeuvre">Expédition Utoupie</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2024<br/>
+                    Chignoles, métal, bois, 80×80×180cm
+                </p>
+<p>
+                    En 2024, Cécile Poulat mène à Marcenod, dans le département de la Loire, une résidence de 6 mois avec des élèves de CM1-CM2. Les enfants recréent les activités disparues du village à travers des <i>Utoupies</i>, sculptures activées par un dispositif générant des formes en mouvement intitulé la <i>Machine Révolutive II</i>. Reliant mémoire, récits d’habitant·e·s et gestes créatifs, elle célèbre la vie et l’histoire du village.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/cecile_poulat/" rel="noopener noreferrer" target="_blank">@cecile_poulat</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE D
+========================= -->
+<div class="popup popup-oeuvre" id="oeuvre08">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre08')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/maximilian1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">08.</span>
+<div>
+<h3>Maximilian James Browning</h3>
+<p class="titre-oeuvre">Almost Concretion</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Enceinte, acier, 18×18×18cm, création sonore, 4min 13s
+                </p>
+<p>
+<i>Almost Concrétion</i> explore des objets en tension, façonnés à partir d’anxiétés diffuses et de gestes d’observation lente. Chaque pièce naît d’un fragment du réel et traduit des émotions difficiles à nommer. Le métal incarne le poids de l’histoire et du danger. Ces objets ne donnent pas de réponses : ils déplacent la perception, ouvrent un doute. Ils invitent à briser certaines évidences, à s’asseoir dans l’inconfort d’une question. Leur fonction est trouble, leur présence silencieuse, leur temporalité décalée.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/whos_designstudio/" rel="noopener noreferrer" target="_blank">@whos_designstudio</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre11">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre11')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/thomas_cappe1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">11.</span>
+<div>
+<h3>Thomas Cappe</h3>
+<p class="titre-oeuvre">Arche 3</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2024<br/>
+                    Peinture à l’huile, 162×205cm
+                </p>
+<p>
+                    Thomas Cappe façonne l’espace à travers le vide et les volumes qui s’y inscrivent. Sa pratique s’ancre dans la fabrication de châssis sur mesure : ils échappent aux formats traditionnels et répondent aux formes architecturales représentées. Ses châssis sculptés dictent la lecture de motifs glanés, fragments de bâtiments ou paysages pour créer des espaces à la frontière de l’abstraction. Dans la série <i>Ivoire</i>, dont est issu <i>Arche 3</i>, l’image et le support s’unissent pour instaurer une atmosphère suspendue.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/_thomas_cappe/" rel="noopener noreferrer" target="_blank">@_thomas_cappe</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre18.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre18.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/juliette_cornelius1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">18.1</span>
+<div>
+<h3>Juliette Cornélius</h3>
+<p class="titre-oeuvre">Reste de naufragé</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Grès émaillé, 10×5cm
+                </p>
+<p>
+                    « Cet œil, seul témoin et vestige d’un drame, semble contempler le vide. Il revoit en boucle le naufrage et les marins hurler, des cris que plus personne n’entendra jamais. Et si l’on en croit la légende, sur l’île de Bréhat, un·e borgne viendrait se réchauffer près des cheminées, tard dans la nuit… »
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/nelius__world/" rel="noopener noreferrer" target="_blank">@nelius__world</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre22">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre22')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/abel1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">22.</span>
+<div>
+<h3>Abel Dutournier</h3>
+<p class="titre-oeuvre">Luci</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Chêne, impression 3D, 16,5×16,5×15,3cm
+                </p>
+<p>
+                    Inspirée de la bioluminescence, <i>Luci</i> évoque la lueur naturelle des champignons luminescents que l’on peut observer dans certaines forêts. Cette veilleuse cherche à recréer, dans un espace domestique, la magie discrète et envoûtante de ces phénomènes nocturnes.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/abel.dutournier/" rel="noopener noreferrer" target="_blank">@abel.dutournier</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre34">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre34')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/heidi1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">34.</span>
+<div>
+<h3>Heidi Habbuloglu</h3>
+<p class="titre-oeuvre">Fenêtre de Cobogó</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2024<br/>
+                    Plâtre, 70×50×10cm
+                </p>
+<p>
+                    Ces briques en plâtre combinent les barreaux ornementés des quartiers auto-construits du Sud-Est de la Turquie et les briques creuses brésiliennes Cobogó. Collées par trois, elles sont modulables et permettent de créer différentes structures formant une seule pièce solide. La pièce présentée au diplôme, une entrée composée de 71 briques, devient ici une fenêtre de 32 briques, offrant un autre point de vue du diorama.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/heidihabb/" rel="noopener noreferrer" target="_blank">@heidihabb</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre38">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre38')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/linda1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">38.</span>
+<div>
+<h3>Linda Imbert</h3>
+<p class="titre-oeuvre">Assise : au même niveau</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Bois, aluminium, revêtement coton, 115×70×75cm
+                </p>
+<p>
+                    Ce projet interroge la manière de raconter des histoires et les espaces qui les accueillent. La bibliothèque, bien commun ouvert à tous·tes, devient un terrain de jeu à réinventer. Linda Imbert décloisonne ces zones figées pour créer un lieu mouvant, accueillant, propice au partage ou à l’étude. De cette réflexion naissent trois objets : <i>La bibliothèque entre deux marches</i>, <i>L’assise : au même niveau</i>, <i>Le totem un peu plus haut</i>, autant de manières d’habiter la bibliothèque ensemble, à l’écart ou entre les deux.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/linda_imbert_/" rel="noopener noreferrer" target="_blank">@linda_imbert_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre42">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre42')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/soraya1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">42.</span>
+<div>
+<h3>Soraya Khelil</h3>
+<p class="titre-oeuvre">Co-Habiter</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Matériaux divers, 40×40×130cm
+                </p>
+<p>
+<i>Co-Habiter</i> est un totem modulaire qui accueille les pollinisateurs et favorise leur présence dans nos environnements quotidiens. Inspiré des bannkörbe allemands, il tisse des liens entre humain·e·s, insectes et végétaux. Chaque module forme une maille dans un réseau vivant. Plutôt qu’imposer, il propose observation, écoute et interaction, invitant à coexister et à renouer avec des gestes simples de protection et de transmission.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/sorayakhelil/" rel="noopener noreferrer" target="_blank">@sorayakhelil</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre60">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre60')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/leana1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">60.</span>
+<div>
+<h3>Léana Mouches-Damian</h3>
+<p class="titre-oeuvre">Collaborare – Ce qui nous lie</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Verre borosilicate sablé et poli, 35×8,5×8,5cm
+                </p>
+<p>
+                    Initialement destiné au premier vin blanc du Château Carbonnieux, ce contenant s’offre une nouvelle vie par le biais d’une transformation minimale. Son goulot est raccourci, sa transparence estompée. Son col se pare d’un nuage de verre, tel un caillou vaporeux évoquant les Graves, ces pierres qui confèrent toute leur singularité aux vins du Pessac-Léognan. Objet de partage, cette carafe, aujourd’hui destinée à contenir de l’eau, incarne une approche modeste et engagée du design qui favorise les connexions humaines et valorise les ressources locales.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/leana_mouchesdamian/" rel="noopener noreferrer" target="_blank">@leana_mouchesdamian</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre62.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre62.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/mathias_padlewski1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">62.1</span>
+<div>
+<h3>Mathias Padlewski</h3>
+<p class="titre-oeuvre">Marchepied / boîte à livres</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Contreplaqué, peinture, faïence, papier, 41,5×55×40cm
+                </p>
+<p>
+<i>Un kilo de plumes</i> est une maison d’édition itinérante, elle se consacre autant à la fabrication de livres et d’imprimés qu’à la création d’objets en lien avec les livres et l’univers de la bibliothèque. Le marchepied permet d’atteindre les niveaux supérieurs d’une étagère. Ouvert, il devient une boîte à livre et permet de mettre en libre consultation une sélection de livres proposés par des artistes ou designer·euse·s invité·e·s par la maison d’édition.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/mathiaspad/" rel="noopener noreferrer" target="_blank">@mathiaspad</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre79.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre79.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/jeanne_these.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">79.2</span>
+<div>
+<h3>Jeanne Thèse</h3>
+<p class="titre-oeuvre">L’Hebdo Tubulaire</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2024<br/>
+                    Papier, 42×29,7cm
+                </p>
+<p>
+<i>L’Hebdo Tubulaire</i> est le journal hebdomadaire de la ville de Saint-Jean-de-Tubes. On y retrouve en une, les grands événements et les préoccupations de ses habitant·e·s. À l’intérieur, le journal déroule la « sitcom live » rédigée comme une pièce de théâtre. La dernière page propose un lexique tubulaire propre à la ville et quelques illustrations.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/jeannoujeannettte/" rel="noopener noreferrer" target="_blank">@jeannoujeannettte</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre81">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre81')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/D/arthur_vanpoucke1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">81.</span>
+<div>
+<h3>Arthur Van-Poucke</h3>
+<p class="titre-oeuvre">Le bureau de Miro</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    MDF, peinture acrylique, résine, 154×87×74cm
+                </p>
+<p>
+                    Le bureau d’études techniques imaginaires est l’atelier d’Arthur Van-Poucke, un espace de réflexion et un exemple de « ré-injection » des formes extraites de ses balades mentales réalisées durant le diplôme. Ses recherches plastiques utilisent maquette, dessin, reproduction et changement d’échelle. L’objet de départ est un bâtiment du quartier Bergson à Saint-Étienne. Dans ce bureau, le personnage Miro incarne les espaces entre poétique et univers industriel, révélant une double personnalité, une sorte de personnage off.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/arthur.vanpoucke_/" rel="noopener noreferrer" target="_blank">@arthur.vanpoucke_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE E
+========================= -->
+<!-- ERWAN -->
+<div class="popup popup-oeuvre" id="oeuvre02">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre02')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/erwan1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">02.</span>
+<div>
+<h3>Erwan Acas</h3>
+<p class="titre-oeuvre">Mutualisme pré-cybernétique</p>
+</div>
+</div>
+<p class="infos">
+                    Design Création numérique, 2025<br/>
+                    Logiciel Processing, VCV Rack, 22×14×6cm
+                </p>
+<p>
+                    Erwan Acas explore notre rapport au vivant à l’ère cybernétique. Par un processus de collaboration sonore avec le blob, organisme unicellulaire, il crée un échange où l’organisme devient musicien, modulant le son par sa forme. Ce dispositif traduit la sensibilité et la complexité de l’Autre, au-delà de toute tentative d’anthropomorphisme, invitant à ressentir plutôt qu’à expliquer ou maîtriser.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/erwan.acas/" rel="noopener noreferrer" target="_blank">@erwan.acas</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ADÈLE -->
+<div class="popup popup-oeuvre" id="oeuvre03.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre03.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/E/adele_1.jpg"/>
+<img alt="" src="img_rectoverso/E/adele_dessin_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">03.1</span>
+<div>
+<h3>Adèle Archaimbaud</h3>
+<p class="titre-oeuvre">Symbiogenesis, l’intimité des inconnus</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Papier, techniques mixtes, 50×70cm, 70×100cm, 64×100cm
+                </p>
+<p>
+<i>Symbiogenesis, l’intimité des inconnus</i> raconte l’histoire des microbes et de leurs réseaux d’interdépendance avec le vivant. Inspirée par les travaux de la microbiologiste américaine Lynn Margulis, Adèle Archaimbaud rend visible ces récits d’entrelacements et d’intrications à travers des images mêlant science et fiction, savoir et poésie. Ces images invitent à comprendre, à rêver et se mêler à ces mondes imperceptibles, pour écrire une symbiographie poétique du vivre-avec et de l’alliance intime avec l’altérité.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/adele.archaimbaud/" rel="noopener noreferrer" target="_blank">@adele.archaimbaud</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre03.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre03.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/adele_dessin_2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">03.2</span>
+<div>
+<h3>Adèle Archaimbaud</h3>
+<p class="titre-oeuvre">Symbiogenesis, l’intimité des inconnus</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Papier, techniques mixtes, 50×70cm, 70×100cm, 64×100cm
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/adele.archaimbaud/" rel="noopener noreferrer" target="_blank">@adele.archaimbaud</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup popup-oeuvre" id="oeuvre03.3">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre03.3')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/E/adele_3.jpg"/>
+<img alt="" src="img_rectoverso/E/adele_dessin_3.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">03.3</span>
+<div>
+<h3>Adèle Archaimbaud</h3>
+<p class="titre-oeuvre">Symbiogenesis, l’intimité des inconnus</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Papier, techniques mixtes, 50×70cm, 70×100cm, 64×100cm
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/adele.archaimbaud/" rel="noopener noreferrer" target="_blank">@adele.archaimbaud</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- RÉMI -->
+<div class="popup popup-oeuvre" id="oeuvre13">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre13')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/remi1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">13.</span>
+<div>
+<h3>Rémi Castagna</h3>
+<p class="titre-oeuvre">Le poids des choses</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Céramique émaillée, acier poli miroir, branche de platane facettée, 33×12cm
+                </p>
+<p>
+                    Cette urne, objet de référence au recueillement, est conçue à partir d’éléments dépréciés, délaissés et récupérés comme de l’aubier déligné, jeté en atelier de menuiserie ou de l’acier embouti non conforme. Ces matériaux sont ensuite revalorisés par des opérations manuelles, comme ici la taille et le polissage. Cette approche interroge la façon dont le geste manuel bouscule notre perception sur la valeur des choses.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/remi.castagna/" rel="noopener noreferrer" target="_blank">@remi.castagna</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- YOWEI -->
+<div class="popup popup-oeuvre" id="oeuvre15">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre15')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/E/yowei2.jpg"/>
+<img alt="" src="img_rectoverso/E/yowei1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">15.</span>
+<div>
+<h3>Yowei Chang</h3>
+<p class="titre-oeuvre">And, so?</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2024<br/>
+                    Bois, métal, plastique, matériaux divers, dimensions variables
+                </p>
+<p>
+                    Pour ce projet, Yowei Chang s’inspire des moisissures qui colonisent murs, meubles et objets abandonnés. Souvent perçues comme indésirables, celles-ci symbolisent la résilience. Par exagération de leur poids visuel et changement d’échelle, elles deviennent des présences sculpturales. Le dialogue entre matériaux lourds et légers crée une tension, transformant l’infime en œuvre monumentale et invite à regarder autrement ce qui est habituellement ignoré.
+                </p>
+<p class="insta">
+<a href="https://yoweichang.com" rel="noopener noreferrer" target="_blank">yoweichang.com</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JEANNE LAFAYE DE MICHEAUX -->
+<div class="popup popup-oeuvre" id="oeuvre43">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre43')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/jeanne_lafaye1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">43.</span>
+<div>
+<h3>Jeanne Lafaye de Micheaux</h3>
+<p class="titre-oeuvre">À l’orée des naissances – Le cabinet</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Fil d’acier, Plexiglas dichroïque, verre soufflé, céramique, 60×60×175cm
+                </p>
+<p>
+                    Le cabinet est un objet repère et témoin. Inspiré des cabinets de curiosité et des meubles à secrets, il collecte des éléments du quotidien pour marquer des étapes de transition. Conçu comme un corps accueillant des curiosités, il agit comme un journal intime, capturant l’essence du quotidien. Sa construction verticale et totémique fait écho aux recherches du designer italien Ettore Sottsass sur la fonction rituelle et symbolique des objets.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/galeriejanetta/" rel="noopener noreferrer" target="_blank">@galeriejanetta</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- GABRIEL LECURIEUX-LAFFERRONNAY -->
+<div class="popup popup-oeuvre" id="oeuvre44.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre44.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/gabriel2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">44.2</span>
+<div>
+<h3>Gabriel Lecurieux-Lafferronnay</h3>
+<p class="titre-oeuvre">Indestemparis : Omega</p>
+</div>
+</div>
+<p class="infos">
+                    Design Création numérique, 2025<br/>
+                    Impressions 3D, galvanoplastie, plastique, cuivre, peinture, 110×15×45cm
+                </p>
+<p>
+<i>Indestemparis</i> est une fiction sur une civilisation future fondée sur la relativité du temps comme principe social et économique, représentée ici par des artefacts de mesure. Le projet interroge la création comme archéologie du virtuel en exhumant ce qui n’a pas encore existé. Par un protocole spéculatif, les outils numériques relient des virtualités déphasées, et les sculptures deviennent les traces archéologiques d’un rapport au temps encore à venir.
+                </p>
+<p class="insta">
+<a href="https://monadeworks.com" rel="noopener noreferrer" target="_blank">monadeworks.com</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JUDITH -->
+<div class="popup popup-oeuvre" id="oeuvre50">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre50')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/E/judith1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">50.</span>
+<div>
+<h3>Judith Massutí</h3>
+<p class="titre-oeuvre">Sé víu bé a Mallorca – Balancí mallorquí</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Métal, lin, coton, 60×45×85cm
+                </p>
+<p>
+                    Originaire de Majorque, Judith Massuti explore l’évolution des objets traditionnels et la préservation des savoir-faire de l’île espagnole. Elle revisite la chaise à bascule majorquine, le <i>balancí mallorquí</i>, en conservant le balancement et le tissu ikat tissé selon une technique ancestrale. La structure en métal, épurée de ses accoudoirs, crée légèreté et sensation de flottement, entre tradition et modernité.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/judith.massuti/" rel="noopener noreferrer" target="_blank">@judith.massuti</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ----- SALLE F ----- -->
+<!-- COLINE -->
+<div class="popup popup-oeuvre" id="oeuvre20">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre20')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/F/coline1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">20.</span>
+<div>
+<h3>Coline Drouglazet</h3>
+<p class="titre-oeuvre">Soma</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Contreplaqué, métal, textile technique, 160 × 60 × 115 cm
+                </p>
+<p>
+                    Et si la récupération physique et mentale devenait un rituel ? Le fauteuil <i>Soma</i> invite à ralentir et à renouer avec un repos actif. Placé en position « zéro gravité », le corps se détend naturellement. Un module de massage plantaire et un dispositif sonore intégré accompagnent la récupération. Métal tubulaire et bois cintré offrent une expérience immersive où le soin devient posture.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/studio_glaz/" rel="noopener noreferrer" target="_blank">@studio_glaz</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ANNA-NINA -->
+<div class="popup popup-oeuvre" id="oeuvre30">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre30')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/F/anna_nina1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">30.</span>
+<div>
+<h3>Anna-Nina Girel-Chatellard</h3>
+<p class="titre-oeuvre">Ricochets</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Papier, 100 × 100 cm
+                </p>
+<p>
+<i>Ricochets</i> explore le lien entre image et mot, interrogeant lisibilité, sens et langage graphique. L’artiste crée des systèmes et une anthologie de mots, mêlant son, rythme et matérialité. Une typographie minimaliste, fondée sur la grille, structure ce processus avant de céder la place à une pratique plus libre et intuitive, où la ligne guide le regard entre ordre et hasard dans un espace graphique et domestique.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/anna_nina.gc/" rel="noopener noreferrer" target="_blank">@anna_nina.gc</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JULIE -->
+<div class="popup popup-oeuvre" id="oeuvre31">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre31')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/F/julie1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">31.</span>
+<div>
+<h3>Julie Gomez</h3>
+<p class="titre-oeuvre">Les jumeaux</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Kraft blanc, marqueur, peinture acrylique, 100 × 200 cm
+                </p>
+<p>
+                    Le projet explore l’incidence du dessin inspiré par la culture internet, la BD, le manga et les jeux vidéo sur le·la visiteur·euse. Julie Gomez mélange les codes kawaii, signifiant « mignon » en japonais, et les éléments inquiétants, créant une multitude de personnages offrant réconfort tout en interrogeant le regard extérieur. <i>Les jumeaux</i> expérimentent le grand format et le dessin en tant que médium et support.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/juliie_g1/" rel="noopener noreferrer" target="_blank">@juliie_g1</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- YAĞMUR -->
+<div class="popup popup-oeuvre" id="oeuvre41">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre41')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/F/yagmur1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">41.</span>
+<div>
+<h3>Yağmur Kesmez</h3>
+<p class="titre-oeuvre">The double 5</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2025<br/>
+                    Dessin numérique, impression sur textile, 150 × 180 cm
+                </p>
+<p>
+<i>The double 5</i> est issu de la série autofictionnelle de dessins numériques <i>The Double</i>, qui illustre l’histoire de Yağmur Kesmez et de son alter ego, Dark Circles. Le dessin, présenté ici, évoque l’émergence d’un sentiment d’autonomie, de sens et de curiosité vis à vis du monde dans lequel l’artiste et son alter ego se trouvent.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/yagmur_kesmez/" rel="noopener noreferrer" target="_blank">@yagmur_kesmez</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MATHIS -->
+<div class="popup popup-oeuvre" id="oeuvre84">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre84')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/F/mathis1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">84.</span>
+<div>
+<h3>Mathis Volpe</h3>
+<p class="titre-oeuvre">Anicroche</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2025<br/>
+                    Bronze, marbre, 35 × 45 × 42 cm
+                </p>
+<p>
+                    Inspirée par la réflexion spatiale du sculpteur espagnol Jorge Oteiza, cette sculpture explore le vide autant que la matière. Sa forme constituée de lames de bronze disposées de manière chaotique laisse circuler l’espace. Le bronze structure ce désordre apparent : les arêtes se répondent, découpent la lumière et révèlent une tension intérieure où le vide devient un élément actif de la composition.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/mathis.volpe/" rel="noopener noreferrer" target="_blank">@mathis.volpe</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE G
+========================= -->
+<!-- ARTHUR EUVRARD -->
+<div class="popup popup-oeuvre" id="oeuvre23.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre23.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/arthur1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">23.1</span>
+<div>
+<h3>Arthur Euvrard</h3>
+<p class="titre-oeuvre">Syna [Signes, Synapse, Sinaï] – Pictogrammes incarnés</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    MDF gris, 150×150×5cm
+                </p>
+<p>
+                    Cette sculpture est issue d’une série représentant des pictogrammes acrophoniques, où chaque lettre est incarnée par un mot commençant par cette même lettre. Ces formes sont issues de la police de caractères <i>Syna</i> dessinée par Arthur Euvrard. Ces reproductions en bois opèrent un déplacement du signe typographique vers l’objet pour l’inscrire dans une dimension narrative et fictionnelle, en projetant son installation dans l’espace public.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/arth.grafik/" rel="noopener noreferrer" target="_blank">@arth.grafik</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LILOU -->
+<div class="popup popup-oeuvre" id="oeuvre28">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre28')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/lilou1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">28.</span>
+<div>
+<h3>Lilou Gaxieu</h3>
+<p class="titre-oeuvre">Ils plagent ; plageons – La Lectrice</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Patchwork de textiles thermocollés et cousus, 157×204cm
+                </p>
+<p>
+                    La plage méditerranéenne est un seuil, entre sable et mer, mais aussi entre cultures, corps et usages. Espace social autant que naturel, elle devient un microcosme où se rejouent normes, rituels et appartenances. À travers la figure de la lectrice archétype parmi quatorze personnages ironiques, le projet révèle le paradoxe de la plage : lieu de liberté apparente et d’entre-soi codifié où chacun·e observe, joue un rôle et participe à la mise en scène collective.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/lilou_gaxieu/" rel="noopener noreferrer" target="_blank">@lilou_gaxieu</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LÉA -->
+<div class="popup popup-oeuvre" id="oeuvre33">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre33')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/lea1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">33.</span>
+<div>
+<h3>Léa Guibert</h3>
+<p class="titre-oeuvre">L’élan de l’autre</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Bois, métal, corde, 200×60×220cm
+                </p>
+<p>
+                    Ce projet repense les objets sportifs pour créer des situations de rencontre à deux. Inspirés des machines de fitness, quatre dispositifs privilégient coordination, écoute et relation plutôt que performance individuelle. L’objet présenté se pratique côte à côte, les deux participant·e·s doivent synchroniser leurs mouvements et leur temps d’effort. Le sport devient un prétexte au partage et à l’expérience vécue ensemble. Parce qu’à deux, les liens sont plus forts, et plus durables.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/lea.guibert/" rel="noopener noreferrer" target="_blank">@lea.guibert</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CLÉMENCE -->
+<div class="popup popup-oeuvre" id="oeuvre39">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre39')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/clemence1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">39.</span>
+<div>
+<h3>Clémence Joseph</h3>
+<p class="titre-oeuvre">Camping à Beaulieu</p>
+</div>
+</div>
+<p class="infos">
+                    Design Public(s), 2024<br/>
+                    Textile, céramique, dimensions variables
+                </p>
+<p>
+                    La série de maquettes inspirées des objets et motifs archétypaux des vacances en bord de mer, disposées devant un brise-vue miniature, crée un espace d’évasion réduit. Ce travail est le point de départ du projet <i>Camping à Beaulieu</i>, un séjour de quatre jours destiné aux enfants de ce quartier stéphanois. Ateliers et récits mêlent souvenirs et imaginaire pour composer une carte postale à échelle humaine, au cœur d’un théâtre de verdure.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/club_mijo/" rel="noopener noreferrer" target="_blank">@club_mijo</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LORENZA -->
+<div class="popup popup-oeuvre" id="oeuvre46">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre46')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/lorenza1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">46.</span>
+<div>
+<h3>Lorenza Mannaioni</h3>
+<p class="titre-oeuvre">90 minutes</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Papier, feutre, 21×29,7cm
+                </p>
+<p>
+                    La question de l’image télévisuelle de football percute la pratique du décalque. À la post-ère de la reproduction mécanique, une image demeure l’image d’une image. Les matchs gravitent autour de nous depuis l’enfance : sans les regarder, nous les voyons. Dans les bars, plusieurs écrans diffusent la même scène. Banales en apparence, ces images relèvent pourtant d’une machinerie complexe qui façonne notre perception du réel sportif.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/lorenzamannaioni/" rel="noopener noreferrer" target="_blank">@lorenzamannaioni</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JUSTINE -->
+<div class="popup popup-oeuvre" id="oeuvre48">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre48')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/justine_margale1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">48.</span>
+<div>
+<h3>Justine Margalé</h3>
+<p class="titre-oeuvre">Biceps</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Tissus, 200×100cm
+                </p>
+<p>
+                    Ce projet de diplôme s’appuie sur un mémoire consacré au bodybuilding, utilisé comme analogie du monde occidental contemporain. Il questionne le rapport au corps, au contrôle et à la performance, et propose de réintroduire le mouvement dans un quotidien sédentaire à travers un salon hybride. Le tapis, conçu comme un terrain d’entraînement, s’inspire des codes et normes du CrossFit.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/justinemargale/" rel="noopener noreferrer" target="_blank">@justinemargale</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CHARLOTTE -->
+<div class="popup popup-oeuvre" id="oeuvre51">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre51')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/charlotte_maucourt1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">51.</span>
+<div>
+<h3>Charlotte Maucourt</h3>
+<p class="titre-oeuvre">Dans 15 minutes tout le monde deviendra célèbre</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2024<br/>
+                    Coupes, moteur électrique, acier, impression 3D, 14×14×250cm
+                </p>
+<p>
+                    Réalisée à partir de coupes collectées auprès d’associations et de recycleries locales, l’œuvre est composée de ces éléments démontés et nettoyés, puis assemblés en sculpture autour d’une tige filetée. <i>Dans 15 minutes tout le monde deviendra célèbre</i> interroge les récits de réussite et de reconnaissance, se présentant comme une vanité contemporaine, reflet du « siècle du moi ».
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/charlotte.maucourt/" rel="noopener noreferrer" target="_blank">@charlotte.maucourt</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- INDIA 52.1 -->
+<div class="popup popup-oeuvre" id="oeuvre52.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre52.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/india1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">52.1</span>
+<div>
+<h3>India Maury</h3>
+<p class="titre-oeuvre">Souvenir de Système Septem</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Acier thermolaqué, papier, 40×40×180cm
+                </p>
+<p>
+                    Ce tourniquet attendait le jury à la fin de la présentation d’India Maury pendant son diplôme intitulé <i>Système Septem</i>. Ce fut une visite guidée, d’objet en objet, comme une sorte de musée domestique des nouvelles merveilles du monde. Sur chaque carte postale, une image des objets présentés ; sept fragments d’un même récit, devenus souvenirs à emporter. Chacun pouvait repartir avec un morceau du voyage, une trace du moment partagé comme on garde une carte de vacances ou un ticket d’entrée plié dans la poche. <i>Souvenir de Système Septem</i> prolongeait le geste du diplôme : faire circuler les points de vues, mettre en mouvement des questions et débats, laisser tourner le projet, et peut-être, continuer la visite ailleurs !
+                </p>
+<p class="insta">
+<a href="https://indiamaury.com" rel="noopener noreferrer" target="_blank">indiamaury.com</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- INDIA 52.2 -->
+<div class="popup popup-oeuvre" id="oeuvre52.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre52.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/india2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">52.2</span>
+<div>
+<h3>India Maury</h3>
+<p class="titre-oeuvre">Lampe Roma</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Tôle inox, hêtre massif, casquette, système électrique, 18,5×18,5×30cm
+                </p>
+<p>
+                    Une chambre d’hôtel lors d’un voyage en Italie, en pleine nuit. Il faut aller à la salle de bains sans réveiller personne. Alors, casquette vissée sur la tête – devenue ici abat-jour –, vous partez, lampe en main, pour une épopée de deux mètre cinquante, la longueur exacte du câble électrique. Cette micro-aventure dérisoire met en lumière la tentation contemporaine de transformer chaque instant en expérience spectaculaire. <i>Lampe Roma</i> joue de cette tension entre l’idéal du voyage et la banalité du réel. Elle fait un geste ordinaire, un récit miniature. Objet spéculatif plus qu’objet fonctionnel, cette lampe éclaire autant qu’elle raconte : une fiction domestique qui ironise sur nos désirs d’évasion et sur la mise en scène du voyage.
+                </p>
+<p class="insta">
+<a href="https://indiamaury.com" rel="noopener noreferrer" target="_blank">indiamaury.com</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ALVINA -->
+<div class="popup popup-oeuvre" id="oeuvre70">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre70')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/G/alvina1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">70.</span>
+<div>
+<h3>Alvina Raguin</h3>
+<p class="titre-oeuvre">Ouvrir les yeux</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Échasses, polystyrène extrudé, enduit, corde, coquilles d’œufs, farine, 25×50cm<br/>
+                    Dessin, encre de chine, crayon, 21×29,7cm
+                </p>
+<p>
+                    Prendre conscience de son environnement visuel et chercher à le comprendre permet de meubler les moments creux générés par l’attente. Les échasses élèvent le point de vue et permettent d’appréhender l’environnement d’une nouvelle manière. Cette modification de la perception de l’espace suscite de nouvelles réflexions qui nourrissent le développement de la créativité. Voir autrement pour penser différemment.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/alvinafissh/" rel="noopener noreferrer" target="_blank">@alvinafissh</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE H
+========================= -->
+<!-- LOUIS -->
+<div class="popup popup-oeuvre" id="oeuvre17">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre17')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/louis1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">17.</span>
+<div>
+<h3>Louis Chevalier</h3>
+<p class="titre-oeuvre">Paraform</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Chêne, mousse polyéther, 40×31×40cm
+                </p>
+<p>
+                    Ce projet explore les usages à partir de formes techniques industrielles. Louis Chevalier détourne la fonction des objets pour les intégrer à des paysages domestiques. Le profilé métallique standardisé est réinterprété en bois massif. Ainsi, le geste manuel reprend le dessus sur la production industrielle. La précision artisanale redonne à la forme technique, une dimension sensible et humaine, transformant un symbole de fabrication industrielle.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/louisschevalier/" rel="noopener noreferrer" target="_blank">@louisschevalier</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ELYETTE -->
+<div class="popup popup-oeuvre" id="oeuvre26">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre26')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/elyette1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">26.</span>
+<div>
+<h3>Elyette Gauthier</h3>
+<p class="titre-oeuvre">Plaquel·les</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2024<br/>
+                    Sérigraphie, 40×60cm<br/>
+                    Plâtre, 5×10×20cm
+                </p>
+<p>
+<i>Plaquel·les</i> prend la forme d’objets éditoriaux en plâtre, placés aux pieds de statues féminines nues. Ces interventions questionnent la perception de ces figures dénudées dans l’espace public. En clair, pourquoi doivent-elles être déshabillées pour occuper une place ou une rue ? Réalisé avec des étudiant·es de l’Ésad de Saint-Étienne à travers un protocole de création collective, ce projet active un dialogue critique entre contemporanéité et monuments patrimoniaux.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ESTELLE -->
+<div class="popup popup-oeuvre" id="oeuvre61">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre61')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/estelle1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">61.</span>
+<div>
+<h3>Estelle Ottaviano</h3>
+<p class="titre-oeuvre">CSIP (Confins Spatiaux Inexplorés ou Presque) et Klanitars</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Plaques offset, montage de schémas et dessins issus de <i>Tout l’Univers</i>, éditions Hachette, 1961-1970, 60×50cm et 84×50cm
+                </p>
+<p>
+                    La vie de l’ère du commerce spatial est explorée par la science-fiction à travers le détournement d’images, la génération de texte par IA et l’absurde. Dans la fiction <i>Klanitars</i>, des mammifères marins possèdent un liquide lymphatique aux propriétés curatives et régénératrices. Quant aux <i>CSIP</i> (Confins Spatiaux Inexplorés ou Presque), ils offrent des ressources précieuses tout en soulevant des enjeux éthiques et environnementaux. Ainsi, l’astronaute commercial voyage de planète en planète, combinant audace et négociation pour exploiter ces nouvelles opportunités.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- MATHIAS -->
+<div class="popup popup-oeuvre" id="oeuvre62.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre62.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/mathias_2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">62.2</span>
+<div>
+<h3>Mathias Padlewski</h3>
+<p class="titre-oeuvre">Étagère Jackson</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Aluminium, panneaux composites, 80×40×200cm
+                </p>
+<p>
+<i>Un kilo de plumes</i> est une maison d’édition itinérante, elle se consacre autant à la fabrication de livres et d’imprimés qu’à la création d’objets en lien avec les livres et l’univers de la bibliothèque. Cette étagère tire son nom de la tour Jackson à Bergson, un quartier de Saint-Étienne. Elle fait suite à un projet de cerfs-volants imaginé pour accompagner le mouvement vertical du quartier. Ainsi, cette étagère a été conçue pour être la plus légère possible.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/mathiaspad/" rel="noopener noreferrer" target="_blank">@mathiaspad</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- RICHARD -->
+<div class="popup popup-oeuvre" id="oeuvre73">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre73')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/richard1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">73.</span>
+<div>
+<h3>Richard Rondelez</h3>
+<p class="titre-oeuvre">Carpet</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Aluminium, linoléum recyclé, 37×10×15cm
+                </p>
+<p>
+                    « Soudain, j’aperçois une lueur à travers un timide interstice sur le sol. Curieux, je soulève ce vieux linoléum, et une lumière vive et inattendue en jaillit. Ainsi, je découvre que ce matériau revêt un caractère bien plus précieux que ce que l’on peut imaginer. » <i>Carpet</i> est une lampe avec une structure en aluminium et un abat-jour en linoléum recyclé de l’entreprise française Tarkett.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/richard_lighthouse/" rel="noopener noreferrer" target="_blank">@richard_lighthouse</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ANGÈLE -->
+<div class="popup popup-oeuvre" id="oeuvre82">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre82')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/H/angele2.jpg"/>
+<img alt="" src="img_rectoverso/H/angele1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">82.</span>
+<div>
+<h3>Angèle Villière</h3>
+<p class="titre-oeuvre">500 briques</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Terre, 10,5×21×6,5cm<br/>
+                    Photographie numérique, 84,1×59,4cm
+                </p>
+<p>
+<i>500 briques</i> en terre issue des excavations du site de la Cité du design à Saint-Étienne, ont été réalisées par vingt-deux participant·e·s. Cette terre a été déplacée dans le cadre d’un atelier participatif de fabrication de briques. La quantité ainsi prélevée reste infime au regard des volumes excavés pour construire et transformer le quartier. La production de ces 500 briques a donné forme à une matière inerte, jusque-là considérée comme un déchet.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/angele_v2l/" rel="noopener noreferrer" target="_blank">@angele_v2l</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- VIRGILE -->
+<div class="popup popup-oeuvre" id="oeuvre83">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre83')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/H/virgile1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">83.</span>
+<div>
+<h3>Virgile Voisin</h3>
+<p class="titre-oeuvre">5E</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Acier, profilé d’aluminium, 100×45×40cm
+                </p>
+<p>
+                    Cette presse fait partie du projet <i>5E</i> consacré à l’auto-édition d’un manuel pour fabriquer des billets. Virgile Voisin étudie la plus petite coupure, le billet de 5 euros. À partir de sa dissection graphique, le projet reproduit son atelier de production et imagine la reproduction manuelle d’objets industriels. Chaque machine imprime une couche précise, reprenant les éléments graphiques en pièces techniques ou ornementales. Les billets, réunis en liasses, forment une édition révélant leur face cachée.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/virggile/" rel="noopener noreferrer" target="_blank">@virggile</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE I
+========================= -->
+<!-- JULIETTE CORNÉLIUS -->
+<div class="popup popup-oeuvre" id="oeuvre18.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre18.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/juliette_cornelius2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">18.2</span>
+<div>
+<h3>Juliette Cornélius</h3>
+<p class="titre-oeuvre">Le naufragé</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Papier, posca, acrylique, crayon, 119×84cm
+                </p>
+<p>
+                    Cette illustration évoque une légende racontée sur l’île de Bréhat, celle d’un naufragé perdu aux confins du temps. Ici, l’homme ne se distingue presque plus de la mer qui l’a englouti. Les formes se mêlent, leurs contours se confondent, seule une nuance de couleur les sépare encore. Il semble s’être fondu dans l’océan, comme s’il en était devenu l’écho silencieux. Seule la lente décomposition de son corps semble nous raconter le drame de son histoire oubliée.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/nelius__world/" rel="noopener noreferrer" target="_blank">@nelius__world</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MATHILDE LESCYER 1 -->
+<div class="popup popup-oeuvre" id="oeuvre45.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre45.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/mathilde_lescuyer2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">45.1</span>
+<div>
+<h3>Mathilde Lescuyer</h3>
+<p class="titre-oeuvre">Le Reishi</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    bois, tissu, 30×25×25cm
+                </p>
+<p>
+                    Issus du projet <i>La sixième heure</i>, <i>Le 6</i> et <i>Le Reishi</i> sont des coussins posturaux pour la micro-sieste au travail, permettant de se reposer de 5 à 30 minutes. Posés sur le haut du corps comme dans une étreinte, ils offrent protection et bien-être, favorisant un état méditatif. <i>Le 6</i>, positionné à droite du diorama, évoque la « sixième heure » de midi, et <i>Le Reishi</i>, sur la gauche, fait référence au champignon aux propriétés anti-stress et stimulantes.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/mathilde.lescuyer/" rel="noopener noreferrer" target="_blank">@mathilde.lescuyer</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MATHILDE LESCYER 2 -->
+<div class="popup popup-oeuvre" id="oeuvre45.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre45.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/mathilde_lescuyer1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">45.2</span>
+<div>
+<h3>Mathilde Lescuyer</h3>
+<p class="titre-oeuvre">Le 6</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    mousse polyéther, tissu, 30×30×30cm<br/>
+</p>
+<p class="insta">
+<a href="https://www.instagram.com/mathilde.lescuyer/" rel="noopener noreferrer" target="_blank">@mathilde.lescuyer</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- EUGÉNIE MANTILLERI -->
+<div class="popup popup-oeuvre" id="oeuvre47">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre47')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/eugenie1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">47.</span>
+<div>
+<h3>Eugénie Mantilleri</h3>
+<p class="titre-oeuvre">Distortionem</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2024<br/>
+                    Impressions photographiques sur Dibond, 80×90cm
+                </p>
+<p>
+                    À travers la photographie et la céramique, le corps s’explore et sa plastique s’affranchit de toutes frontières conventionnelles faisant face à une révolution anthropomorphique. Les corps ne sont plus et n’ont ni repères, ni source d’identification.
+                </p>
+<p>
+                    « Voyage en soi<br/>
+                    Corps oubliés<br/>
+                    Corps adulés<br/>
+                    Désarticuler l’élévation<br/>
+                    Du réalisme à la désincarnation<br/>
+                    De la substance à la transmutation<br/>
+                    Corps<br/>
+                    Pores<br/>
+                    Et s’incorporent. »
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/feuilledementhe/" rel="noopener noreferrer" target="_blank">@feuilledementhe</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LAURA MILLAUD -->
+<div class="popup popup-oeuvre" id="oeuvre54">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre54')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/laura_millaud.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">54.</span>
+<div>
+<h3>Laura Millaud</h3>
+<p class="titre-oeuvre">Bains publics rue du Treyve</p>
+</div>
+</div>
+<p class="infos">
+                    Design Public(s), 2024<br/>
+                    Vidéo, 10 min
+                </p>
+<p>
+                    Autrefois fréquentés par nos grands-parents avant l’arrivée de l’eau courante à domicile, les bains publics sont aujourd’hui largement oubliés. Laura Millaud s’intéresse à ces lieux essentiels à l’hygiène et à la vie urbaine pour les explorer. <i>Bains publics rue du Treyve</i> restitue avec respect l’atmosphère et la mémoire de ces lieux partagés.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/club_mijo/" rel="noopener noreferrer" target="_blank">@club_mijo</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MARGAUX MONROUVEIX -->
+<div class="popup popup-oeuvre" id="oeuvre57">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre57')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/margaux1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">57.</span>
+<div>
+<h3>Margaux Monrouveix</h3>
+<p class="titre-oeuvre">Éclos</p>
+</div>
+</div>
+<p class="infos">
+                    Design Public(s), 2025<br/>
+                    MDF, dimensions variables
+                </p>
+<p>
+                    Les pièces présentées sont un extrait du projet <i>Éclos</i>, qui propose des outils de médiation et de sensibilisation à l’éducation affective, relationnelle et sexuelle dès le plus jeune âge. L’outil montré s’adresse aux professionnel·le·s de santé pour favoriser la concertation et la co-construction d’actions de sensibilisation à l’éducation sexuelle des parents et de leurs enfants. Le projet inclut également un outil de sensibilisation destiné aux parents, utilisable en salle d’attente pour encourager réflexion et dialogue.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/by.goms/" rel="noopener noreferrer" target="_blank">@by.goms</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MAXENCE RONDEAU -->
+<div class="popup popup-oeuvre" id="oeuvre72">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre72')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/I/maxence1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">72.</span>
+<div>
+<h3>Maxence Rondeau</h3>
+<p class="titre-oeuvre">HoulA</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Verre, tube acier, 43×45×90cm
+                </p>
+<p>
+                    Série de chaises issues d’un travail sur le mouvement et la déformation. Entre équilibre et déséquilibre, chaque pièce semble traversée par une force invisible, une houle figée dans la matière. Par le contraste entre la rigidité du métal et la fragilité du verre, l’objet vacille entre fonction et poésie.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/maxencerondeau/" rel="noopener noreferrer" target="_blank">@maxencerondeau</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE J
+========================= -->
+<!-- MARTINA -->
+<div class="popup popup-oeuvre" id="oeuvre06">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre06')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<video class="oeuvre-video" controls="" playsinline="" preload="metadata">
+    <source src="img_rectoverso/J/martina.mp4" type="video/mp4"/>
+</video>
+<img alt="" src="img_rectoverso/J/martina_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">06.</span>
+<div>
+<h3>Martina Baus</h3>
+<p class="titre-oeuvre">Jingdezhen Fossils</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Polymère composite, dimensions variables<br/>
+                    <i>Extrait vidéo, 1min 41s</i> <br>
+                    Vidéo, 4min 41s
+                </p>
+<p>
+                    Martina Baus explore 7 objets trouvés dans une usine abandonnée à Jingdezhen en Chine. Traités comme des fossiles, ils révèlent une temporalité propre et des traces de gestes passés. Nés d’une attention au matériau plutôt que d’une transformation, ces objets deviennent des matrices résiduelles entre artefact et moule. Leur valeur réside dans ce qu’ils retiennent. La vidéo <i>desktop movie</i> accompagne cette recherche, entre archive, fiction et présence.
+                </p>
+<p class="insta">
+<a href="https://martina.baus.ec" rel="noopener noreferrer" target="_blank">martina.baus.ec</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- DORIANE -->
+<div class="popup popup-oeuvre" id="oeuvre07">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre07')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/J/doriane_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">07.</span>
+<div>
+<h3>Doriane Bouteille</h3>
+<p class="titre-oeuvre">Pain de Py Froid</p>
+</div>
+</div>
+<p class="infos">
+                    Design Public(s), 2024<br/>
+                    Céramique, 30×30×5cm
+                </p>
+<p>
+<i>Pain de Py Froid</i> a été conçu à Yzeron, près de Lyon, avec la boulangère Léa Paturel. Il met en valeur le territoire, les artisan·e·s local·e·s et la gastronomie. Inspiré des rochers du site, le projet invite au partage, à la découverte des producteur·rice·s et des paysages de la région.
+                </p>
+<p class="insta">
+<a href="https://www.linkedin.com/in/doriane-bouteille-2179b5204/" rel="noopener noreferrer" target="_blank">linkedin.com/in/doriane-bouteille-2179b5204</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- BENOÎT -->
+<div class="popup popup-oeuvre" id="oeuvre24.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre24.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/J/benoit_fage_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">24.1</span>
+<div>
+<h3>Benoît Fage</h3>
+<p class="titre-oeuvre">Minitel</p>
+</div>
+</div>
+<p class="infos">
+                    Design Créations numériques, 2025<br/>
+                    Minitel, 22×25×37cm
+                </p>
+<p>
+                    Issu du projet <i>Polaris</i>, inspiré des écrits du philosophe Paul Virilio sur la technologie et la pensée, le Minitel, réseau instantané des années 1980, symbolise l’accélération de la transmission de l’information. Benoît Fage l’interroge comme révélateur d’une mutation cognitive. À mesure que l’outil gagne en vitesse, c’est notre rapport au temps, à l’autre et à la connaissance qui se transforme, démontrant que nos outils ne sont pas neutres.
+                </p>
+<p class="insta">
+<a href="https://benoitfage.xyz" rel="noopener noreferrer" target="_blank">benoitfage.xyz</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- LAURIANE -->
+<div class="popup popup-oeuvre" id="oeuvre36">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre36')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/J/lauriane1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">36.</span>
+<div>
+<h3>Lauriane Heintz</h3>
+<p class="titre-oeuvre">Éphéméride - automne<br/>Antennes mémorielles</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+<i>Éphéméride - automne</i> : grès, lin, Ø40cm<br/>
+<i>Antennes mémorielles</i> : acier, dimensions variables
+                </p>
+<p>
+                    Lauriane Heintz propose une réinterprétation sensible du calendrier à travers des disques de grès figurant les saisons et les rythmes biologiques des animaux. Les gravures du disque ici exposé illustrent l’automne comme un lien, une transition entre saison claire et saison sombre. Associé à un tapis en lin, le disque devient support de mémoire et d’observation, invitant à ressentir le temps par le vivant et à transmettre la richesse des milieux naturels d’Auvergne-Rhône-Alpes. Lauriane Heintz récolte des fragments naturels qu’elle met en valeur par des structures métalliques, prolongeant l’observation et la transmission.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/lauriane_heintz_/" rel="noopener noreferrer" target="_blank">@lauriane_heintz_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SAUDADE -->
+<div class="popup popup-oeuvre" id="oeuvre53">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre53')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/J/saudade_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">53.</span>
+<div>
+<h3>Saudade Messina</h3>
+<p class="titre-oeuvre">Jardinons !</p>
+</div>
+</div>
+<p class="infos">
+                    Design Public(s), 2025<br/>
+                    Fontaine, céramique, bois, 50×50×40cm
+                </p>
+<p>
+                    Saudade Messina s’intéresse aux jardins partagés en proposant des dispositifs pédagogiques sur le cycle de vie des plantes. Ainsi, sa fontaine interroge l’usage de l’eau. Versée manuellement ou récupérée, celle-ci s’écoule sur des éléments en céramique inspirés de tuiles et irrigue des oyas enterrées, limitant le gaspillage. Déplaçable et durable, la fontaine sensibilise petit·e·s et grand·e·s au vivant et au temps qui passe.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/saudade_design_/" rel="noopener noreferrer" target="_blank">@saudade_design_</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE K
+========================= -->
+<!-- ARTHUR CARPENTIER 1 -->
+<div class="popup popup-oeuvre" id="oeuvre12.1">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre12.1')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/arthur_carpentier1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">12.1</span>
+<div>
+<h3>Arthur Carpentier</h3>
+<p class="titre-oeuvre">Objets destinés aux oiseaux en milieu urbain</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Métal, tôle, terre cuite, 20×20×40cm, 56×36×45cm
+                </p>
+<p>
+                    Arthur Carpentier s’inspire des toits, lieux intermédiaires entre habitat et ciel, pour concevoir des objets destinés aux oiseaux. Sans naturaliser l’industriel, il le réinterprète pour le rendre habitable. En partenariat avec la Ligue pour la Protection des Oiseaux (LPO), il adapte dimensions, matériaux et emplacements aux besoins de quatre espèces fragilisées : martinet noir, martinet à ventre blanc, rougequeue noir, moineau domestique. Son projet interroge la cohabitation entre bâti et vivant et le rôle du design comme support d’attention.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/arthur_tenbullets/" rel="noopener noreferrer" target="_blank">@arthur_tenbullets</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ARTHUR CARPENTIER 2 -->
+<div class="popup popup-oeuvre" id="oeuvre12.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre12.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/arthur_carpentier2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">12.2</span>
+<div>
+<h3>Arthur Carpentier</h3>
+<p class="titre-oeuvre">Objets destinés aux oiseaux en milieu urbain</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Métal, tôle, terre cuite, 20×20×40cm, 56×36×45cm
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/arthur_tenbullets/" rel="noopener noreferrer" target="_blank">@arthur_tenbullets</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ARTHUR EUVRARD -->
+<div class="popup popup-oeuvre" id="oeuvre23.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre23.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/arthur_euvrard2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">23.2</span>
+<div>
+<h3>Arthur Euvrard</h3>
+<p class="titre-oeuvre">Syna [Signes, Synapse, Sinaï] – Stèle de Syna</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2025<br/>
+                    Acier électro-zingué, 75×50×3cm
+                </p>
+<p>
+                    Arthur Euvrard présente une stèle pictographique qui évoque une stèle hiéroglyphique, gravée par un chef des scribes, nommé Dédia, en 1300 av. J.-C, relatant le récit de sa vie. Elle en reprend la composition et le sens de lecture, transposés dans un langage graphique contemporain. Elle constitue une matérialisation du caractère typographique Syna, de ce qu’il engage en tant que système d’écriture. Cette stèle se présente comme un objet destiné aux regardeur·euse·s–philologues invité·e·s à décrypter le sens des pictogrammes.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/arth.grafik/" rel="noopener noreferrer" target="_blank">@arth.grafik</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- BENOÎT -->
+<div class="popup popup-oeuvre" id="oeuvre24.2">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre24.2')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/benoit_fage_2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">24.2</span>
+<div>
+<h3>Benoît Fage</h3>
+<p class="titre-oeuvre">Tablette d’argile</p>
+</div>
+</div>
+<p class="infos">
+                    Design Créations numériques, 2025<br/>
+                    Calame sur argile, 25×34×0,8cm
+                </p>
+<p>
+                    Issue du projet <i>Polaris</i> et inspirée des écrits du philosophe Paul Virilio sur la technologie et la pensée, <i>Tablette d’argile</i>, lourde et permanente, incarne une mémoire gravée dans la matière. Benoît Fage l’interroge comme outil cognitif : ce support millénaire ne se contente pas de stocker l’information, il en conditionne la forme, le rythme, le rapport au temps. Il démontre ainsi que nos outils façonnent activement notre manière de percevoir le monde.
+                </p>
+<p class="insta">
+<a href="https://benoitfage.xyz" rel="noopener noreferrer" target="_blank">benoitfage.xyz</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JUSTINE GASPARD -->
+<div class="popup popup-oeuvre" id="oeuvre25">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre25')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/justine1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">25.</span>
+<div>
+<h3>Justine Gaspard</h3>
+<p class="titre-oeuvre">Acousma</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Céramique, métal, dimensions variables
+                </p>
+<p>
+                    Le projet <i>Acousma</i> est une installation où l’espace domestique devient orchestre. Chaque objet agit comme instrument et chaque passage de l’utilisateur·ice produit une performance éphémère. L’œuvre repense le quotidien sonore, révélant la musicalité des gestes et des interactions, et faisant du domestique un reflet de l’identité de ses habitant·e·s.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/justinegsd/" rel="noopener noreferrer" target="_blank">@justinegsd</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- MORGANE -->
+<div class="popup popup-oeuvre" id="oeuvre74">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre74')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/K/morgane_rousseau.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">74.</span>
+<div>
+<h3>Morgane Rousseau</h3>
+<p class="titre-oeuvre">Fragments</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+                    Hêtre, métal, acier, inox, dimensions variables
+                </p>
+<p>
+                    Ils sont petits, grands, beaux, rigides, simples… Nombreux sont les adjectifs qui qualifient les fragments issus de la récupération. Morgane Rousseau réutilise ces fragments pour créer des outils à l’échelle de la main. Guidée par un protocole mêlant photographie, dessin, assemblage et archivage, elle questionne formes et usages autour de la table. Chaque outil permet de piquer, saisir ou servir. Les jonctions en hêtre proviennent aussi de chutes recyclées.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/morganeroussseau/" rel="noopener noreferrer" target="_blank">@morganeroussseau</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     SALLE L
+========================= -->
+<!-- TINA -->
+<div class="popup popup-oeuvre" id="oeuvre01">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre01')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/L/tina1.jpg"/>
+<img alt="" src="img_rectoverso/L/tina2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">01.</span>
+<div>
+<h3>Tina Abenzoar</h3>
+<p class="titre-oeuvre">Sentyé mêlé</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2024<br/>
+<i>Tourment d’amour</i> : Hêtre, aluminum, 260cm<br/>
+<i>Tressaz</i> : Hêtre, aluminium, chute de Neyret, plastique, 150cm<br/>
+<i>Bâton ki ka semé</i> : Hêtre, acier, textile, graine, 150cm
+                </p>
+<p>
+<i>Sentyé mêlé</i> est une série d’objets manifestes qui questionne l’impact environnemental de nos outils sportifs et techniques en milieu insulaire, en Guadeloupe et à la Réunion. En détournant la fonction traditionnelle et technique du bâton, chaque objet intègre une action réparatrice pendant la marche. Cette transformation influence à la fois l’usage de l’outil et sa fabrication, créant une nouvelle relation au territoire. La série vise à reconnecter la marche insulaire avec l’héritage du marronnage, proposant un geste qui enrichit, émancipe et régénère l’histoire de l’environnement traversé.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/tina.abenzoar/" rel="noopener noreferrer" target="_blank">@tina.abenzoar</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- AURÉLIE -->
+<div class="popup popup-oeuvre" id="oeuvre49">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre49')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/L/aurelie_1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">49.</span>
+<div>
+<h3>Aurélie Martinet</h3>
+<p class="titre-oeuvre">Foyer au cœur végétal</p>
+</div>
+</div>
+<p class="infos">
+                    Design Objet, 2025<br/>
+                    Chaise, métal, feutre de laine, chanvre, coton, faïence, grès, MDF, 50×56×80cm
+                </p>
+<p>
+                    Dans les sociétés occidentales, la plante est un “être” délaissé. Pour éviter cette mise à l’écart, Aurélie Martinet cherche à placer les végétaux au cœur du quotidien. Pour cela, plantes et mobilier s’hybrident pour créer, au sein du foyer, un cœur végétal évolutif. Ce projet nous invite à porter un nouveau regard sur les plantes, à les observer, à les comprendre, et à interagir avec elles.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/aurelie_martinet_design_objet/" rel="noopener noreferrer" target="_blank">@aurelie_martinet_design_objet</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ORANE -->
+<div class="popup popup-oeuvre" id="oeuvre56">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre56')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/L/orane1.jpg"/>
+<img alt="" src="img_rectoverso/L/orane2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">56.</span>
+<div>
+<h3>Orane Mondani</h3>
+<p class="titre-oeuvre">Vivace</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+                    Photographie, 120×160cm<br/>
+                    Béton, 5×1×2cm
+                </p>
+<p>
+                    Pourquoi continuer à photographier ? Que restera-t-il ? Orane Mondani envisage la photographie non seulement comme capture de l’éphémère, mais comme vitalité. La photographie « vivace » naîtrait de sa capacité à perdurer dans le temps, non par immuabilité, mais par sa force vitale et sa faculté à évoluer et à s’adapter aux changements de l’environnement.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/orane.mondani/" rel="noopener noreferrer" target="_blank">@orane.mondani</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ALFEA -->
+<div class="popup popup-oeuvre" id="oeuvre58">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre58')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/L/alfea1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">58.</span>
+<div>
+<h3>Alfea Morelli</h3>
+<p class="titre-oeuvre">Multibiote, électrobiote, anthropochienne (cellules mortes)</p>
+</div>
+</div>
+<p class="infos">
+                    Design Créations numériques, 2024<br/>
+                    Impressions 3D, matériaux mixtes, 100×300×300cm
+                </p>
+<p>
+                    Bâtie en réaction à l’Anthropocène, la sympoïèse questionne la notion de soi en considérant l’individu comme un ensemble d’espèces en symbiose. Les cellules mortes et microbiotes deviennent des acteur·rice·s de notre pensée. L’installation rassemble composants électroniques, emballages de médicaments et objets abandonnés. Ces artefacts ont été pensés comme un prélèvement de l’identité d’Alfea Morelli, des extensions artificielles de son être, relevant de la wild-tech.
+                </p>
+<p class="insta">
+<a href="https://alfeamorelli.xyz" rel="noopener noreferrer" target="_blank">alfeamorelli.xyz</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JESSICA -->
+<div class="popup popup-oeuvre" id="oeuvre64">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre64')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/L/jessica_1.jpg"/>
+<img alt="" src="img_rectoverso/L/jessica_2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">64.</span>
+<div>
+<h3>Jessica Perez</h3>
+<p class="titre-oeuvre">Murmure des marais</p>
+</div>
+</div>
+<p class="infos">
+                    Design ACDC_espaces, 2025<br/>
+                    Cône en laiton, acier, 50×37×8,5cm<br/>
+                    Cône en chêne, 11,5×12×4cm
+                </p>
+<p>
+<i>Murmure des marais</i> est un paysage sonore sur les écosystèmes des zones humides situées dans la réserve naturelle du PNR de Millevaches en Limousin. On y discerne la captation des sons qui se diffusent dans l’air autour des étangs, ainsi que des sonorités provenant du cône en laiton. Cet instrument, réalisé à partir de techniques et de matériaux de lutherie, fonctionne de façon autonome et sans interprète. Il interagit avec l’espace environnant et permet de saisir le son du vent dans la forêt, grâce au mouvement du moulin en acier. Sur le côté gauche du diorama se trouve un cône en bois. En s’en approchant et en tendant l’oreille, on peut entendre un extrait de cette composition.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/jessica.perez.gok/" rel="noopener noreferrer" target="_blank">@jessica.perez.gok</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JULIETTE SOUSTELLE -->
+<div class="popup popup-oeuvre" id="oeuvre78">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre78')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-2">
+<img alt="" src="img_rectoverso/L/juliette_1.jpg"/>
+<img alt="" src="img_rectoverso/L/juliette_2.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">78.</span>
+<div>
+<h3>Juliette Soustelle</h3>
+<p class="titre-oeuvre">Traces du flux</p>
+</div>
+</div>
+<p class="infos">
+                    Design Graphismes et Images, 2024<br/>
+<i>Artefacts</i> : Tirage papier mat contrecollé sur dibond, 60×90cm<br/>
+<i>Résidus</i> : Plâtre, 10×10×6cm
+                </p>
+<p>
+                    Cette série s’inscrit dans le projet <i>Traces du flux</i>, qui interroge la relation entre mémoire et virtuel. Les images montrent la tension entre trace photographique et réinterprétation machinique, oscillant entre réel et hallucination algorithmique. Les objets et éditions proviennent de lieux en friche ou démolis. Un moulage réalisé à partir de machines et de cartes électroniques récupérées conserve l’empreinte du geste humain et de la technologie passée.
+                </p>
+<p class="insta">
+<a href="https://juliettesoustelle.tumblr.com" rel="noopener noreferrer" target="_blank">juliettesoustelle.tumblr.com</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================
+     ENTRE RECTO ET VERSO
+========================= -->
+<!-- CELESTE MOJA -->
+<div class="popup popup-oeuvre" id="oeuvre55">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre55')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/ENTRE_RECTO_&_VERSO/celeste1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">55.</span>
+<div>
+<h3>Céleste Moja</h3>
+<p class="titre-oeuvre">Sans titre ©</p>
+</div>
+</div>
+<p class="infos">
+                    Art, 2025<br/>
+                    Peinture à l’huile, 40×40cm
+                </p>
+<p>
+                    Céleste Moja a réalisé 16 peintures à l’huile sur bois. Il s’agit d’un travail de translation picturale : chaque peinture isole un détail à l’échelle 1 observé dans certaines propositions des diplômé·e·s, ici exposées. Ces représentations d’objets de liaison et de contenant sont réunies en un ensemble à partir de formats standardisés.
+                </p>
+<p>
+                    Détails issus des projets des alumni suivant : Adèle Archaimbaud, <i>Symbiogenesis, l’intimité des inconnus</i> / Yowei Chang, <i>And, so?</i> / Cécile Cheang, <i>Sous l’Ombre de son Silence</i> / Elyette Gauthier, <i>Plaquel·les</i> / Lilou Gaxieu, <i>Ils plagent ; plageons</i> / Nils Geffre, <i>Des archives que l’on porte</i> / Léa Guibert, <i>L’élan de l’autre</i> / Sarah Hadjazi, <i>Une brève histoire de mots</i> / Gabriel Lecurieux-Lafferronnay, <i>Indestemparis : Alpha</i> / Justine Gaspard, <i>Acousma</i> / Clément Peyret, <i>À tâtons</i> / Romane Pinault, <i>Exposition incomplète</i> / Alvina Raguin, <i>Ouvrir les yeux</i> / Colin Riccobene, <i>Le portail des gloutons</i> / Jeanne Troadec, <i>Conten(u)ant : pièce 002</i> / Arthur Van-Poucke, <i>Bureau d’études techniques imaginaires</i>.
+                </p>
+<p class="insta">
+<a href="https://www.instagram.com/celestemoja/" rel="noopener noreferrer" target="_blank">
+                        @celestemoja
+                    </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- JEANNE TROADEC -->
+<div class="popup popup-oeuvre" id="oeuvre80">
+<div class="popup-content popup-small">
+<span class="close" onclick="closePopup('oeuvre80')">×</span>
+<div class="oeuvre-layout">
+<div class="oeuvre-image gallery-1">
+<img alt="" src="img_rectoverso/ENTRE_RECTO_&_VERSO/jeanne1.jpg"/>
+</div>
+<div class="oeuvre-texte">
+<div class="cartel-titre">
+<span class="numero">80.</span>
+<div>
+<h3>Jeanne Troadec</h3>
+<p class="titre-oeuvre">Conten(u)ant : pièce 002</p>
+</div>
+</div>
+<p class="infos">
+                    Art ACDC_espaces, 2025<br/>
+                    Carton, scotch, mousse, étiquette adhésive, tissu occultant, Ø125 et 44×49×56,5cm
+                </p>
+<p>
+<i>Conten(u)ant : pièce 002</i> retient une forme sans la révéler. La pièce invite le·la visiteur·euse à la considérer pour ce qu’elle est, matériellement et spatialement, ici et maintenant, tout en laissant ouverte l’hypothèse de ce qu’elle pourrait contenir. Elle ouvre un espace d’hypothèses et active un potentiel imaginaire indéfini et subjectif en instaurant une attention formelle immédiate. La pièce s’inscrit dans le parcours de l’artiste : fabrication, exposition, vente, stockage. Elle circule, elle est manipulée, classée, transportée, parfois oubliée. En attente, <i>Conten(u)ant : pièce 002</i> semble prête à être déplacée.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</body>
+<script src="app_rectoverso.js"></script>
 </html>
