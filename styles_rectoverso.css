@@ -206,6 +206,7 @@ body.popup-open{
     cursor:pointer;
     transition:all 0.3s ease;
     z-index:10;
+    transform:translate(-50%, -50%);
 }
 
 .salle:hover{
@@ -227,7 +228,7 @@ body.popup-open{
 .salle-h{ top:11%; left:72%; }
 .salle-i{ top:1%; left:53.5%; }
 .salle-j{ top:23%; left:57.2%; }
-.salle-k{ top:29%; left:51%; }
+.salle-k{ top:29%; left:52%; }
 .salle-l{ top:10%; left:34.2%; }
 .salle-cine{ top:10%; left:41%; }
 .salle-celeste{ top:41%; left:51%; }
