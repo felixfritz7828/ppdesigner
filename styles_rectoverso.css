@@ -527,14 +527,13 @@ body.popup-open{
 
     background:rgba(0,0,0,.92);
 
-    /*
-     * C’est désormais le fond du popup qui défile.
-     */
+    /* Le scroll se fait ici */
     overflow-x:hidden;
     overflow-y:auto;
 
+    -webkit-overflow-scrolling:touch;
     overscroll-behavior:contain;
-    scrollbar-gutter:stable;
+    touch-action:pan-y;
 
     z-index:1000;
 }
@@ -545,29 +544,22 @@ body.popup-open{
     width:100%;
     max-width:1000px;
 
-    /*
-     * Aucune hauteur imposée et aucun scroll ici.
-     */
     height:auto;
     max-height:none;
+    min-height:0;
 
     margin:0 auto;
     padding:35px;
 
+    /* Aucun scroll imbriqué */
     overflow:visible;
 
     background:#080808;
     color:#fff;
     border-radius:10px;
 
-    /*
-     * Empêche les transformations ou animations héritées.
-     */
-    animation:none !important;
-    transform:none !important;
-    transition:none !important;
-    scale:1 !important;
-    zoom:1;
+    animation:none;
+    transform:none;
 }
 
 .popup-cinema .close{
@@ -1175,14 +1167,23 @@ p{
 
     .popup-cinema{
         padding:16px;
+
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        touch-action:pan-y;
     }
 
     .popup-cinema .cinema-content{
         width:100%;
         max-width:none;
 
+        height:auto;
+        max-height:none;
+
         margin:0;
         padding:22px;
+
+        overflow:visible;
     }
 
     .cinema-liste{
