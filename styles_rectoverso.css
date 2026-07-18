@@ -269,7 +269,7 @@ body.popup-open{
     overflow-y:auto;
     scrollbar-width:none;
     -ms-overflow-style:none;
-    margin:4vh auto;
+    margin:0 auto;
     padding:30px;
     box-sizing:border-box;
     animation:popupAppear 0.15s ease-out;
@@ -283,9 +283,15 @@ body.popup-open{
 
 .close{
     position:sticky;
-    float:right;
-    top:15px;
-    right:20px;
+    display:block;
+    top:12px;
+    width:max-content;
+    margin-left:auto;
+    margin-bottom:-35px;
+
+    float:none;
+    right:auto;
+
     color:#999;
     font-size:40px;
     line-height:1;
@@ -298,13 +304,9 @@ body.popup-open{
 ========================= */
 
 .popup-salle{
-    width:100%;
-    max-width:1000px;
-    max-height:100%;
-    margin:auto;
-    overflow-y:auto;
-    scrollbar-width:none;
-    -ms-overflow-style:none;
+    width:min(1000px, calc(100vw - 32px));
+    max-height:calc(100dvh - 32px);
+    margin:0;
 }
 
 .popup-salle::-webkit-scrollbar{
@@ -362,7 +364,7 @@ body.popup-open{
 .gabriel_penicaud1{ top:51%; left:64%; }
 .clement1{ top:9%; left:74%; }
 .alexia1{ top:47%; left:92%; }
-.jeanne_these1{ top:90%; left:85%; }
+.jeanne_these1{ top:92%; left:83%; }
 
 /* =========================
    POPUP FANTÔME C1
@@ -392,12 +394,12 @@ body.popup-open{
 ========================= */
 
 .soraya1{ top:22.5%; left:4%; }
-.leana1{ top:63%; left:22%; }
-.linda1{ top:91%; left:29%; }
+.leana1{ top:74%; left:18%; }
+.linda1{ top:93%; left:28%; }
 .thomas1{ top:3%; left:43%; }
 .juliette_cornelius1{ top:38.5%; left:44%; }
-.jeanne_these2{ top:38.5%; left:57%; }
-.arthur_van1{ top:82%; left:64%; }
+.jeanne_these2{ top:63%; left:53%; }
+.arthur_van1{ top:83%; left:65%; }
 .abel1{ top:38.5%; left:70%; }
 .maximilian1{ top:0%; left:73%; }
 .mathias1{ top:95%; left:84%; }
@@ -421,10 +423,10 @@ body.popup-open{
    POPUP FANTÔME F
 ========================= */
 
-.f-coline1{ top:85%; left:40%; }
+.f-coline1{ top:88%; left:38%; }
 .f-anna1{ top:92%; left:64%; }
-.f-julie1{ top:28%; left:75%; }
-.f-yagmur1{ top:10%; left:45%; }
+.f-julie1{ top:28%; left:73%; }
+.f-yagmur1{ top:8%; left:45%; }
 .f-mathis1{ top:75%; left:13%; }
 
 /* =========================
@@ -434,12 +436,12 @@ body.popup-open{
 .arthur_euvrard_g1{ top:30%; left:79%; }
 .lilou1{ top:11%; left:28%; }
 .lea1{ top:55%; left:47%; }
-.clemence_joseph1{ top:85%; left:30%; }
+.clemence_joseph1{ top:87%; left:30%; }
 .lorenza1{ top:12%; left:61%; }
 .justine_margale1{ top:82%; left:65%; }
 .charlotte_maucourt1{ top:3%; left:72%; }
-.india1{ top:30%; left:2%; }
-.india2{ top:84%; left:12%; }
+.india1{ top:30%; left:0%; }
+.india2{ top:84%; left:11%; }
 .alvina1{ top:61%; left:92%; }
 
 /* =========================
@@ -450,7 +452,7 @@ body.popup-open{
 .elyette1{ top:57%; left:91%; }
 .estelle1{ top:8%; left:21%; }
 .mathias2{ top:73%; left:45%; }
-.richard1{ top:30%; left:83%; }
+.richard1{ top:30%; left:80%; }
 .angele1{ top:53%; left:67%; }
 .virgile1{ top:59%; left:4%; }
 
@@ -458,12 +460,12 @@ body.popup-open{
    POPUP FANTÔME I
 ========================= */
 
-.juliette_cornelius2{ top:1%; left:88%; }
+.juliette_cornelius2{ top:0%; left:88%; }
 .mathilde1{ top:86%; left: 16%; }
 .mathilde2{ top:86%; left:74%; }
 .eugenie1{ top:3%; left:47%; }
 .laura1{ top:45%; left:7%; }
-.margaux1{ top:90%; left:48%; }
+.margaux1{ top:92%; left:48%; }
 .maxence1{ top:47%; left:40%; }
 
 /* =========================
@@ -480,21 +482,21 @@ body.popup-open{
    POPUP FANTÔME K
 ========================= */
 
-.arthur_carpentier1{ top:81%; left:5%; }
-.arthur_carpentier2{ top:84%; left:63%; }
+.arthur_carpentier1{ top:82%; left:5%; }
+.arthur_carpentier2{ top:85%; left:63%; }
 .arthur_euvrard_k1{ top:25%; left:79%; }
 .benoit2{ top:35%; left:18%; }
-.justine_gaspard1{ top:84%; left:36%; }
+.justine_gaspard1{ top:86%; left:36%; }
 .morgane1{ top:18%; left:49%; }
 
 /* =========================
    POPUP FANTÔME L
 ========================= */
 
-.tina1{ top:68%; left:4%; }
+.tina1{ top:68%; left:2%; }
 .aurelie1{ top:91%; left:70%; }
-.orane1{ top:70%; left:87%; }
-.alfea1{ top:87%; left:46%; }
+.orane1{ top:73%; left:88%; }
+.alfea1{ top:92%; left:42%; }
 .jessica1{ top:4%; left:21%; }
 .juliette_soustelle1{ top:49%; left:57%; }
 
@@ -518,7 +520,8 @@ body.popup-open{
 
 .popup-cinema{
     display:none;
-
+    align-items:start;
+    justify-content:stretch;
     position:fixed;
     inset:0;
 
@@ -1263,12 +1266,12 @@ p{
         position:fixed;
         right:20px;
         bottom:20px;
-        z-index:9999;
+        z-index:1500;
 
         display:flex;
         flex-direction:column;
         align-items:flex-end;
-        gap:10px;
+        gap:0;
 
         opacity:0;
         visibility:hidden;
@@ -1295,8 +1298,10 @@ p{
         display:flex;
         flex-direction:column;
         align-items:stretch;
+         position:relative;
+        z-index:1;
 
-        min-width:105px;
+        min-width:80px;
 
         overflow:hidden;
 
@@ -1327,8 +1332,7 @@ p{
         font-size:13px;
         line-height:1;
         color:#000;
-        text-align:right;
-        text-transform:uppercase;
+        text-align:left;
         text-decoration:none;
 
         cursor:pointer;
@@ -1346,14 +1350,56 @@ p{
         padding-bottom:9px !important;
     }
 
-    .mobile-menu-toggle::after{
-        content:' +';
-    }
+.mobile-menu-card .mobile-menu-toggle{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:7px;
+    width:100%;
+}
 
-    .mobile-menu-toggle.is-open::after{
-        content:' −';
-    }
+.hamburger{
+    position:relative;
+    display:block;
+    width:14px;
+    height:10px;
+    flex-shrink:0;
+}
 
+.hamburger::before,
+.hamburger::after{
+    content:"";
+    position:absolute;
+    left:0;
+    width:100%;
+    height:1.5px;
+    background:currentColor;
+    transition:
+        top .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.hamburger::before{
+    top:1px;
+    box-shadow:0 4px 0 currentColor;
+}
+
+.hamburger::after{
+    top:9px;
+}
+
+.mobile-menu-toggle.is-open .hamburger::before{
+    top:5px;
+    transform:rotate(45deg);
+    box-shadow:none;
+}
+
+.mobile-menu-toggle.is-open .hamburger::after{
+    top:5px;
+    transform:rotate(-45deg);
+}
 
     /* FENÊTRE DES SCÈNES : FERMÉE PAR DÉFAUT */
 
@@ -1362,6 +1408,7 @@ p{
         right:0;
         bottom:100%;
         margin-bottom:10px;
+        z-index:2;
 
         width:min(330px, calc(100vw - 40px));
         max-height:calc(100dvh - 170px);
@@ -1454,4 +1501,16 @@ p{
     .mobile-menu-card button:hover{
         color:#e85aa9;
     }
+}
+
+@media (max-width:768px){
+
+    .mobile-menu.cartel-open,
+    .mobile-menu.visible.cartel-open{
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(10px);
+    }
+
 }
