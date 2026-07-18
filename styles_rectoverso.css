@@ -203,6 +203,8 @@ body.popup-open{
     font-family:'ES-Plakeit', sans-serif;
     font-size:clamp(12px,1.2vw,18px);
     font-weight:bold;
+    line-height: 0.8;
+    text-align: left;
     cursor:pointer;
     transition:all 0.3s ease;
     z-index:10;
@@ -219,7 +221,7 @@ body.popup-open{
 .salle-a{ top:60%; left:57%; }
 .salle-b{ top:62%; left:37%; }
 .salle-c1{ top:55%; left: 43%; }
-.salle-c2{ top:49%; left:50%; }
+.salle-c2{ top:50%; left:50%; }
 .salle-d{ top:39.5%; left:20.7%; }
 .salle-e{ top:25%; left:26%; }
 .salle-f{ top:38.5%; left:60.9%; }
@@ -230,8 +232,8 @@ body.popup-open{
 .salle-k{ top:29%; left:52%; }
 .salle-l{ top:10%; left:34.2%; }
 .salle-cine{ top:10%; left:41%; }
-.salle-celeste{ top:41%; left:51%; }
-.salle-jeanne{ top:29%; left:34%; }
+.salle-celeste{ top:41%; left:53%; }
+.salle-jeanne{ top:30%; left:34%; }
 
 
 /* =========================
@@ -343,22 +345,22 @@ body.popup-open{
    POPUP FANTÔME A
 ========================= */
 
-.colin1{ top:82%; left:23%; }
+.colin1{ top:83%; left:21%; }
 .nils1{ top:53%; left:39%; }
-.elise1{ top:8%; left:55%; }
+.elise1{ top:6%; left:58%; }
 .ludo1{ top:58%; left:88%; }
 
 /* =========================
    POPUP FANTÔME B
 ========================= */
 
-.kamila1{ top:5%; left:10%; }
-.kamila2{ top:1%; left:50%; }
-.gabriel_lecurieux1{ top:28%; left:20%; }
-.jasmine1{ top:47%; left:47%; }
-.gabriel_penicaud1{ top:49%; left:67%; }
-.clement1{ top:11%; left:75%; }
-.alexia1{ top:48%; left:93%; }
+.kamila1{ top:4%; left:9%; }
+.kamila2{ top:0%; left:49%; }
+.gabriel_lecurieux1{ top:26%; left:20%; }
+.jasmine1{ top:46%; left:46%; }
+.gabriel_penicaud1{ top:51%; left:64%; }
+.clement1{ top:9%; left:74%; }
+.alexia1{ top:47%; left:92%; }
 .jeanne_these1{ top:90%; left:85%; }
 
 /* =========================
@@ -368,7 +370,7 @@ body.popup-open{
 .pierre1{ top:43%; left:7%; }
 .romane1{ top:15%; left:20%; }
 .sarah1{ top:55%; left:33%; }
-.lou1{ top:10%; left:58%; }
+.lou1{ top:8%; left:57%; }
 .juliette_mottier1{ top:22%; left:70%; }
 .marion1{ top:43%; left:85%; }
 
@@ -376,100 +378,100 @@ body.popup-open{
    POPUP FANTÔME C2
 ========================= */
 
-.kenza1{ top:47%; left:8%; }
+.kenza1{ top:47%; left:6%; }
 .lisa1{ top:95%; left:25%; }
-.emile1{ top:12%; left:38%; }
+.emile1{ top:11%; left:38%; }
 .emma1{ top:59%; left:37%; }
-.cecile_poulat1{ top:18%; left:54%; }
+.cecile_poulat1{ top:17.5%; left:54%; }
 .clemence_candille1{ top:90%; left:65%; }
-.charlotte_asmonti1{ top:43%; left:85%; }
+.charlotte_asmonti1{ top:43%; left:86%; }
 
 /* =========================
    POPUP FANTÔME D
 ========================= */
 
-.soraya1{ top:23%; left:5%; }
-.leana1{ top:44%; left:17%; }
-.linda1{ top:90%; left:28%; }
+.soraya1{ top:22.5%; left:4%; }
+.leana1{ top:63%; left:22%; }
+.linda1{ top:91%; left:29%; }
 .thomas1{ top:3%; left:43%; }
-.juliette_cornelius1{ top:38%; left:46%; }
-.jeanne_these2{ top:38%; left:57%; }
+.juliette_cornelius1{ top:38.5%; left:44%; }
+.jeanne_these2{ top:38.5%; left:57%; }
 .arthur_van1{ top:82%; left:64%; }
-.abel1{ top:38%; left:68%; }
-.maximilian1{ top:2%; left:73%; }
-.mathias1{ top:95%; left:83%; }
+.abel1{ top:38.5%; left:70%; }
+.maximilian1{ top:0%; left:73%; }
+.mathias1{ top:95%; left:84%; }
 .heidi1{ top:47%; left:92%; }
 
 /* =========================
    POPUP FANTÔME E
 ========================= */
 
-.adele1{ top:10%; left:10%; }
-.adele2{ top:5%; left:60%; }
+.adele1{ top:9%; left:9%; }
+.adele2{ top:3%; left:60%; }
 .adele3{ top:55%; left:90%; }
 .gabriel_lecurieux2{ top:78%; left:10%; }
-.jeanne_lafaye1{ top:20%; left:40%; }
-.jowey1{ top:54%; left:43%; }
+.jeanne_lafaye1{ top:19%; left:39%; }
+.jowey1{ top:53%; left:44%; }
 .judith1{ top:88%; left:57%; }
-.remy1{ top:35%; left:77%; }
+.remy1{ top:34%; left:75%; }
 .erwan1{ top:93%; left:82%; }
 
 /* =========================
    POPUP FANTÔME F
 ========================= */
 
-.f-coline1{ top:44%; left:50%; }
-.f-anna1{ top:90%; left:64%; }
-.f-julie1{ top:28%; left:77%; }
-.f-yagmur1{ top:15%; left:47%; }
-.f-mathis1{ top:75%; left:14%; }
+.f-coline1{ top:85%; left:40%; }
+.f-anna1{ top:92%; left:64%; }
+.f-julie1{ top:28%; left:75%; }
+.f-yagmur1{ top:10%; left:45%; }
+.f-mathis1{ top:75%; left:13%; }
 
 /* =========================
    POPUP FANTÔME G
 ========================= */
 
-.arthur_euvrard_g1{ top:30%; left:80%; }
-.lilou1{ top:13%; left:28%; }
-.lea1{ top:55%; left:49%; }
+.arthur_euvrard_g1{ top:30%; left:79%; }
+.lilou1{ top:11%; left:28%; }
+.lea1{ top:55%; left:47%; }
 .clemence_joseph1{ top:85%; left:30%; }
-.lorenza1{ top:13%; left:61%; }
-.justine_margale1{ top:80%; left:66%; }
+.lorenza1{ top:12%; left:61%; }
+.justine_margale1{ top:82%; left:65%; }
 .charlotte_maucourt1{ top:3%; left:72%; }
-.india1{ top:32%; left:5%; }
+.india1{ top:30%; left:2%; }
 .india2{ top:84%; left:12%; }
-.alvina1{ top:63%; left:92%; }
+.alvina1{ top:61%; left:92%; }
 
 /* =========================
    POPUP FANTÔME H
 ========================= */
 
 .louis1{ top:91%; left:61%; }
-.elyette1{ top:55%; left:92%; }
-.estelle1{ top:10%; left:22%; }
-.mathias2{ top:74%; left:47%; }
+.elyette1{ top:57%; left:91%; }
+.estelle1{ top:8%; left:21%; }
+.mathias2{ top:73%; left:45%; }
 .richard1{ top:30%; left:83%; }
 .angele1{ top:53%; left:67%; }
-.virgile1{ top:60%; left:5%; }
+.virgile1{ top:59%; left:4%; }
 
 /* =========================
    POPUP FANTÔME I
 ========================= */
 
-.juliette_cornelius2{ top:3%; left:85%; }
-.mathilde1{ top:85%; left:19%; }
+.juliette_cornelius2{ top:1%; left:88%; }
+.mathilde1{ top:86%; left: 16%; }
 .mathilde2{ top:86%; left:74%; }
-.eugenie1{ top:4%; left:47%; }
+.eugenie1{ top:3%; left:47%; }
 .laura1{ top:45%; left:7%; }
-.margaux1{ top:80%; left:35%; }
-.maxence1{ top:46%; left:42%; }
+.margaux1{ top:90%; left:48%; }
+.maxence1{ top:47%; left:40%; }
 
 /* =========================
    POPUP FANTÔME J
 ========================= */
 
 .martina1{ top:63%; left:43%; }
-.doriane1{ top:15%; left:74%; }
-.benoit1{ top:82%; left:55%; }
+.doriane1{ top:13%; left:74%; }
+.benoit1{ top:83%; left:55%; }
 .lauriane1{ top:58%; left:8%; }
 .saudade1{ top:82%; left:85%; }
 
@@ -477,23 +479,23 @@ body.popup-open{
    POPUP FANTÔME K
 ========================= */
 
-.arthur_carpentier1{ top:80%; left:5%; }
-.arthur_carpentier2{ top:83%; left:63%; }
-.arthur_euvrard_k1{ top:26%; left:77%; }
-.benoit2{ top:35%; left:20%; }
-.justine_gaspard1{ top:65%; left:36%; }
-.morgane1{ top:20%; left:48%; }
+.arthur_carpentier1{ top:81%; left:5%; }
+.arthur_carpentier2{ top:84%; left:63%; }
+.arthur_euvrard_k1{ top:25%; left:79%; }
+.benoit2{ top:35%; left:18%; }
+.justine_gaspard1{ top:84%; left:36%; }
+.morgane1{ top:18%; left:49%; }
 
 /* =========================
    POPUP FANTÔME L
 ========================= */
 
-.tina1{ top:68%; left:5%; }
-.aurelie1{ top:90%; left:70%; }
+.tina1{ top:68%; left:4%; }
+.aurelie1{ top:91%; left:70%; }
 .orane1{ top:70%; left:87%; }
 .alfea1{ top:87%; left:46%; }
-.jessica1{ top:5%; left:20%; }
-.juliette_soustelle1{ top:50%; left:58%; }
+.jessica1{ top:4%; left:21%; }
+.juliette_soustelle1{ top:49%; left:57%; }
 
 /* =========================
    POPUP FANTÔME CELESTE
