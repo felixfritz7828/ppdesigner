@@ -105,6 +105,12 @@ body{
     overflow-x:hidden;
 }
 
+body.popup-open .mobile-menu{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
 html.popup-open,
 body.popup-open{
     overflow:hidden;
@@ -244,6 +250,7 @@ body.popup-open{
 .popup{
     position:fixed;
     inset:0;
+    z-index:1000;
 
     display:none;
     align-items:center;
@@ -254,49 +261,69 @@ body.popup-open{
     padding:16px;
 
     overflow:hidden;
-    box-sizing:border-box;
 
     background:rgba(0,0,0,.5);
-    z-index:1000;
+}
+
+.popup.is-open{
+    display:flex;
 }
 
 .popup-content{
     position:relative;
-    background:white;
-    border-radius:10px;
-    width:min(900px,80vw);
+
+    width:min(900px, calc(100vw - 32px));
     max-height:calc(100dvh - 32px);
-    overflow-y:auto;
-    scrollbar-width:none;
-    -ms-overflow-style:none;
-    margin:0 auto;
+    margin:0;
     padding:30px;
-    box-sizing:border-box;
-    animation:popupAppear 0.15s ease-out;
-    z-index:1001;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+
+    background:#fff;
+    border-radius:10px;
+
+    scrollbar-width:none;
+
+    animation:popupAppear .15s ease-out;
+}
+
+.popup-content::-webkit-scrollbar{
+    display:none;
 }
 
 @keyframes popupAppear{
-    from{ transform:scale(0.99); }
-    to{ transform:scale(1); }
+    from{
+        opacity:0;
+        transform:scale(.99);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
 .close{
     position:sticky;
+    top:10px;
+    z-index:20;
+
     display:block;
-    top:12px;
     width:max-content;
+
     margin-left:auto;
     margin-bottom:-35px;
 
-    float:none;
-    right:auto;
+    border:0;
+    background:none;
 
     color:#999;
     font-size:40px;
     line-height:1;
+
     cursor:pointer;
-    z-index:20;
 }
 
 /* =========================
@@ -306,11 +333,6 @@ body.popup-open{
 .popup-salle{
     width:min(1000px, calc(100vw - 32px));
     max-height:calc(100dvh - 32px);
-    margin:0;
-}
-
-.popup-salle::-webkit-scrollbar{
-    display:none;
 }
 
 .popup-salle .titre,
@@ -335,7 +357,6 @@ body.popup-open{
     display:block;
     width:100%;
     height:auto;
-    margin:0 auto;
 }
 
 .image-fantome .salle{
@@ -394,11 +415,11 @@ body.popup-open{
 ========================= */
 
 .soraya1{ top:22.5%; left:4%; }
-.leana1{ top:74%; left:18%; }
+.leana1{ top:78%; left:18%; }
 .linda1{ top:93%; left:28%; }
 .thomas1{ top:3%; left:43%; }
 .juliette_cornelius1{ top:38.5%; left:44%; }
-.jeanne_these2{ top:63%; left:53%; }
+.jeanne_these2{ top:60%; left:53%; }
 .arthur_van1{ top:83%; left:65%; }
 .abel1{ top:38.5%; left:70%; }
 .maximilian1{ top:0%; left:73%; }
@@ -412,19 +433,19 @@ body.popup-open{
 .adele1{ top:9%; left:9%; }
 .adele2{ top:3%; left:60%; }
 .adele3{ top:55%; left:90%; }
-.gabriel_lecurieux2{ top:78%; left:10%; }
+.gabriel_lecurieux2{ top:80%; left:10%; }
 .jeanne_lafaye1{ top:19%; left:39%; }
-.jowey1{ top:53%; left:44%; }
+.jowey1{ top:54%; left:43%; }
 .judith1{ top:88%; left:57%; }
-.remy1{ top:34%; left:75%; }
+.remy1{ top:34%; left:73%; }
 .erwan1{ top:93%; left:82%; }
 
 /* =========================
    POPUP FANTÔME F
 ========================= */
 
-.f-coline1{ top:88%; left:38%; }
-.f-anna1{ top:92%; left:64%; }
+.f-coline1{ top:89%; left:38%; }
+.f-anna1{ top:92%; left:62%; }
 .f-julie1{ top:28%; left:73%; }
 .f-yagmur1{ top:8%; left:45%; }
 .f-mathis1{ top:75%; left:13%; }
@@ -464,7 +485,7 @@ body.popup-open{
 .mathilde1{ top:86%; left: 16%; }
 .mathilde2{ top:86%; left:74%; }
 .eugenie1{ top:3%; left:47%; }
-.laura1{ top:45%; left:7%; }
+.laura1{ top:46%; left:2%; }
 .margaux1{ top:92%; left:48%; }
 .maxence1{ top:47%; left:40%; }
 
@@ -494,7 +515,7 @@ body.popup-open{
 ========================= */
 
 .tina1{ top:68%; left:2%; }
-.aurelie1{ top:91%; left:70%; }
+.aurelie1{ top:92%; left:69%; }
 .orane1{ top:73%; left:88%; }
 .alfea1{ top:92%; left:42%; }
 .jessica1{ top:4%; left:21%; }
@@ -519,29 +540,22 @@ body.popup-open{
 ========================= */
 
 .popup-cinema{
-    display:none;
-    align-items:start;
-    justify-content:stretch;
-    position:fixed;
-    inset:0;
-
-    width:100%;
-    height:100dvh;
+    align-items:flex-start;
+    justify-content:center;
 
     padding:20px;
-    box-sizing:border-box;
 
-    background:rgba(0,0,0,.92);
-
-    /* Le scroll se fait ici */
     overflow-x:hidden;
     overflow-y:auto;
 
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior:contain;
-    touch-action:pan-y;
+    background:rgba(0,0,0,.92);
 
-    z-index:1000;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+}
+
+.popup-cinema.is-open{
+    display:flex;
 }
 
 .popup-cinema .cinema-content{
@@ -549,23 +563,16 @@ body.popup-open{
 
     width:100%;
     max-width:1000px;
-
-    height:auto;
-    max-height:none;
     min-height:0;
 
     margin:0 auto;
     padding:35px;
 
-    /* Aucun scroll imbriqué */
     overflow:visible;
 
     background:#080808;
     color:#fff;
     border-radius:10px;
-
-    animation:none;
-    transform:none;
 }
 
 .popup-cinema .close{
@@ -573,14 +580,9 @@ body.popup-open{
     top:18px;
     right:22px;
 
-    float:none;
+    margin:0;
 
     color:#fff;
-    font-size:40px;
-    line-height:1;
-
-    cursor:pointer;
-    z-index:20;
 }
 
 .cinema-titre{
@@ -670,29 +672,29 @@ body.popup-open{
 }
 
 /* =========================
-   POPUP ŒUVRE / CARTEL
+   POPUP ŒUVRE
 ========================= */
 
 .popup-oeuvre{
     z-index:2000;
-    display:none;
     padding:40px;
-    overflow:hidden;
     background:rgba(0,0,0,.5);
 }
 
+.popup-oeuvre.is-open{
+    display:flex;
+}
+
 .popup-oeuvre .popup-content{
-    width:min(1200px,90vw);
+    width:min(1200px, calc(100vw - 80px));
     max-height:calc(100dvh - 80px);
-    margin:0 auto;
     padding:24px;
-    overflow-x:hidden;
-    overflow-y:auto;
-    overscroll-behavior:contain;
+
     scrollbar-width:thin;
 }
 
 .popup-oeuvre .popup-content::-webkit-scrollbar{
+    display:block;
     width:8px;
 }
 
@@ -1022,41 +1024,26 @@ p{
         max-width:none;
     }
 
-    .popup{
+     .popup{
         padding:16px;
-        overflow:hidden;
     }
 
     .popup-content{
-        margin:auto;
+        width:100%;
+        max-height:calc(100dvh - 32px);
+        padding:22px;
     }
 
     .popup-salle{
         width:100%;
-        max-width:none;
-        max-height:calc(100dvh - 32px);
-        padding:22px;
-        overflow-y:auto;
     }
 
     .popup-salle .titre{
         margin:0 0 18px;
+        padding-right:30px;
+
         font-size:clamp(1.4rem,5.8vw,2rem);
         line-height:.95;
-    }
-
-    .popup-salle .close{
-        top:12px;
-        right:16px;
-    }
-
-    .salle{
-        font-size:clamp(12px,1.2vw,18px);
-    }
-
-    .image-fantome{
-        width:100%;
-        margin:0 auto 25px;
     }
 
     .popup-oeuvre{
@@ -1066,9 +1053,28 @@ p{
     .popup-oeuvre .popup-content{
         width:100%;
         max-height:calc(100dvh - 32px);
-        margin:auto;
         padding:20px;
-        overflow-y:auto;
+    }
+
+    .popup-cinema{
+        padding:16px;
+    }
+
+    .popup-cinema .cinema-content{
+        width:100%;
+        max-width:none;
+        margin:0;
+        padding:22px;
+    }
+
+
+    .salle{
+        font-size:clamp(12px,1.2vw,18px);
+    }
+
+    .image-fantome{
+        width:100%;
+        margin:0 auto 25px;
     }
 
     .oeuvre-layout{
@@ -1252,9 +1258,9 @@ p{
 
 
 
-/* ==========================
-        MENU MOBILE
-========================== */
+/* =========================
+   MENU MOBILE
+========================= */
 
 .mobile-menu{
     display:none;
@@ -1266,16 +1272,16 @@ p{
         position:fixed;
         right:20px;
         bottom:20px;
-        z-index:1500;
+        z-index:800;
 
         display:flex;
         flex-direction:column;
         align-items:flex-end;
-        gap:0;
 
         opacity:0;
         visibility:hidden;
         pointer-events:none;
+
         transform:translateY(10px);
 
         transition:
@@ -1291,141 +1297,161 @@ p{
         transform:translateY(0);
     }
 
+    /*
+     * Prioritaire sur .visible :
+     * le menu disparaît dès qu’une popup est ouverte.
+     */
+    .mobile-menu.popup-is-open{
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(10px);
+    }
+
 
     /* CARTE PRINCIPALE */
 
     .mobile-menu-card{
-        display:flex;
-        flex-direction:column;
-        align-items:stretch;
-         position:relative;
+        position:relative;
         z-index:1;
 
-        min-width:80px;
+        display:flex;
+        flex-direction:column;
+
+        min-width:105px;
 
         overflow:hidden;
 
+        background:rgba(245,245,245,.94);
         border-radius:8px;
 
-        background:rgba(245,245,245,.92);
+        box-shadow:0 8px 15px rgba(0,0,0,.16);
 
         backdrop-filter:blur(8px);
         -webkit-backdrop-filter:blur(8px);
-
-        box-shadow:0 8px 15px rgba(0,0,0,.16);
     }
 
     .mobile-menu-card a,
     .mobile-menu-card button{
-        display:block;
         width:100%;
-
         margin:0;
-        padding:7px 12px;
+        padding:8px 12px;
 
         border:0;
         border-radius:0;
 
         background:none;
 
-        font-family:'ES-Plakeit', sans-serif;
+        color:#000;
+        font-family:'ES-Plakeit',sans-serif;
         font-size:13px;
         line-height:1;
-        color:#000;
         text-align:left;
         text-decoration:none;
 
         cursor:pointer;
     }
 
-    .mobile-menu-card a + a,
-    .mobile-menu-card a + button{
+    .mobile-menu-card > * + *{
         border-top:1px solid rgba(0,0,0,.1);
+    }
+
+    .mobile-menu-card a:hover,
+    .mobile-menu-card button:hover{
+        color:#e85aa9;
     }
 
     .mobile-menu-top{
         font-size:22px !important;
         line-height:.8 !important;
-        padding-top:8px !important;
-        padding-bottom:9px !important;
     }
 
-.mobile-menu-card .mobile-menu-toggle{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:flex-start;
-    gap:7px;
-    width:100%;
-}
 
-.hamburger{
-    position:relative;
-    display:block;
-    width:14px;
-    height:10px;
-    flex-shrink:0;
-}
+    /* BOUTON INDEX */
 
-.hamburger::before,
-.hamburger::after{
-    content:"";
-    position:absolute;
-    left:0;
-    width:100%;
-    height:1.5px;
-    background:currentColor;
-    transition:
-        top .25s ease,
-        transform .25s ease,
-        box-shadow .25s ease;
-}
+    .mobile-menu-card .mobile-menu-toggle{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        gap:8px;
+    }
 
-.hamburger::before{
-    top:1px;
-    box-shadow:0 4px 0 currentColor;
-}
 
-.hamburger::after{
-    top:9px;
-}
+    /* HAMBURGER */
 
-.mobile-menu-toggle.is-open .hamburger::before{
-    top:5px;
-    transform:rotate(45deg);
-    box-shadow:none;
-}
+    .hamburger{
+        position:relative;
 
-.mobile-menu-toggle.is-open .hamburger::after{
-    top:5px;
-    transform:rotate(-45deg);
-}
+        display:block;
+        width:14px;
+        height:10px;
 
-    /* FENÊTRE DES SCÈNES : FERMÉE PAR DÉFAUT */
+        flex-shrink:0;
+    }
+
+    .hamburger::before,
+    .hamburger::after{
+        content:"";
+
+        position:absolute;
+        left:0;
+
+        width:100%;
+        height:1.5px;
+
+        background:currentColor;
+
+        transition:
+            top .25s ease,
+            transform .25s ease,
+            box-shadow .25s ease;
+    }
+
+    .hamburger::before{
+        top:1px;
+        box-shadow:0 4px 0 currentColor;
+    }
+
+    .hamburger::after{
+        top:9px;
+    }
+
+    .mobile-menu-toggle.is-open .hamburger::before{
+        top:5px;
+        transform:rotate(45deg);
+        box-shadow:none;
+    }
+
+    .mobile-menu-toggle.is-open .hamburger::after{
+        top:5px;
+        transform:rotate(-45deg);
+    }
+
+
+    /* LISTE DES SCÈNES */
 
     .mobile-menu-scenes{
         position:absolute;
         right:0;
         bottom:100%;
-        margin-bottom:10px;
         z-index:2;
 
         width:min(330px, calc(100vw - 40px));
         max-height:calc(100dvh - 170px);
-
+        margin-bottom:10px;
         padding:12px;
 
         overflow-y:auto;
         overscroll-behavior:contain;
 
+        background:rgba(245,245,245,.96);
         border-radius:8px;
 
-        background:rgba(245,245,245,.96);
+        box-shadow:0 8px 15px rgba(0,0,0,.16);
 
         backdrop-filter:blur(8px);
         -webkit-backdrop-filter:blur(8px);
-
-        box-shadow:0 8px 15px rgba(0,0,0,.16);
 
         opacity:0;
         visibility:hidden;
@@ -1446,18 +1472,13 @@ p{
         display:none;
     }
 
-
-    /* FENÊTRE OUVERTE */
-
     .mobile-menu-scenes.is-open{
         opacity:1;
         visibility:visible;
         pointer-events:auto;
+
         transform:translateY(0) scale(1);
     }
-
-
-    /* LIENS DES SCÈNES */
 
     .mobile-menu-scenes a{
         display:grid;
@@ -1468,18 +1489,14 @@ p{
         width:100%;
         padding:7px 5px;
 
-        border-radius:6px;
-
-        font-family:'ES-Plakeit', sans-serif;
+        color:#000;
+        font-family:'ES-Plakeit',sans-serif;
         font-size:12px;
         line-height:1.05;
-        color:#000;
         text-align:left;
         text-decoration:none;
 
-        transition:
-            color .2s ease,
-            background .2s ease;
+        border-radius:6px;
     }
 
     .mobile-menu-scenes a + a{
@@ -1487,8 +1504,8 @@ p{
     }
 
     .mobile-menu-scenes a span{
-        font:inherit;
         color:#999;
+        font:inherit;
     }
 
     .mobile-menu-scenes a:hover,
@@ -1497,16 +1514,11 @@ p{
         background:rgba(232,90,169,.08);
     }
 
-    .mobile-menu-card a:hover,
-    .mobile-menu-card button:hover{
-        color:#e85aa9;
-    }
 }
 
 @media (max-width:768px){
 
-    .mobile-menu.cartel-open,
-    .mobile-menu.visible.cartel-open{
+    body.popup-open .mobile-menu{
         opacity:0;
         visibility:hidden;
         pointer-events:none;
