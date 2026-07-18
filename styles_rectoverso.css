@@ -139,7 +139,7 @@ body.popup-open{
     width:min(450px,100%);
     height:auto;
     display:block;
-    margin:0;
+    margin-top: 20px;
 }
 
 .home-title{
@@ -218,19 +218,19 @@ body.popup-open{
 
 /* Positions plan */
 
-.salle-a{ top:60%; left:57%; }
+.salle-a{ top:60%; left:56%; }
 .salle-b{ top:62%; left:37%; }
 .salle-c1{ top:55%; left: 43%; }
 .salle-c2{ top:50%; left:50%; }
-.salle-d{ top:39.5%; left:20.7%; }
-.salle-e{ top:25%; left:26%; }
-.salle-f{ top:38.5%; left:60.9%; }
+.salle-d{ top:40.5%; left:20.7%; }
+.salle-e{ top:26%; left:26%; }
+.salle-f{ top:39%; left:60.9%; }
 .salle-g{ top:32.7%; left:81%; }
-.salle-h{ top:11%; left:72%; }
-.salle-i{ top:1%; left:53.5%; }
+.salle-h{ top:12%; left:71%; }
+.salle-i{ top:2%; left:53.5%; }
 .salle-j{ top:23%; left:57.2%; }
 .salle-k{ top:29%; left:52%; }
-.salle-l{ top:10%; left:34.2%; }
+.salle-l{ top:12%; left:34.2%; }
 .salle-cine{ top:10%; left:41%; }
 .salle-celeste{ top:41%; left:53%; }
 .salle-jeanne{ top:30%; left:34%; }
@@ -856,7 +856,7 @@ body.popup-open{
     margin-bottom:0;
     font-family:'ES-Plakeit', sans-serif;
     font-size:0.8rem;
-    line-height:1;
+    line-height:1.2;
 
     color:#9a9a9a;
 }
